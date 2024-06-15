@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" href="./css/cr/zt.css">
+		<link rel="stylesheet" href="./css/cr/cjpgl.css">
+		<script type="text/javascript" src="./js/cr/jpgl.js"></script>
+		
+		<style>
+		/* CSS样式设置加载动画 */
+		.loader {
+		  border: 16px solid #f3f3f3; /* Light grey */
+		  border-top: 16px solid #3498db; /* Blue */
+		  border-radius: 50%;
+		  width: 120px;
+		  height: 120px;
+		  animation: spin 2s linear infinite;
+		}
+		
+		@keyframes spin {
+		  0% { transform: rotate(0deg); }
+		  100% { transform: rotate(360deg); }
+		}
+		#qwe{
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: white;
+			z-index: 9999;
+		}
+		</style>
+	</head>
+	
+	<body>
+		<div id="qwe">
+			<div class="loader"></div>
+		</div>
+		<script>
+		// 在页面加载前显示加载动画
+		document.addEventListener('DOMContentLoaded', function() {
+		  var loader = document.querySelector('#qwe');
+		  loader.style.display = 'block';
+		  
+		  // 模拟延迟加载时间
+		  setTimeout(function() {
+		    loader.style.display = 'none';
+		  }, 1000); // 延迟
+		});
+		</script>
+		
+		
+		<div class="big">
+			<!--左边-->
+			<div class="left">
+				<div class="ltop">
+					<img id="glzx"src="./imgs/cr/图标/DM_20230316155207_358.PNG">
+					<span id="ltop1"><img class="tjsc"src="./imgs/cr/图标/收藏.PNG"/>添加收藏</span>
+				</div>
+				<div class="lbottom">
+					<ul class="lul">
+						<li class="lli">
+							
+							<div id="mr" class="lxfys">
+								<svg width="22px" height="20" viewBox="0 0 79 79"><path fill-rule="evenodd" clip-rule="evenodd" d="M68.886 48.01C65.711 59.477 55.916 68.17 43.867 69.726L47.379 62.311C56.441 59.314 63.05 50.963 63.469 40.1H69.95H78.1C78.1 40.1 71.562 44.042 68.886 48.01ZM39.1 16.49C39.662 16.49 39.334 16.527 38.1 16.541V10.05V0C38.1 0 43.104 10.961 47.1 11C59.471 14.171 68.169 24.081 69.726 36.133L62.311 32.621C59.214 23.255 50.404 16.49 39.1 16.49ZM16.49 39.1C16.49 40.338 16.526 40.666 16.54 40.1H10.042H0C0 40.1 10.061 36.896 11 31.1C13.928 21.423 22.611 13.217 33.387 10.788L29.477 18.999C21.783 22.862 16.49 30.804 16.49 39.1ZM40 22.1L51 46.1L40 56L28.1 46.1L40 22.1ZM45 46L40 35L35 46L40 49.1L45 46ZM38.1 63.459V69.95V78.1C38.1 78.1 35.958 71.562 31.99 68.886C21.409 65.956 13.206 57.383 10.778 46.609L18.995 50.521C22.719 57.924 30.233 63.089 38.1 63.459Z"></path>		</svg>
+								<span>
+									精品攻略
+								</span>
+							</div>
+							
+							<div id="hot">HOT</div>
+						</li>
+						<li class="lli">
+							<div class="lxfys">
+							<svg width="22px" height="18px"><path stroke-width="0" fill-rule="evenodd" d="M15.572,7.186 L18.908,6.074 L18.908,8.298 L15.572,11.635 L16.684,11.635 L16.684,12.747 L14.459,13.859 L14.459,11.635 L14.459,7.186 L14.459,3.849 L20.020,0.513 L20.020,3.849 L15.572,7.186 ZM7.786,13.859 L7.786,2.737 L12.235,2.737 L12.235,13.859 L10.010,16.084 L7.786,13.859 ZM3.337,11.635 L4.449,11.635 L1.113,8.298 L1.113,6.074 L4.449,7.186 L0.001,3.849 L0.001,0.513 L5.562,3.849 L5.562,7.186 L5.562,11.635 L5.562,13.859 L3.337,12.747 L3.337,11.635 Z"></path></svg>
+							<span>峡谷排位</span>
+							</div>
+							
+						</li>
+						<li class="lli">
+							<div class="lxfys">
+							<svg width="22px" height="18px"><path stroke-width="0" fill-rule="evenodd" d="M19.456,9.386 L18.024,15.969 C17.787,17.060 16.691,17.756 15.576,17.524 L8.850,16.122 C7.736,15.890 7.025,14.817 7.262,13.726 L8.694,7.143 C8.932,6.053 10.027,5.357 11.142,5.589 L17.868,6.991 C18.982,7.223 19.693,8.295 19.456,9.386 ZM10.991,11.378 C10.153,11.199 9.327,11.735 9.149,12.576 C8.970,13.417 9.505,14.244 10.345,14.423 C11.184,14.602 12.009,14.066 12.187,13.225 C12.366,12.384 11.831,11.557 10.991,11.378 ZM16.200,8.233 C15.351,8.052 14.516,8.595 14.335,9.446 C14.154,10.297 14.696,11.135 15.545,11.316 C16.394,11.497 17.229,10.954 17.410,10.103 C17.590,9.251 17.049,8.414 16.200,8.233 ZM6.957,5.170 C6.737,5.105 6.504,5.075 6.262,5.112 C5.394,5.246 4.799,6.051 4.934,6.911 C5.045,7.620 5.622,8.119 6.305,8.207 L5.401,12.457 L4.230,12.635 C3.104,12.806 2.049,12.052 1.874,10.950 L0.819,4.298 C0.644,3.197 1.414,2.164 2.540,1.993 L9.336,0.960 C10.462,0.789 11.516,1.543 11.691,2.645 L11.811,3.400 L10.256,3.069 C8.764,2.751 7.301,3.691 6.957,5.170 Z"></path></svg>
+						<span>大乱斗</span>
+							</div>
+						</li>
+						<li class="lli">
+							<div class="lxfys">
+							<svg width="22px" height="16px"><path stroke-width="0" fill-rule="evenodd" d="M21.830,8.265 C21.457,8.833 19.823,7.863 19.823,7.863 C19.823,7.863 19.272,9.721 17.378,10.611 C17.083,10.218 17.165,9.165 14.979,7.360 C14.854,6.533 14.067,5.700 13.418,5.120 C12.002,3.888 11.267,3.904 11.249,3.882 C11.824,3.050 12.915,1.840 14.402,1.840 L15.406,0.033 L16.409,1.840 C16.409,1.840 18.819,2.047 19.823,4.651 C19.823,4.651 22.418,7.372 21.830,8.265 ZM17.941,5.253 C17.419,5.249 16.788,6.012 16.811,6.643 C16.835,7.290 17.433,7.686 17.800,7.663 C18.166,7.640 18.591,7.453 18.788,6.847 C18.985,6.241 18.196,5.254 17.941,5.253 Z"></path><path stroke-width="0" fill-rule="evenodd" d="M17.197,12.394 C16.709,13.122 14.579,11.878 14.579,11.878 C14.579,11.878 13.346,15.971 8.558,16.000 C3.994,16.027 2.799,11.878 2.799,11.878 C2.799,11.878 0.967,13.027 0.181,12.394 C-0.605,11.760 2.164,8.243 2.799,7.757 C2.799,7.757 4.556,4.151 7.511,4.151 L8.819,1.832 L10.128,4.151 C10.128,4.151 13.271,4.416 14.579,7.757 C14.579,7.757 17.963,11.247 17.197,12.394 ZM5.491,8.577 C5.153,8.579 4.108,9.825 4.369,10.590 C4.630,11.355 5.193,11.592 5.678,11.621 C6.164,11.650 6.955,11.150 6.987,10.333 C7.018,9.535 6.183,8.572 5.491,8.577 ZM12.125,8.529 C11.444,8.524 10.621,9.502 10.652,10.312 C10.683,11.142 11.463,11.650 11.941,11.621 C12.419,11.591 12.973,11.351 13.230,10.574 C13.486,9.797 12.458,8.531 12.125,8.529 Z"></path></svg>
+							<span>最佳双排</span>
+							</div>
+						</li>
+						<li class="lli">
+							<!-- 链接文件 -->
+							<a href="./英雄列表.html">
+							<div class="lxfys">
+							<svg width="22px" height="18px"><path stroke-width="0" fill-rule="evenodd" d="M14.187,6.874 C14.187,2.212 7.838,0.525 7.838,0.525 C7.838,0.525 1.488,2.206 1.488,6.874 C1.488,11.543 1.499,12.140 0.430,13.224 C0.430,13.224 1.952,17.456 5.721,17.456 C5.721,17.456 4.663,16.415 4.663,11.107 C4.663,11.107 2.547,10.656 2.547,6.874 C5.234,6.874 6.779,8.991 6.779,8.991 L6.779,13.224 L7.838,14.282 L8.896,13.224 L8.896,8.991 C8.896,8.991 10.307,6.874 13.128,6.874 C13.128,10.601 11.012,11.107 11.012,11.107 C11.012,16.393 9.954,17.456 9.954,17.456 C13.723,17.456 15.245,13.224 15.245,13.224 C14.092,12.055 14.187,11.537 14.187,6.874 Z"></path></svg>
+							<span>英雄列表</span>
+							</div>
+							</a>
+						</li>
+						<li class="lli">
+							<!-- 链接文件 -->
+							<a href="./装备列表.html">
+							<div class="lxfys">
+							<svg width="22px" height="18px"><path stroke-width="0" fill-rule="evenodd" d="M2.990,11.682 L0.161,11.682 L0.868,9.561 L4.404,10.268 L14.303,0.368 L17.132,0.368 L17.132,3.197 L7.232,13.096 L7.939,16.632 L5.818,17.339 L5.818,14.510 L3.697,15.218 L3.697,16.632 L0.868,16.632 L0.868,13.803 L2.282,13.803 L2.990,11.682 Z"></path></svg>
+							<span>装备列表</span>
+							</div>
+							</a>
+						</li>
+						<li class="lli">
+							<div class="lxfys">
+							<svg width="22px" height="16px"><path stroke-width="0" fill-rule="evenodd" d="M20.004,0.907 L14.612,1.986 C14.612,1.986 13.254,0.907 10.298,0.907 C7.342,0.907 5.984,1.986 5.984,1.986 L0.591,0.907 L1.670,6.299 L0.591,9.535 C1.877,12.138 5.536,16.006 10.298,16.006 C15.060,16.006 18.247,12.537 20.004,9.535 L18.925,6.299 L20.004,0.907 ZM3.827,8.456 L3.827,7.378 C3.827,7.378 4.690,5.237 6.010,5.237 C7.331,5.237 8.141,7.378 8.141,7.378 L8.141,8.456 C8.141,8.456 7.275,7.378 5.987,7.378 C4.699,7.378 3.827,8.456 3.827,8.456 ZM10.298,12.782 C8.131,12.782 7.062,10.613 7.062,10.613 L7.062,9.535 C7.062,9.535 8.139,10.613 10.298,10.613 C12.457,10.613 13.533,9.535 13.533,9.535 L13.533,10.613 C13.533,10.613 12.464,12.782 10.298,12.782 ZM16.769,8.456 C16.769,8.456 16.261,7.316 14.593,7.316 C12.924,7.316 12.455,8.456 12.455,8.456 L12.455,7.378 C12.455,7.378 13.087,5.213 14.616,5.213 C16.145,5.213 16.769,7.378 16.769,7.378 L16.769,8.456 Z"></path></svg>
+							<span>趣味数据</span>
+							</div>
+						</li>
+					</ul>  
+					
+				</div>
+			</div>
+			<!-- 右边 -->
+			<div class="right">
+				<div class="rtop">
+					<div class="r-top-left">
+						<div class="r-t-xf0">
+							<!--文件跳转-->
+							<a href="./英雄联盟.html">
+								
+						<img src="./imgs/cr/图标/英雄联盟.png" alt="">
+						</div></a>
+						
+						<div class="r-t-xf">
+							<div id="xflol">
+								<img src="./imgs/cr/图标/lol.PNG">
+								<span>英雄联盟攻略中心</span>
+							</div>
+							<div id="rglzx">
+								<img id="ydzy" src="./imgs/cr/图标/DM_20230316155207_363.PNG"><span>云顶之弈主题战</span>
+							</div>
+							
+							
+						</div>
+					</div>
+					<div class="r-top-right">
+						<ul>
+							<li><img src="./imgs/cr/图标/下载.PNG"></li>
+							<li id="sjxf">
+								<img src="./imgs/cr/图标/手机.PNG">
+							<!-- 	二维码 -->
+								<div id="ewm">
+									<img src="./imgs/cr/二维码.png">
+									<br/>
+									<a>
+										查看装备战绩
+										<br/>
+										掌上英雄联盟
+									</a>
+									
+								</div>
+							</li>
+							<li><img src="./imgs/cr/图标/用户.PNG"></li>
+						</ul>
+					</div>
+				</div>
+				<div class="rbottom">
+					<img id="bgimg" src="./imgs/cr/bg.jpg">
+					<div class="ztnr">
+						<span id="bt">精品攻略</span>
+						<div class="lb">
+							<div id="lbl">
+								<a id="one" onclick="zxgl()" href="#" class="mr">最新攻略</a>
+								<a id="two" onclick="yxgl()" href="#">英雄攻略</a>
+								<a id="three" onclick="bbwf()" href="#">版本玩法</a>
+							</div>
+							<div id="lb2">
+								<div class="xlk">
+									<input type="text"placeholder="搜索英雄">
+									<div id="img">
+										<img src="./imgs/cr/图标/下箭头.PNG" alt="">
+									</div>
+								</div>
+								<a id="two1" onclick="yxgl()"  href="#">基础教学</a>
+								<a id="two2" onclick="yxgl2()"  href="#">精品图文</a>
+								<a id="two3" onclick="yxgl3()"  href="#">精品视频</a>
+							</div>
+						</div>
+						<div class="nrbf">
+							<div id="zxgl">
+								<div id="nr">
+									<div class="nr1">
+										<div id="tleft">
+											<img src="./imgs/cr/攻略/内容/DM_20230323143853_001.PNG">
+										</div>
+										<div id="tright">
+											<div id="tx-mz">
+												<img src="./imgs/cr/攻略/头像/DM_20230323144036_001.JPEG">
+												<span>葱葱</span>
+											</div>
+											<div id="btnr">
+												【13.6】薇恩Q加强或将回归暴击流，血统饮血剑一齐削弱.
+											</div>
+											<div id="time">2023-03-23</div>
+											<div id="mg-new"><img src="./imgs/cr/图标/new.png" alt=""></div>
+										</div>
+									</div>
+									<div class="nr2">
+										<div id="tleft">
+											<img src="./imgs/cr/攻略/内容/DM_20230323143853_002.PNG">
+										</div>
+										<div id="tright">
+											<div id="tx-mz">
+												<img src="./imgs/cr/攻略/头像/DM_20230323144036_002.JPEG">
+												<span>兰斯</span>
+											</div>
+											<div id="btnr">
+												版本研究所13.6：龙王悠米跳转 新英雄米利欧上线
+											</div>
+											<div id="time">2023-03-23</div>
+											<div id="mg-new"><img src="./imgs/cr/图标/new.png" alt=""></div>
+										</div>
+									</div>
+									<div class="nr3">
+										<div id="tleft">
+											<img src="./imgs/cr/攻略/内容/DM_20230323143853_003.PNG">
+										</div>
+										<div id="tright">
+											<div id="tx-mz">
+												<img src="./imgs/cr/攻略/头像/DM_20230323144036_003.JPEG">
+												<span>NGA英雄联盟社区</span>
+											</div>
+											<div id="btnr">
+												新英雄米利欧入门攻略。机制全面但吃发育的软辅
+											</div>
+											<div id="time">2023-03-22</div>
+											<div id="mg-new"><img src="./imgs/cr/图标/new.png" alt=""></div>
+										</div>
+									</div>
+									<div class="nr4">
+										<div id="tleft">
+											<img src="./imgs/cr/攻略/内容/DM_20230323143853_004.PNG">
+										</div>
+										<div id="tright">
+											<div id="tx-mz">
+												<img src="./imgs/cr/攻略/头像/DM_20230323144036_004.PNG">
+												<span>教你一招</span>
+											</div>
+											<div id="btnr">
+												教你一招：6分钟教你玩会新英雄米利欧
+											</div>
+											<div id="time">2023-03-22</div>
+											<div id="mg-new"><img src="./imgs/cr/图标/new.png" alt=""></div>
+										</div>
+									</div>
+									<div class="nr5">
+										<div id="tleft">
+											<img src="./imgs/cr/攻略/内容/DM_20230323143853_005.JPEG">
+										</div>
+										<div id="tright">
+											<div id="tx-mz">
+												<img src="./imgs/cr/攻略/头像/DM_20230323144036_005.JPEG">
+												<span>京城飞机王</span>
+											</div>
+											<div id="btnr">
+												Poke与爆发的结合，中单飞机轰炸峡谷
+											</div>
+											<div id="time">2023-03-22</div>
+											<div id="mg-new"><img src="./imgs/cr/图标/new.png" alt=""></div>
+										</div>
+									</div>
+									<div class="nr6">
+										<div id="tleft">
+											<img src="./imgs/cr/攻略/内容/DM_20230323143853_006.JPEG">
+										</div>
+										<div id="tright">
+											<div id="tx-mz">
+												<img src="./imgs/cr/攻略/头像/DM_20230323144036_006.JPEG">
+												<span>白牧</span>
+											</div>
+											<div id="btnr">
+												【白牧】牧魂人超高兵线理解上分教学
+											</div>
+											<div id="time">2023-03-22</div>
+											<div id="mg-new"><img src="./imgs/cr/图标/new.png" alt=""></div>
+										</div>
+									</div>
+									<div class="nr7">
+										<div id="tleft">
+											<img src="./imgs/cr/攻略/内容/DM_20230323143853_007.JPEG">
+										</div>
+										<div id="tright">
+											<div id="tx-mz">
+												<img src="./imgs/cr/攻略/头像/DM_20230323144036_007.JPEG">
+												<span>冬雨QAQ</span>
+											</div>
+											<div id="btnr">
+												7种保人机制，米利欧堪称完美新英雄
+											</div>
+											<div id="time">2023-03-22</div>
+											<div id="mg-new"><img src="./imgs/cr/图标/new.png" alt=""></div>
+										</div>
+									</div>
+									<div class="nr8">
+										<div id="tleft">
+											<img src="./imgs/cr/攻略/内容/DM_20230323143853_008.JPEG">
+										</div>
+										<div id="tright">
+											<div id="tx-mz">
+												<img src="./imgs/cr/攻略/头像/DM_20230323144036_008.JPEG">
+												<span>虎牙、木槿</span>
+											</div>
+											<div id="btnr">
+												【木槿】超模机制？带你了解新软辅米利欧
+											</div>
+											<div id="time">2023-03-20</div>
+											<div id="mg-new"><img src="./imgs/cr/图标/new.png" alt=""></div>
+										</div>
+									</div>
+									<div class="nr9">
+										<div id="tleft">
+											<img src="./imgs/cr/攻略/内容/DM_20230323143853_009.JPEG">
+										</div>
+										<div id="tright">
+											<div id="tx-mz">
+												<img src="./imgs/cr/攻略/头像/DM_20230323144036_007.JPEG">
+												<span>冬雨QAQ</span>
+											</div>
+											<div id="btnr">
+												2级就线杀，打中一个技能就完事！
+											</div>
+											<div id="time">2023-03-20</div>
+											<div id="mg-new"><img src="./imgs/cr/图标/new.png" alt=""></div>
+										</div>
+									</div>
+									<div class="nr10">
+										<div id="tleft">
+											<img src="./imgs/cr/攻略/内容/DM_20230323143853_010.JPEG">
+										</div>
+										<div id="tright">
+											<div id="tx-mz">
+												<img src="./imgs/cr/攻略/头像/DM_20230323144036_009.JPEG">
+												<span>龙辰</span>
+											</div>
+											<div id="btnr">
+												国一皇子近5w场排位的顶级教学
+											</div>
+											<div id="time">2023-03-19</div>
+											<div id="mg-new"><img src="./imgs/cr/图标/new.png" alt=""></div>
+										</div>
+									</div>
+									
+								</div>
+								<div id="wb">
+									<a href="" class="wb1">1</a>
+									<a href="">2</a>
+									<a href="">3</a>
+									<a href="">…</a>
+									<a href="">1701</a>
+									<a href="">下一页</a>
+								</div>
+							</div>
+							<div id="yxgl1">
+								<div id="nr">
+									<div class="nr1">
+										<div id="tleft">
+											<img src="./imgs/cr/攻略/内容/DM_20230323143853_008.JPEG">
+										</div>
+										<div id="tright">
+											<div id="tx-mz">
+												<img src="./imgs/cr/攻略/头像/DM_20230323144036_008.JPEG">
+												<span>虎牙、木槿</span>
+											</div>
+											<div id="btnr">
+												【木槿】超模机制？带你了解新软辅米利欧
+											</div>
+											<div id="time">2023-03-20</div>
+											<div id="mg-new"><img src="./imgs/cr/图标/new.png" alt=""></div>
+										</div>
+									</div>
+									<div class="nr2">
+										<div id="tleft">
+											<img src="./imgs/cr/攻略/内容/DM_20230323144327_002.JPEG">
+										</div>
+										<div id="tright">
+											<div id="tx-mz">
+												<img src="./imgs/cr/攻略/头像/DM_20230323144036_007.JPEG">
+												<span>冬雨QAQ</span>
+											</div>
+											<div id="btnr">
+												13.6版本喜提大加强，有望回归T1
+											</div>
+											<div id="time">2023-03-19</div>
+											<div id="mg-new"><img src="./imgs/cr/图标/new.png" alt=""></div>
+										</div>
+									</div>
+									<div class="nr3">
+										<div id="tleft">
+											<img src="./imgs/cr/攻略/内容/DM_20230323144327_003.JPEG">
+										</div>
+										<div id="tright">
+											<div id="tx-mz">
+												<img src="./imgs/cr/攻略/头像/DM_20230323144036_007.JPEG">
+												<span>冬雨QAQ</span>
+											</div>
+											<div id="btnr">
+												最无脑输出手！出到俩件套就起飞
+											</div>
+											<div id="time">2023-03-14</div>
+											<div id="mg-new"><img src="./imgs/cr/图标/new.png" alt=""></div>
+										</div>
+									</div>
+									<div class="nr4">
+										<div id="tleft">
+											<img src="./imgs/cr/攻略/内容/DM_20230323144327_004.JPEG">
+										</div>
+										<div id="tright">
+											<div id="tx-mz">
+												<img src="./imgs/cr/攻略/头像/DM_20230323144413_004.png">
+												<span>波比king</span>
+											</div>
+											<div id="btnr">
+												【波比king】强大的对线坦克，摇篮中按死一切战士
+											</div>
+											<div id="time">2023-03-10</div>
+											<div id="mg-new"><img src="./imgs/cr/图标/new.png" alt=""></div>
+										</div>
+									</div>
+									<div class="nr5">
+										<div id="tleft">
+											<img src="./imgs/cr/攻略/内容/DM_20230323144327_005.JPEG">
+										</div>
+										<div id="tright">
+											<div id="tx-mz">
+												<img src="./imgs/cr/攻略/头像/DM_20230323144036_007.JPEG">
+												<span>冬雨QAQ</span>
+											</div>
+											<div id="btnr">
+												三分钟掌握所有细节，新版本凯南的高胜率符文出装
+											</div>
+											<div id="time">2023-03-05</div>
+											<div id="mg-new"><img src="./imgs/cr/图标/new.png" alt=""></div>
+										</div>
+									</div>
+									<div class="nr6">
+										<div id="tleft">
+											<img src="./imgs/cr/攻略/内容/DM_20230323144327_006.JPEG">
+										</div>
+										<div id="tright">
+											<div id="tx-mz">
+												<img src="./imgs/cr/攻略/头像/DM_20230323144036_007.JPEG">
+												<span>冬雨QAQ</span>
+											</div>
+											<div id="btnr">
+												13.5版本野区调整，豹女或将崛起！
+											</div>
+											<div id="time">2023-02-27</div>
+											<div id="mg-new"><img src="./imgs/cr/图标/new.png" alt=""></div>
+										</div>
+									</div>
+									<div class="nr7">
+										<div id="tleft">
+											<img src="./imgs/cr/攻略/内容/DM_20230323144327_007.JPEG">
+										</div>
+										<div id="tright">
+											<div id="tx-mz">
+												<img src="./imgs/cr/攻略/头像/DM_20230323144036_007.JPEG">
+												<span>冬雨QAQ</span>
+											</div>
+											<div id="btnr">
+												小鱼人入门到精通，只需三分钟
+											</div>
+											<div id="time">2023-02-24</div>
+											<div id="mg-new"><img src="./imgs/cr/图标/new.png" alt=""></div>
+										</div>
+									</div>
+									<div class="nr8">
+										<div id="tleft">
+											<img src="./imgs/cr/攻略/内容/DM_20230323144327_008.PNG">
+										</div>
+										<div id="tright">
+											<div id="tx-mz">
+												<img src="./imgs/cr/攻略/头像/DM_20230323144413_005.JPEG">
+												<span>解说小南风</span>
+											</div>
+											<div id="btnr">
+												13.4版本龙王不能呸呸呸！欢乐不在却强度稳定适合冲分
+											</div>
+											<div id="time">2023-02-18</div>
+											<div id="mg-new"><img src="./imgs/cr/图标/new.png" alt=""></div>
+										</div>
+									</div>
+									<div class="nr9">
+										<div id="tleft">
+											<img src="./imgs/cr/攻略/内容/DM_20230323144327_009.JPEG">
+										</div>
+										<div id="tright">
+											<div id="tx-mz">
+												<img src="./imgs/cr/攻略/头像/DM_20230323144036_007.JPEG">
+												<span>冬雨QAQ</span>
+											</div>
+											<div id="btnr">
+												新版本皇子速成，抓人关键技巧
+											</div>
+											<div id="time">2023-02-17</div>
+											<div id="mg-new"><img src="./imgs/cr/图标/new.png" alt=""></div>
+										</div>
+									</div>
+									<div class="nr10">
+										<div id="tleft">
+											<img src="./imgs/cr/攻略/内容/DM_20230323144327_010.JPEG">
+										</div>
+										<div id="tright">
+											<div id="tx-mz">
+												<img src="./imgs/cr/攻略/头像/DM_20230323144036_007.JPEG">
+												<span>冬雨QAQ</span>
+											</div>
+											<div id="btnr">
+												5分钟速成，玩好安妮的所有必备技巧
+											</div>
+											<div id="time">2023-02-17</div>
+											<div id="mg-new"><img src="./imgs/cr/图标/new.png" alt=""></div>
+										</div>
+									</div>
+									
+								</div>
+								<div id="wb">
+									<a href="" class="wb1">1</a>
+									<a href="">2</a>
+									<a href="">3</a>
+									<a href="">…</a>
+									<a href="">34</a>
+									<a href="">下一页</a>
+								</div>
+							</div>
+							<div id="yxgl2">
+								<div id="nr">
+									<div class="nr1">
+										<div id="tleft">
+											<img src="./imgs/cr/攻略/内容/DM_20230323143853_008.JPEG">
+										</div>
+										<div id="tright">
+											<div id="tx-mz">
+												<img src="./imgs/cr/攻略/头像/DM_20230323144036_008.JPEG">
+												<span>虎牙、木槿</span>
+											</div>
+											<div id="btnr">
+												【木槿】超模机制？带你了解新软辅米利欧
+											</div>
+											<div id="time">2023-03-20</div>
+											<div id="mg-new"><img src="./imgs/cr/图标/new.png" alt=""></div>
+										</div>
+									</div>
+									<div class="nr2">
+										<div id="tleft">
+											<img src="./imgs/cr/攻略/内容/DM_20230323144545_002.PNG">
+										</div>
+										<div id="tright">
+											<div id="tx-mz">
+												<img src="./imgs/cr/攻略/头像/DM_20230323144620_002.JPEG">
+												<span>B站龙辰小皇子</span>
+											</div>
+											<div id="btnr">
+												国一皇子近5w场排位的顶级教学
+											</div>
+											<div id="time">2023-03-17</div>
+											<div id="mg-new"><img src="./imgs/cr/图标/new.png" alt=""></div>
+										</div>
+									</div>
+									<div class="nr3">
+										<div id="tleft">
+											<img src="./imgs/cr/攻略/内容/DM_20230323144327_003.JPEG">
+										</div>
+										<div id="tright">
+											<div id="tx-mz">
+												<img src="./imgs/cr/攻略/头像/DM_20230323144413_004.png">
+												<span>波比king</span>
+											</div>
+											<div id="btnr">
+												【波比king】强大的对线坦克，摇篮中按死一切战士
+											</div>
+											<div id="time">2023-03-14</div>
+											<div id="mg-new"><img src="./imgs/cr/图标/new.png" alt=""></div>
+										</div>
+									</div>
+									<div class="nr4">
+										<div id="tleft">
+											<img src="./imgs/cr/攻略/内容/DM_20230323144545_004.JPEG">
+										</div>
+										<div id="tright">
+											<div id="tx-mz">
+												<img src="./imgs/cr/攻略/头像/DM_20230323144620_004.JPEG">
+												<span>枪炮使</span>
+											</div>
+											<div id="btnr">
+												【枪炮使】仅存的辅核塞娜全方位上分教学
+											</div>
+											<div id="time">2023-03-14</div>
+											<div id="mg-new"><img src="./imgs/cr/图标/new.png" alt=""></div>
+										</div>
+									</div>
+									<div class="nr5">
+										<div id="tleft">
+											<img src="./imgs/cr/攻略/内容/DM_20230323144545_005.JPEG">
+										</div>
+										<div id="tright">
+											<div id="tx-mz">
+												<img src="./imgs/cr/攻略/头像/DM_20230323144620_005.JPEG">
+												<span>猩猩诺手</span>
+											</div>
+											<div id="btnr">
+												【猩猩诺手】国服万场诺手导师论文级上分攻略
+											</div>
+											<div id="time">2023-03-06</div>
+											<div id="mg-new"><img src="./imgs/cr/图标/new.png" alt=""></div>
+										</div>
+									</div>
+									<div class="nr6">
+										<div id="tleft">
+											<img src="./imgs/cr/攻略/内容/DM_20230323144545_006.JPEG">
+										</div>
+										<div id="tright">
+											<div id="tx-mz">
+												<img src="./imgs/cr/攻略/头像/DM_20230323144620_006.JPEG">
+												<span>歆晓</span>
+											</div>
+											<div id="btnr">
+												【歆晓】峡谷怪盗AP艾翁玩法教学
+											</div>
+											<div id="time">2023-03-02</div>
+											<div id="mg-new"><img src="./imgs/cr/图标/new.png" alt=""></div>
+										</div>
+									</div>
+									<div class="nr7">
+										<div id="tleft">
+											<img src="./imgs/cr/攻略/内容/DM_20230323144545_007.JPEG">
+										</div>
+										<div id="tright">
+											<div id="tx-mz">
+												<img src="./imgs/cr/攻略/头像/DM_20230323144620_007.JPEG">
+												<span>林爱怜</span>
+											</div>
+											<div id="btnr">
+												【林爱怜】联盟最强后期 铸星龙王大型攻略
+											</div>
+											<div id="time">2023-02-26</div>
+											<div id="mg-new"><img src="./imgs/cr/图标/new.png" alt=""></div>
+										</div>
+									</div>
+									<div class="nr8">
+										<div id="tleft">
+											<img src="./imgs/cr/攻略/内容/DM_20230323144545_008.JPEG">
+										</div>
+										<div id="tright">
+											<div id="tx-mz">
+												<img src="./imgs/cr/攻略/头像/DM_20230323144620_008.JPEG">
+												<span>Thresh、婵儿</span>
+											</div>
+											<div id="btnr">
+												赛场王者！排位T4？帮你补足泽丽信息差！											</div>
+											<div id="time">2023-02-21</div>
+											<div id="mg-new"><img src="./imgs/cr/图标/new.png" alt=""></div>
+										</div>
+									</div>
+									<div class="nr9">
+										<div id="tleft">
+											<img src="./imgs/cr/攻略/内容/DM_20230323144546_009.JPEG">
+										</div>
+										<div id="tright">
+											<div id="tx-mz">
+												<img src="./imgs/cr/攻略/头像/DM_20230323144620_009.JPEG">
+												<span>57</span>
+											</div>
+											<div id="btnr">
+												【57】盲僧连续加强，教你稳定上分
+											</div>
+											<div id="time">2023-02-15</div>
+											<div id="mg-new"><img src="./imgs/cr/图标/new.png" alt=""></div>
+										</div>
+									</div>
+									<div class="nr10">
+										<div id="tleft">
+											<img src="./imgs/cr/攻略/内容/DM_20230323144546_010.JPEG">
+										</div>
+										<div id="tright">
+											<div id="tx-mz">
+												<img src="./imgs/cr/攻略/头像/DM_20230323144620_010.JPEG">
+												<span>业小宝</span>
+											</div>
+											<div id="btnr">
+												讯刃最大的受益者霞，能否逆袭版本？
+											</div>
+											<div id="time">2023-02-08</div>
+											<div id="mg-new"><img src="./imgs/cr/图标/new.png" alt=""></div>
+										</div>
+									</div>
+									
+								</div>
+								<div id="wb">
+									<a href="" class="wb1">1</a>
+									<a href="">2</a>
+									<a href="">3</a>
+									<a href="">…</a>
+									<a href="">37</a>
+									<a href="">下一页</a>
+								</div>
+							</div>
+							<div id="yxgl3">
+								<div id="nr">
+									<div class="nr1">
+										<div id="tleft">
+											<img src="./imgs/cr/攻略/内容/DM_20230323144717_001.PNG">
+										</div>
+										<div id="tright">
+											<div id="tx-mz">
+												<img src="./imgs/cr/攻略/头像/DM_20230323144758_001.JPEG">
+												<span>兰斯</span>
+											</div>
+											<div id="btnr">
+												新版本研究所13.6：龙王悠米调整 新英雄米利欧上线
+											</div>
+											<div id="time">2023-03-23</div>
+											<div id="mg-new"><img src="./imgs/cr/图标/new.png" alt=""></div>
+										</div>
+									</div>
+									<div class="nr2">
+										<div id="tleft">
+											<img src="./imgs/cr/攻略/内容/DM_20230323143853_004.PNG">
+										</div>
+										<div id="tright">
+											<div id="tx-mz">
+												<img src="./imgs/cr/攻略/头像/DM_20230323144036_004.PNG">
+												<span>教你一招</span>
+											</div>
+											<div id="btnr">
+												教你一招：6分钟教你玩会新英雄米利欧
+											</div>
+											<div id="time">2023-03-22</div>
+											<div id="mg-new"><img src="./imgs/cr/图标/new.png" alt=""></div>
+										</div>
+									</div>
+									<div class="nr3">
+										<div id="tleft">
+											<img src="./imgs/cr/攻略/内容/DM_20230323144717_003.PNG">
+										</div>
+										<div id="tright">
+											<div id="tx-mz">
+												<img src="./imgs/cr/攻略/头像/DM_20230323144758_001.JPEG">
+												<span>兰斯</span>
+											</div>
+											<div id="btnr">
+												加强推线直接登顶T1?!诡术妖姬增幅解析
+											</div>
+											<div id="time">2023-03-09</div>
+											<div id="mg-new"><img src="./imgs/cr/图标/new.png" alt=""></div>
+										</div>
+									</div>
+									<div class="nr4">
+										<div id="tleft">
+											<img src="./imgs/cr/攻略/内容/DM_20230323144717_004.PNG">
+										</div>
+										<div id="tright">
+											<div id="tx-mz">
+												<img src="./imgs/cr/攻略/头像/DM_20230323144758_001.JPEG">
+												<span>兰斯</span>
+											</div>
+											<div id="btnr">
+												新英雄米利欧上线！硬辅，一脚踢断女坦E，无伤点塔，全员水银											</div>
+											<div id="time">2023-03-08</div>
+											<div id="mg-new"><img src="./imgs/cr/图标/new.png" alt=""></div>
+										</div>
+									</div>
+									<div class="nr5">
+										<div id="tleft">
+											<img src="./imgs/cr/攻略/内容/DM_20230323144717_005.PNG">
+										</div>
+										<div id="tright">
+											<div id="tx-mz">
+												<img src="./imgs/cr/攻略/头像/DM_20230323144758_003.JPEG">
+												<span>晴空</span>
+											</div>
+											<div id="btnr">
+												一看就会：碾压对线，新版武器峡谷王者局教学！
+											</div>
+											<div id="time">2023-02-21</div>
+											<div id="mg-new"><img src="./imgs/cr/图标/new.png" alt=""></div>
+										</div>
+									</div>
+									<div class="nr6">
+										<div id="tleft">
+											<img src="./imgs/cr/攻略/内容/DM_20230323144717_006.JPEG">
+										</div>
+										<div id="tright">
+											<div id="tx-mz">
+												<img src="./imgs/cr/攻略/头像/DM_20230323144758_004.JPEG">
+												<span>魔界设计师</span>
+											</div>
+											<div id="btnr">
+												无限火力现状（lol搞笑日常动画）
+											</div>
+											<div id="time">2023-02-20</div>
+											<div id="mg-new"><img src="./imgs/cr/图标/new.png" alt=""></div>
+										</div>
+									</div>
+									<div class="nr7">
+										<div id="tleft">
+											<img src="./imgs/cr/攻略/内容/DM_20230323144717_007.PNG">
+										</div>
+										<div id="tright">
+											<div id="tx-mz">
+												<img src="./imgs/cr/攻略/头像/DM_20230323144758_001.JPEG">
+												<span>兰斯</span>
+											</div>
+											<div id="btnr">
+												研究所：新赛季更容易赢游戏的打野方法 S13野区趋势整体分析
+											</div>
+											<div id="time">2023-02-16</div>
+											<div id="mg-new"><img src="./imgs/cr/图标/new.png" alt=""></div>
+										</div>
+									</div>
+									<div class="nr8">
+										<div id="tleft">
+											<img src="./imgs/cr/攻略/内容/DM_20230323144717_008.PNG">
+										</div>
+										<div id="tright">
+											<div id="tx-mz">
+												<img src="./imgs/cr/攻略/头像/DM_20230323144758_001.JPEG">
+												<span>兰斯</span>
+											</div>
+											<div id="btnr">
+												版本答案：新版龙王大招毁天！ER隐藏机制不断Q！
+											</div>
+											<div id="time">2023-02-15</div>
+											<div id="mg-new"><img src="./imgs/cr/图标/new.png" alt=""></div>
+										</div>
+									</div>
+									<div class="nr9">
+										<div id="tleft">
+											<img src="./imgs/cr/攻略/内容/DM_20230323144717_009.PNG">
+										</div>
+										<div id="tright">
+											<div id="tx-mz">
+												<img src="./imgs/cr/攻略/头像/DM_20230323144758_001.JPEG">
+												<span>兰斯</span>
+											</div>
+											<div id="btnr">
+												新版本研究所13.3：卡萨丁奎桑提强度调整，龙王重做上线
+											</div>
+											<div id="time">2023-02-13</div>
+											<div id="mg-new"><img src="./imgs/cr/图标/new.png" alt=""></div>
+										</div>
+									</div>
+									<div class="nr10">
+										<div id="tleft">
+											<img src="./imgs/cr/攻略/内容/DM_20230323144717_010.PNG">
+										</div>
+										<div id="tright">
+											<div id="tx-mz">
+												<img src="./imgs/cr/攻略/头像/DM_20230323144758_001.JPEG">
+												<span>兰斯</span>
+											</div>
+											<div id="btnr">
+												13.1b版本T1英雄推荐：真神贾科斯 女警崛起
+											</div>
+											<div id="time">2023-02-07</div>
+											<div id="mg-new"><img src="./imgs/cr/图标/new.png" alt=""></div>
+										</div>
+									</div>
+									
+								</div>
+								<div id="wb">
+									<a href="" class="wb1">1</a>
+									<a href="">2</a>
+									<a href="">3</a>
+									<a href="">…</a>
+									<a href="">46</a>
+									<a href="">下一页</a>
+								</div>
+							</div>
+							
+							<div id="bbwf">
+								<div id="nr">
+									<div id="nr1">
+										<p>版本研究所13.6：龙王悠米调整 新英雄米利欧上线</p>
+										<p>2023-03-23</p>
+										<div class="bbnr">版本内容</div>
+									</div>
+									<div id="nr2">
+										<p>新英雄米利欧上线！硬辅，一脚踢断女坦E，无伤点塔，全队水银</p>
+										<p>2023-03-08</p>
+										<div class="bbnr">版本内容</div>
+									</div>
+									<div id="nr3">
+										<p>无限火力现状（lol搞笑日常动画）</p>
+										<p>2023-02-20</p>
+										<div class="bbnr">版本内容</div>
+									</div>
+									<div id="nr4">
+										<p>电研所：新赛季最容易赢游戏的打野方法 S13野区趋势整体分析</p>
+										<p>2023-02-16</p>
+										<div class="bbnr">版本内容</div>
+									</div>
+									<div id="nr5">
+										<p>版本研究所13.3：卡萨丁奎桑提强度调整，龙王重做上线</p>
+										<p>2023-02-13</p>
+										<div class="bbnr">版本内容</div>
+									</div>
+									<div id="nr6">
+										<p>13.1b版本T1英雄推荐：真神贾克斯 女警烬崛起</p>
+										<p>2023-02-07</p>
+										<div class="bbnr">版本内容</div>
+									</div>
+									<div id="nr7">
+										<p>楚钧：双AD下路强在哪</p>
+										<p>2023-02-06</p>
+										<div class="bbnr">版本内容</div>
+									</div>
+									<div id="nr8">
+										<p>楚钧：如何打好中路对线</p>
+										<p>2023-02-06</p>
+										<div class="bbnr">版本内容</div>
+									</div>
+									<div id="nr9">
+										<p>韩服新思路，CD刀卑尔维斯</p>
+										<p>2023-02-05</p>
+										<div class="bbnr">版本内容</div>
+									</div>
+									<div id="nr10">
+										<p>韩服新套路，CD刀纳什双修AP卡莎</p>
+										<p>2023-02-05</p>
+										<div class="bbnr">版本内容</div>
+									</div>
+								</div>
+								<div id="wb">
+									<a href="" class="wb1">1</a>
+									<a href="">2</a>
+									<a href="">3</a>
+									<a href="">…</a>
+									<a href="">21</a>
+									<a href="">下一页</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+									
+				</div>
+			</div>3
+		</div>
+	</body>
+</html>

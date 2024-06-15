@@ -1,0 +1,2038 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>新手指引</title>
+		<style>
+			* {
+				padding: 0;
+				margin: 0;
+			}
+			.clearfix:after{
+				content: '';
+				display: block;
+				height: 0px;
+				visibility: hidden;
+				clear: both;
+			}
+			.hz {
+				background-color: #f7f8f8;
+			}
+			.navm {
+				list-style: none;
+				float: left;
+				margin-left: 30px;
+				padding-top: 16px;
+				width: 55%;
+				height: 78px;
+				box-sizing: border-box;
+
+
+			}
+
+			#nav-li {
+				float: left;
+				width: 20%;
+				height: 78px;
+				text-align: center;
+
+			}
+
+			.navm li a span:nth-child(1) {
+				display: block;
+				color: #fff;
+				font-size: 18px;
+				letter-spacing: 1px;
+			}
+
+			.navm li a span:nth-child(2) {
+				display: block;
+				color: #aeaeae;
+				font-size: 11px;
+				margin-top: -1px;
+				letter-spacing: 1px;
+			}
+
+			.navm a {
+				text-decoration: none;
+
+			}
+
+			.loding {
+				float: right;
+				width: 244px;
+				height: 78px;
+				position: relative;
+			}
+
+			.loding-img {
+				float: left;
+				width: 48px;
+				height: 48px;
+				position: relative;
+				margin-top: 14px;
+				line-height: 48px;
+				text-align: center;
+				font-size: 0;
+			}
+
+			.loding-img>img {
+				width: 36px;
+				height: 36px;
+				border-radius: 50%;
+				display: inline-block;
+				vertical-align: middle;
+				height: auto;
+
+			}
+
+			.loding-text {
+				float: left;
+				margin-left: 10px;
+			}
+
+			.summoner {
+				color: #fefefe;
+				font-size: 16px;
+				line-height: 78px;
+			}
+
+			.summoner a {
+				color: #fff3d0;
+			}
+
+			.pone {
+				float: right;
+				width: 40px;
+				height: 40px;
+				line-height: 40px;
+				margin: 23px 0px 0px 0px;
+				vertical-align: middle;
+			}
+
+			.pone a {
+				display: inline-block;
+				width: 20px;
+				height: 28px;
+				text-align: center;
+				background-image: url("imgs/zjy/topfoot-spr.png");
+				background-repeat: no-repeat;
+				background-position: -303px -82px;
+
+			}
+
+			.search {
+				float: right;
+				width: 40px;
+				height: 40px;
+				text-align: center;
+				line-height: 40px;
+				margin: 20px 14px 0px 0px;
+				vertical-align: middle;
+			}
+
+			.search>a {
+				width: 21px;
+				height: 21px;
+				display: inline-block;
+				background-image: url("imgs/zjy/topfoot-spr.png");
+				background-repeat: no-repeat;
+				background-position: -380px -39px;
+			}
+
+			.bgbod {
+				width: 100%;
+				background-color: #081322;
+				height: 78px;
+				overflow: visible;
+				display: none;
+				position: relative;
+				top: 0px;
+				left: -700px;
+			}
+
+			.bgbod-show {
+				display: block;
+				animation: show 0.3s;
+				/* 设置过渡时间及命名 */
+				width: 2800px;
+				z-index: 999;
+
+			}
+
+			/* 直接过渡 */
+			@keyframes show {
+				from {
+					opacity: 0.1;
+				}
+
+				to {
+					opacity: 1;
+				}
+			}
+
+			.bgbod-box {
+				width: 30%;
+				height: 78px;
+				margin: 0px auto;
+				position: relative;
+			}
+
+			.dk2 {
+				width: 21px;
+				height: 21px;
+				display: inline-block;
+				background-image: url("../../imgs/zjy/topfoot-spr.png");
+				background-repeat: no-repeat;
+				background-position: -380px -39px;
+				position: absolute;
+				right: 70px;
+				top: 24px;
+			}
+			.gb {
+				display: inline-block;
+				width: 24px;
+				height: 24px;
+				background-image: url("../../imgs/zjy/topfoot-spr.png");
+				background-position: 84% -64%;
+			}
+			.search-t {
+				float: right;
+				width: 368px;
+				height: 40px;
+				line-height: 40px;
+				background-color: #081322;
+				box-sizing: border-box;
+				padding-left: 5px;
+				color: #fff;
+				font-size: 16px;
+				margin: -60px 321px 0px 0px;
+				border: none;
+				outline: none;
+			}
+			.pone-hover {
+				background-image: url("../../imgs/zjy/topfoot-spr.png");
+				background-position: 0 0;
+				width: 211px;
+				height: 178px;
+				position: absolute;
+				top: 55px;
+				right: 252px;
+				display: none;
+			}
+			/* 联盟二维码死定位 */
+			@media only screen and (min-width:1395px) and (max-width:1535px) {
+				.pone-hover {
+					top: 55px;
+					right: 183px;
+				}
+			}
+			@media only screen and (min-width:1537px) and (max-width:1710px) {
+				.pone-hover {
+					top: 55px;
+					right: 336px;
+				}
+			}
+			@media only screen and (min-width:1711px) and (max-width:1950px) {
+				.pone-hover {
+					top: 55px;
+					right: 442px;
+				}
+			}
+			.pone a:hover .pone-hover {
+				display: block;
+				animation: ewm 0.5s;
+			}
+			@keyframes ewm {
+				from {
+					top: 45px;
+				}
+				top {
+					top: 55px;
+				}
+			}
+			.ewm-box {
+				margin-top: 30px;
+				margin-left: 50px;
+			}
+			.ewm-box img {
+				border-radius: 8px;
+			}
+			.pone-hover>p {
+				color: #cdbe91;
+				font-size: 12px;
+				width: 100%;
+				margin-top: 10px;
+				text-align: center;
+				line-height: 20px;
+			}
+			.polo {
+				width: 50px;
+				height: 50px;
+				display: block;
+				position: absolute;
+				right: -8px;
+				bottom: -2px;
+			}
+			.lode {
+				width: 300px;
+				height: auto;
+				background-color: #000;
+				position: absolute;
+				display: none;
+				top: 0;
+				right: -38px;
+			}
+			.lode p {
+				width: 100%;
+				height: auto;
+				box-sizing: border-box;
+				padding: 0 24px;
+				font-size: 12px;
+				color: #848383;
+				text-align: center;
+			}
+			.loding:hover .lode {
+				display: block;
+				padding-top: 90px;
+				padding-bottom: 20px;
+				opacity: 0.8;
+				z-index: -1;
+				animation: lode 0.3s;
+			}
+			@keyframes lode {
+				from {
+					padding: 0px;
+				}
+				to {
+					padding-top: 90px;
+				}
+			}
+			.nav-y {
+				width: 2800px;
+				overflow: visible;
+				z-index: -11;
+				height: 354px;
+				background-color: #000;
+				opacity: 0.7;
+				position: relative;
+				top: -16px;
+				right: 898px;
+				padding: 88px 0px 32px 0px;
+				display: none;
+			}
+			.navm:hover .nav-y {
+				display: block;
+				animation: nav-x 0.2s;
+			}
+			@keyframes nav-x {
+				from {
+					padding: 0px;
+				}
+				to {
+					padding-top: 88px;
+				}
+			}
+			.y-box {
+				width: 100%;
+				max-width: 1358px;
+				min-width: 1230px;
+				height: auto;
+				margin: 0 auto;
+			}
+			.y-box_1 {
+				width: 55%;
+				overflow: visible;
+				margin-left: 161px;
+				padding-left: 1%;
+			}
+			.y-box_1 li {
+				list-style: none;
+				width: 20%;
+				float: left;
+				height: auto;
+				overflow: visible;
+			}
+			.y-box_1 li a {
+				display: block;
+				width: 100%;
+				overflow: visible;
+				line-height: 30px;
+				color: #e1e1e1;
+				font-size: 14px;
+				text-align: center;
+				position: relative;
+				vertical-align: middle;
+			}
+			.yu-N {
+				width: 14px;
+				height: 14px;
+				display: inline-block;
+				background-image: url("../../imgs/zjy/topfoot-spr.png");
+				margin: -2px 2px 0px 0px;
+				background-position: -381px -65px;
+				vertical-align: middle;
+			}
+			.yu-H {
+				width: 14px;
+				height: 14px;
+				display: inline-block;
+				background-image: url("../../imgs/zjy/topfoot-spr.png");
+				margin: -2px 2px 0px 0px;
+				background-position: -347px -84px;
+				vertical-align: middle;
+			}
+			.y-box_1 a:hover {
+				color: #e9c06c;
+			}
+			#topgg {
+				width: 1923px;
+				min-width: 1230px;
+				height: 360px;
+				overflow: hidden;
+				position: relative;
+				top: -95px;
+				margin: 0 auto;
+				background-image: url("imgs/zjy/0.jpg");
+				z-index: 0;
+			}
+			.mask {
+				width: 100%;
+				height: 131px;
+				position: absolute;
+				left: 0;
+				top: 0;
+				background: url("imgs/zjy/dark-jianbian-repeatx-0.png");
+			}
+			.look {
+				width: auto;
+				max-width: 1358px;
+				min-width: 1230px;
+				height: 100%;
+				position: relative;
+				margin: 0 auto;
+			}
+			.look>a {
+				display: block;
+				position: absolute;
+				z-index: 1;
+				left: 50%;
+				margin-left: -77px;
+				bottom: 32px;
+				background-image: url("imgs/zjy/topfoot-spr.png");
+				background-position: -216px -39px;
+				width: 160px;
+				height: 40px;
+				font-size: 0;
+			}
+			.version {
+				position: absolute;
+				z-index: 2;
+				right: 0;
+				bottom: 28px;
+				font-size: 14px;
+				color: #888787;
+			}
+			.version span {
+				color: #f5d185;
+				margin-right: 10px;
+			}
+			#body {
+				width: 100%;
+				min-width: 1358px;
+				height: auto;
+				margin: 0px auto;
+			}
+			.news {
+				width: 1358px;
+				height: 1200px;
+				margin: 0 auto;
+				padding: 40px 0px 80px 0px;
+			}
+			.tp12345 {
+				width: 1340px;
+				height: 126px;
+				background-color: #f7f8f8;
+				margin: 0 auto;
+			}
+			.tp12345>ul>li {
+				width: 186px;
+				height: 126px;
+				background-color: #e9c06c;
+				background-repeat: no-repeat;
+				margin-left: 10px;
+				background-image: url("imgs/zjy/nav.jpg");
+				float: left;
+				cursor: pointer;
+			}
+			/* 第一个元素被选中时的样式 */
+			.tp12345>ul>li.current:first-child{
+				background-position: 0px -127px;
+			}
+			.tp12345>ul>li:nth-child(2) {
+				background-position: -197px 0px;
+			}
+			/* 第二个元素被选中的背景 */
+			.tp12345>ul>li.current:nth-child(2) {
+				background-position: -197px -127px;
+			}
+			.tp12345>ul>li:nth-child(3) {
+				background-position: -396px 0px;
+			}
+			.tp12345>ul>li.current:nth-child(3) {
+				background-position: -396px -127px;
+			}
+			.tp12345>ul>li:nth-child(4) {
+				background-position: -598px 0px;
+			}
+			.tp12345>ul>li.current:nth-child(4) {
+				background-position: -598px -127px;
+			}
+			.tp12345>ul>li:nth-child(5) {
+				background-position: -794px 0px;
+			}
+			.tp12345>ul>li.current:nth-child(5) {
+				background-position: -794px -127px;
+			}
+			.st:hover {
+				filter: brightness(1.15);
+				animation: st 0.3s;
+			}
+			@keyframes st {
+				from {
+					filter: brightness(0.99);
+				}
+				to {
+					filter: brightness(1.15);
+				}
+			}
+			.gift:hover {
+				filter: brightness(1.15);
+				animation: gift 0.3s;
+			}
+			@keyframes gift {
+				from {
+					filter: brightness(0.99);
+				}
+				to {
+					filter: brightness(1.15);
+				}
+			}
+			@keyframes a {
+				from {
+					box-shadow: 0 0 0px;
+				}
+				to {
+					box-shadow: 0 0 10px #ccc;
+				}
+			}
+			.pfu {
+				float: left;
+				position: relative;
+				width: 402px;
+				height: 254px;
+				background-color: #f7f6f6;
+			}
+			.human-bot {
+				position: absolute;
+				background-image: url("../../imgs/zjy/dark-jianbian-repeatx-0.png");
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				height: 133px;
+			}
+			.pfu-bot {
+				position: absolute;
+				background-image: url("../../imgs/zjy/dark-jianbian-repeatx-0.png");
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				height: 133px;
+			}
+			@keyframes i1 {
+				from {
+					background-size: 30px 30px;
+				}
+				to {
+					background-size: 20px 22px;
+				}
+			}
+			@keyframes fire {
+				from {
+					background-position: -180px -120px;
+				}
+				to {
+					background-position: -216px -99px;
+				}
+			}
+			@keyframes jiao {
+				from {
+					background-position: -0px -120px;
+				}
+				to {
+					background-position: -193px -99px;
+				}
+			}
+			@keyframes cup {
+				from {
+					background-position: -300px 0px;
+				}
+				to {
+					background-position: -247px -46px;
+				}
+			}
+			@keyframes sm-hero {
+				from {
+					background-position: 0px -300px;
+				}
+				to {
+					background-position: -293px -72px;
+				}
+			}
+			@keyframes sm-polo {
+				from {
+					background-position: 0px -300px;
+				}
+				to {
+					background-position: -193px -12px;
+				}
+			}
+			a {
+				text-decoration: none !important;
+			}
+			.nr-nr {
+				background-color: #e3e2e2;
+				font: 12px/20px "微软雅黑", "宋体";
+				min-width: 1050px;
+				margin: 0 auto;
+				text-align: left;
+				color: #494949;
+			}
+			.tx {
+				padding: 15px 20px;
+			}
+			.tx-left {
+				display: block !important;
+				height: 100px;
+				width: 380px;
+				line-height: 100px;
+				font-size: 0;
+				text-align: left;
+				position: absolute;
+				left: 20px;
+				top: 30%;
+			}
+			.left-tx {
+				background-image: url("../../imgs/zjy/topfoot-spr.png");
+				background-repeat: no-repeat;
+				background-position: -215px 12px;
+				width: 191px;
+				height: 49px;
+				margin-right: 30px;
+				display: block;
+				float: left;
+			}
+			a {
+				text-decoration: none;
+			}
+			ul {
+				list-style: none;
+			}
+			body {
+				background-color: #eee;
+			}
+			#head {
+				width: 100%;
+				height: 78px;
+				overflow: visible;
+				position: relative;
+				z-index: 1;
+			}
+			.head-nr {
+				width: 100%;
+				max-width: 1358px;
+				min-width: 1230px;
+				margin: 0px auto;
+
+			}
+			.logo {
+				float: left;
+				margin-top: 10px;
+			}
+			@media only screen (min-width:1396.63px) and (max-width:1536px) {
+				.pone-hover {
+					top: 55px;
+					left: 0px;
+				}
+				p {
+					color: black;
+				}
+			}
+			.zj {
+				width: 1240px;
+				background-color: white;
+				margin: 35px auto;
+				border-top: 3px solid #00a887;
+				padding: 55px 40px;
+				position: relative;
+			}
+			.dw {
+				width: 100%;
+				height: 264px;
+				color: #9f9378;
+				background-color: #e3e2e2;
+				/* float: left; */
+				margin-top: 40px;
+			}
+			.dwwz {
+				width: 1263px;
+				height: 174px;
+				background-color: #e3e2e2;
+				margin: 0 auto;
+				margin-top: 45px;
+				font-size: 10px;
+			}
+			.dwwzz {
+				width: 337px;
+				height: 100px;
+				background-color: #e3e2e2;
+				float: left;
+				margin-top: 80px;
+				margin-left: -43px;
+				}
+			.dwwzy {
+				width: 719px;
+				height: 144px;
+				display: inline;
+				float: right;
+				line-height: 20px;
+				list-style: none;
+				background-color: #e3e2e2;
+				margin-right: 18px;
+				margin-top: 68px;
+				color: #9f9378;
+			}
+			.dwtp1 {
+				width: 189px;
+				height: 34px;
+				background-color: #e3e2e2;
+				float: left;
+				background-image: url("imgs/zjy/topfoot-spr.png");
+				background-position: -216px 0;
+			}
+			.dwtp2 {
+				width: 107px;
+				height: 33px;
+				background-color: #e3e2e2;
+				background-image: url("imgs/zjy/topfoot-spr.png");
+				background-size: 473px 192px;
+				background-position: -247px -89px;
+				float: right;
+				margin-top: 2px;
+			}
+			.dwwzy>p>a {
+				text-decoration: none;
+				color: #9f9378;
+			}
+			.dwwzy>p>a:hover {
+				text-decoration: underline;
+			}
+			.dwwzy>a:hover {
+				text-decoration: underline;
+			}
+			.dwwzy>a {
+				text-decoration: none;
+				color: #9f9378;
+			}
+			.hztb {
+				width: 15px;
+				height: 14px;
+				float: left;
+				margin-top: 3px;
+				background-image: url(imgs/zjy/gswj.png);
+				background-size: 100%;
+			}
+			.zj1 {
+				height: 304px;
+				background-color: white;
+				
+			}
+			.zj2 {
+				height: 530px;
+				margin-top: 100px;
+				border-top:  1px solid #eee;
+				padding-top: 70px;
+			}
+			.zj .zhou{
+				display: none;
+			}
+			.zj2 .show{
+				display:block;
+				}
+			.zj1y {
+				width: 533px;
+				height: 234px;
+				background-color: white;
+				float: right;
+			}
+			.zj1y>p,.zj2z>p,.zj31yy>p,.zj51yy>p,.zj52zz>p{
+				padding-bottom: 15px;
+				text-indent: 2em;
+				font-size: 14px;
+				color: #666;
+				margin: 0 auto;
+				background: white;
+			}
+			.zj31yy>ul{
+				/* width: 532px; */
+				height: 69px;
+			}
+			.zj31yy>p>em{
+				display: inline-block;
+				    padding: 0 3px;
+				    background: #dd5238;
+				    color: #fff;
+				    text-indent: 0;
+			}
+			.zj1y>h2,.zj2z>h2,.zj1y>h2,.zj32>h2,.zj22>h2,.zj21yy>h2,.zj23zz>h2,.zj42zz>h2,.zj51yy>h2,.zj51zz>h2,.zj53>h2,.zj54>h2{
+				padding-bottom: 10px;
+				font-size: 35px;
+			}
+			.zj23yy>h2:nth-child(1){
+				padding-bottom: 10px;
+				font-size: 35px;
+			}
+			.zj2z {
+				width: 533px;
+				height: 278px;
+				float: left;
+				background-color: white;
+			}
+			.zj2y {
+				width: 455px;
+				height: 282px;
+				float: right;
+				background-image: url("imgs/zjy/newbie_01.webp");
+			}
+			.zjyz{
+				width: 455px;
+				height: 282px;
+				float: left;
+				background-image: url("imgs/zjy/newbie_05.webp");
+			}
+			.zj21y {
+				width: 455px;
+				height: 282px;
+				float: right;
+				background-image: url("imgs/zjy/newbie_02.webp");
+			}
+			.zj22y {
+				width: 455px;
+				height: 282px;
+				float: right;
+				background-image: url("imgs/zjy/newbie_03.jpg");
+			}
+			.zj23y {
+				width: 455px;
+				height: 282px;
+				float: right;
+				background-image: url("imgs/zjy/newbie_04.webp");
+			}
+			.zj24y {
+				width: 455px;
+				height: 282px;
+				float: right;
+				background-image: url("imgs/zjy/newbie_05.webp");
+			}
+			.zj2z>h2 {
+				margin-bottom: 10px;
+			}
+			.lkk {
+				width: 532px;
+				height: 62px;
+				background-color: white;
+			}
+			.lkk1,.lkk2 {
+				width: 180px;
+				height: 42px;
+				background-color: white;
+				float: left;
+				margin-right: 10px;
+				margin-top: 20px;
+				background-image: url("imgs/zjy/page.png");
+				background-position: 516px 2px;
+				line-height: 42px;
+				color: white;
+			}
+			.lkk1>p {
+				margin-left: 10px;
+			}
+			.lkk2>p {
+				margin-left: 20px;
+			}
+			.zj3>ul {
+				margin-left: 66px;
+			}
+			.zj3>ul>li {
+				float: left;
+				width: 219px;
+				height: 2px;
+				border-top: 1px solid #d6d6d6;
+				border-bottom: 1px solid #d6d6d6;
+				background: #e4e4e4;
+			}
+			.zj3>ul>li:nth-child(5){
+				border-color: #fff;
+				background-color: #fff;
+			}
+			.zj3>ul>li>span {
+				width: 19px;
+				height: 19px;
+				border-radius: 50px;
+				border: solid white 1px;
+				background-image: url("imgs/zjy/page.png");
+				background-position: 65px 79px;
+				float: left;
+				margin-top: -8px;
+			}
+			.zj3>ul>li>i {
+				width: 19px;
+				height: 19px;
+				background-image: url("imgs/zjy/page.png");
+				background-position: 99px 37px;
+				transform: scale(1.2);
+				margin-top: -30px;
+			}
+			.xstb11:hover+.xstb111 {
+				display: block;
+			}
+			
+			.xstb22:hover+.xstb222 {
+				display: block;
+			}
+			
+			.xstb33:hover+.xstb333 {
+				display: block;
+			}
+			
+			.xstb44:hover+.xstb444 {
+				display: block;
+			}
+			
+			.xstb55:hover+.xstb555 {
+				display: block;
+			}
+			
+			.zj3>ul>li>span:hover {
+				background-image: url("imgs/zjy/page.png");
+				background-position: 65px 59px;
+			}
+			.dh>a {
+				float: left;
+				list-style: none;
+				text-decoration: none;
+			}
+			.dh>a:nth-child(2) {
+				color: #a9a9a9;
+			}
+
+			.dhtb1,.dhtb2 {
+				float: left;
+			}
+			.dhtb1 {
+				width: 16px;
+				height: 16px;
+				margin-top: 40px;
+				margin-left: 10px;
+				background-image: url("imgs/zjy/comm-spr.png");
+				background-position: -343px -72px;
+			}
+			.dhtb2 {
+				background-image: url("imgs/zjy/comm-spr.png");
+				background-position: -387px -46px;
+				width: 5px;
+				height: 8px;
+				margin-left: 17px;
+				margin-top: 44px;
+			}
+			.dh {
+				width: 1324px;
+				height: 96px;
+				line-height: 96px;
+				background-color: #f7f8f8;
+				margin: 0 auto;
+				font-size: 14px;
+				margin-top: -60px;
+			}
+			.zj4 {
+				width: 1158px;
+				height: 247px;
+				background-color: white;
+			}
+			.zj4>span {
+				list-style: none;
+				text-decoration: none;
+				width: 346px;
+				height: 71px;
+				background-color: blue;
+				float: left;
+				margin-top: 200px;
+				margin-left: 400px;
+				background-image: url("imgs/zjy/page.png");
+			}
+			.zj21 {
+			/* 	background-color: blue; */
+				height: 481px;
+				/* background: url("imgs/zjy/downbg.webp"); */
+			}
+			.zj22 {
+				/* background-color:pink; */
+				height: 232px;
+				border-bottom: 1px solid #eee;
+			padding-bottom: 45px;
+			}
+			.zj22>ul>li{
+				float: left;
+				    width: 20%;
+				    text-align: center;
+			}
+			.zj22>ul>li>img{
+			display: block;
+			    margin-bottom: 10px;
+			    border: 1px solid #eee;
+				margin-left: 40px;;
+					}
+			.zj23{
+				/* background-color: aqua; */
+				height: 1006px;
+				margin-top: 40px;
+			}
+			.zj44 {
+				width: 1240px;
+				height: 1289px;
+				background-color: yellow;
+				margin: 0 auto;
+				position: relative;
+				top: -3500px;
+				border-top: 3px solid #00a887;
+			}
+			.zj31yy>p>i{
+				height: 20px;
+				width: 1.25rem;
+				background-repeat: no-repeat;
+				    display: inline-block;
+				   background-image: url("imgs/zjy/page.png");
+				   background-position: -785px -80px;
+				   /* margin-top: 10px; */
+			}
+			.zj31yy>ul>li{
+				float: left;
+				    width: 95px;
+				    height: 40px;
+				    padding-top: 9px;
+				    margin-right: 5px;
+				    background: #00a887;
+				    color: #fff;
+				    text-align: center;
+				    font-size: 12px;
+				    line-height: 30px;
+				}
+			
+			.zj31yy{
+				width:532px ;
+				height: 237px;
+				float: right;
+			}
+			.zj31{
+				height: 304px;
+			}
+			.zj32{
+				height: 356px;
+				    border-top: 1px solid #eee;
+			}
+			.zj32>ul>li{
+				float: left;
+				    margin: 25px 15px 0 0;
+				    width: 168px;
+				    text-align: center;
+				    cursor: pointer;
+					background-color: darkslategray;
+					color: white;
+			}
+			.zj55 {
+			
+				background-color: green;
+			
+				border-top: 3px solid #00a887;
+			}
+
+			.zjd1 {
+				height: 358px;
+				width: 100%;
+				background-color: chartreuse;
+				padding-top: 40px;
+			}
+			/* 点击切换的大盒子 */
+			.zj .box{
+				height: 100%;
+				width: 100%;
+				display: none;
+			}
+			.zj .select{
+				display: block;
+			}
+			.zj21zz{
+				width: 707px;
+				    height: 458px;
+				float: left;
+				/* background-color: black; */
+				background-image: url("imgs/zjy/downbg.webp");
+			}
+			.zj21zz>a{
+			width: 180px;
+			height: 42px;
+			background-color: aqua;
+			float: left;
+			background-repeat: no-repeat;
+			    display: inline-block;
+			    background-image: url("imgs/zjy/page.png");
+				background-position: -347px 0;
+				color: white;
+				line-height: 42px;
+				margin-left: 40px;
+				margin-top: 420px;
+				font-size: 10px;
+				}
+				.zj21zz>a:nth-child(2){
+					background-position: 0 -72px;
+				}
+				.zj21yy{
+					height: 415px;
+					/* background-color: cadetblue; */
+					float: right;
+					margin-top: 69px;
+					margin-right: 80px;
+				}
+				.zj22>ul>li>p>i{
+					display: inline-block;
+					    margin-right: 2px;
+					    width: 20px;
+					    height: 20px;
+					    line-height: 20px;
+					    background-color: #02a787;
+					    border-radius: 10px;
+					    color: #fff;
+					    font-style: normal;
+				}
+				.zj23zz{
+					width: 840px;
+					height: 1006px;
+					/* background-color: cornflowerblue; */
+					float: left;
+					margin-left: 40px;
+				}
+				
+	
+				.kcl{
+				float: left;
+				margin-left: 80px;
+				}
+				#fsl{
+					margin-top: -21px;
+				}
+				.fljjff{
+				float: left;
+	}
+				.zj23yy{
+					width: 225px;
+					height: 182px;
+					/* background-color: cornflowerblue; */
+					float:right;
+					margin-right: 40px;
+					font-size: 14px;
+				}
+			.zj23yybf{
+					width: 18px;
+					    height: 18px;
+						float: left;
+						background-color: blueviolet;
+					    background-position: -806px -79px;
+					    vertical-align: middle;
+						background-image: url("imgs/zjy/page.png");
+						margin-left:-1px ;
+						}
+				.zj23yy>p>a{
+					color: #666;
+					    border-bottom: 1px dotted #666;
+						text-decoration: none;
+				}
+				.zj23yy>p>span{
+					color: #999;
+				}
+				.zj41{
+					height: 359px;
+					 border-bottom: 1px dotted #eee;
+				}
+				.zj41zz{
+					width: 567px;
+					height: 288px;
+					float: left;
+				}
+				.zj41yy{
+					width: 532px;
+					height: 118px;
+					float: right;
+					padding-bottom: 15px;
+					    text-indent: 2em;
+						font-size: 14px;
+						color: #666;
+						
+				}
+				.zj42{
+					height: 359px;
+					padding-top: 60px;
+					 border-bottom: 1px dotted #eee;
+				}
+				.zj42yy{
+					width: 567px;
+					height: 288px;
+					float: right;
+				}
+				.zj42zz{
+					width: 508px;
+					    height: 238px;
+					    float: left;
+						
+					    padding-bottom: 15px;
+					    text-indent: 2em;
+					    font-size: 14px;
+					    color: #666;
+				}
+				.zj43{
+					height: 370px;
+					padding-top: 60px;
+				}
+				.zj43zz{
+					width: 508px;
+					    height: 238px;
+					    float: left;
+					    padding-bottom: 15px;
+				}
+				.zj43yy{
+					width: 567px;
+					height: 288px;
+					float: right;
+					margin-top: 48px;
+					
+				}
+				.zj51{
+					height: 360px;
+					/* background-color: aqua; */
+					padding: 40px;
+					border-bottom: 1px dotted #eee;
+				}
+				.zj51zz{
+					height: 288px;
+					width: 566px;
+					float: left;
+					/* background-color: aquamarine; */
+				}
+				.zj51yy{
+					width: 531px;
+					height: 245px;
+					float: right;
+					/* background-color: aquamarine; */
+					}
+					
+					.zj51tp{
+						width: 180px;
+						height: 42px;
+						background-image: url("imgs/zjy/page.png");
+						background-position: -496px -40px;
+						float: left;
+						color: white;
+						line-height: 42px;
+						font-size: 15px;
+						margin-top: 30px;
+						
+					}
+					.zj52{
+						height: 358px;
+						margin-top:40px ;
+							border-bottom: 1px dotted #eee;
+					}
+					.zj52zz{
+						width: 532px;
+						height: 229px;
+						/* background-color: blueviolet; */
+					}
+					.zj52tb>span{
+						width: 180px;
+						height: 42px;
+						background-image: url("imgs/zjy/page.png");
+						background-position: -496px -40px;
+						float: left;
+						margin-left: 10px;
+						color: white;
+						line-height: 42px;
+						font-size: 15px;
+						margin-top: 20px;
+						
+					}
+					.zj52yy{
+						width: 454px;
+						height: 287px;
+						float: right;
+						/* background-color: blue; */
+						margin-top: -230px;
+					
+					}
+					.zj53{
+							border-bottom: 1px dotted #eee;
+							height: 300px;
+					}
+					.zj53>ul>li{
+						float: left;
+						width: 221px;
+						height: 184px;
+						    text-align: center;
+						    padding-right: 43px;
+							}
+							.zj53>ul>li>p>a{
+								width: 180px;
+								height: 42px;
+								background-position: -347px 0;
+								background-repeat: no-repeat;
+								background-image: url("imgs/zjy/page.png");
+								display:block;
+								margin-left: 20px;
+								color: white;
+								line-height: 42px;
+								font-size: 12px;
+								margin-top: 20px;
+							}
+							.flflfl{
+								width: 180px;
+								height: 42px;
+								margin-top: 20px;
+								
+								background-repeat: no-repeat;
+								background-image: url("imgs/zjy/weibo.jpg");
+								display:block;
+								margin-left: 30px;
+							}
+		</style>
+		<!-- 引入jquer的脚本库 -->
+		<script src="jquery.minn.js"></script>
+		<script>
+			$(()=>{
+				//新手指定切换的部分添加点击事件
+				$(".tp12345 li").click(function(){
+					//获取当前点击的li元素，在整个li当中的索引位置
+					let index = $(".tp12345 li").index($(this));
+					//删除current样式
+					$(".tp12345 li.current").removeClass("current");
+					//给当前选中的li添加current样式
+					$(this).addClass("current");
+					//切换下面的box盒子
+					$(".zj .select").removeClass("select");
+					$(".zj .box:eq("+index+")").addClass("select");
+				})
+				
+				//给第一个大盒子中的悬浮效果做切换
+				$(".zj3 span").hover(
+					function(){
+						//获取当前i所在li的索引
+						let parentLI = $(this).parents("li");
+						let index = $(".zj3 li").index(parentLI);
+						$(".zj2 .show").removeClass("show");
+						$(".zj2 .zhou:eq("+index+")").addClass("show");
+					},
+					function(){
+						
+					}
+				)
+			})
+		</script>
+	</head>
+	<body>
+		<div class="hz">
+			<div id="head">
+				<!-- 导航栏内容 -->
+				<div class="head-nr">
+					<!-- 跳转首页 -->
+					<a class="logo" href="./英雄联盟.html" title="英雄联盟官网"><img src="imgs/zjy/新手引导.png" alt="英雄联盟"></a>
+					<!-- 游戏导航栏 -->
+					<ul class="navm">
+						<li id="nav-li"><a href="">
+								<span>游戏资料</span>
+								<span>GAME INFO</span>
+							</a></li>
+						<li id="nav-li"><a href="">
+								<span>商城/合作</span>
+								<span>STORE</span>
+							</a></li>
+						<li id="nav-li"><a href="">
+								<span>社区互动</span>
+								<span>COMMUNITY</span>
+							</a></li>
+						<li id="nav-li"><a href="">
+								<span>赛事官网</span>
+								<span>ESPORTS</span>
+							</a></li>
+						<li id="nav-li"><a href="">
+								<span>自助系统</span>
+								<span>SYSTEM</span>
+							</a></li>
+						<!-- 导航子菜单 -->
+						<div class="nav-y">
+							<div class="y-box">
+								<ul class="y-box_1">
+									<li>
+										<a href="">游戏下载</a>
+										<a href="">新手指引</a>
+										<a href="">资料库</a>
+										<a href="">
+											<div class="yu-N"></div>
+											云顶之奕
+										</a>
+										<a href="">
+											<div class="yu-N"></div>
+											攻略中心
+										</a>
+										<a href="">开发者基地</a>
+										<a href="">海克斯战利品库</a>
+										<a href="">英雄联盟宇宙</a>
+									</li>
+									<li>
+										<a href="">点券充值</a>
+										<a href="">
+											<div class="yu-H"></div>
+											道聚城
+										</a>
+										<a href="">周边商城</a>
+										<a href="">LOL桌游</a>
+										<a href="">网吧特权</a>
+										<a href="">电竞小说</a>
+									</li>
+									<li>
+										<a href="视频中心.html">视频中心</a>
+										<a href="">官方微信</a>
+										<a href="">官方微博</a>
+										<a href="">玩家服务</a>
+										<a href="">
+											<div class="yu-N"></div>
+											LOL组队专区
+										</a>
+										<a href="">
+											<div class="yu-N"></div>
+											作者入驻计划
+										</a>
+										<a href="">
+											<div class="yu-N"></div>
+											英雄联盟素材库
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<div class="yu-H"></div>
+											LPL职业联赛
+										</a>
+										<a href="">德玛西亚杯</a>
+										<a href="">全球总决赛</a>
+										<a href="">季中冠军赛</a>
+										<a href="">LDL发展联赛</a>
+										<a href="">城市英雄争霸赛</a>
+										<a href="">全国高校联赛</a>
+										<a href="">
+											<div class="yu-N"></div>
+											云顶之奕公开战
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<div class="yu-H"></div>
+											图标自主领取
+										</a>
+										<a href="">
+											<div class="yu-N"></div>
+											转区系统
+										</a>
+										<a href="">
+											<div class="yu-H"></div>
+											封号查询
+										</a>
+										<a href="">账号注销</a>
+										<a href="">
+											<div class="yu-N"></div>
+											信誉分系统
+										</a>
+										<a href="">服务器状态查询</a>
+										<a href='秩序殿堂.html'>秩序殿堂</a>
+										<a href="">峡谷之巅</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</ul>
+					<!-- 登录  -->
+					<div class="loding">
+						<div class="loding-img">
+							<img src="imgs/zjy/default.png" alt="">
+						</div>
+
+						<div class="loding-text">
+							<p class="summoner">亲爱的召唤师，欢迎<a href="" title="登录">登录</a></p>
+							<!-- 登录文字 -->
+
+						</div>
+						<div class="lode">
+							<p>登录并且绑定大区后才可以查看到您的具体信息哦
+								<br />
+								(包括战绩、资产、声望)
+							</p>
+							<p>官网个人信息显示略有延迟，请以游戏数据为准</p>
+						</div>
+					</div>
+					<!-- 手机掌上联盟 -->
+					<span class="pone">
+						<a>
+							<!-- 联盟二维码 -->
+							<div class="pone-hover">
+								<div class="ewm-box" style="width: 110px;height: 110px;">
+									<img style="width: 110px;height: 110px;" src="imgs/zjy/zm-qrcode.jpg">
+								</div>
+								<p>扫码下载掌上英雄联盟</p>
+								<img class="polo" src="imgs/tht/polo.gif" />
+							</div>
+						</a>
+					</span>
+
+					<!-- 搜索 -->
+					<span class="search" href="">
+						<a class="dk" title="搜索"></a>
+					</span>
+					<!-- 搜索蒙版 -->
+					<div class="bgbod">
+						<div class="bgbod-box">
+							<a class="dk dk2" title="点击搜索"></a>
+							<div class="gb-box">
+								<a class="gb" title="关闭搜索"></a>
+							</div>
+							<input class="search-t" type="text" placeholder="搜索 lol.qq.com" />
+
+						</div>
+					</div>
+
+
+				</div>
+
+			</div>
+			<!-- 头部下面的广告 -->
+			<div id="topgg">
+				<!-- 蒙版 -->
+				<div class="mask"></div>
+				<!-- 查看详细 -->
+				<div class="look">
+					< a href="">查看详细</ a>
+					<!-- ；游戏的版本 -->
+					<div class="version">
+						当前游戏版本:
+						<span>Ver 13.5</span>
+						<a class="more">详细版本</ a>
+					</div>
+				</div>
+			</div>
+			<div class="dh">
+				<i class="dhtb1"></i>
+				<a href="">&nbsp;&nbsp;&nbsp;英雄联盟首页</a>
+				<i class="dhtb2"></i>
+				<a>&nbsp;&nbsp;&nbsp;&nbsp;新手指引</a>
+			</div>
+			<div class="tp12345">
+				<ul>
+					<li id="tp11" class="current"><a></a></li>
+					<li id="tp22"><a></a></li>
+					<li id="tp33"><a></a></li>
+					<li id="tp44"><a></a></li>
+					<li id="tp55"><a></a></li>
+				</ul>
+			</div>
+			<div class="zj" id="axbb0" onclick="axbb00">
+			<div class="box select">
+				<div class="zj1">
+					<div class="zjyz"></div>
+					<div class="zj1y">
+						<h2>什么是英雄联盟？</h2>
+						<p>英雄联盟（League of Legends）是由美国Riot
+							Games开发，腾讯游戏运营的全新英雄对战网游。英雄联盟的主创团队由各著名游戏公司的核心美术、策划、程序人员组成，他们打造了游戏中风格特色各异的英雄，加入更加丰富的物品合成系统、地图玩法、天梯匹配机制，以及独创的“召唤师”技能、符文、天赋组合，让玩家感受不一样的英雄对战网游。
+						</p>
+						<p>在游戏中，玩家将扮演一位召唤者，并选择你所信任的联盟国进入这个游戏的正义领域，为了控制瓦罗然的权利而奋战。在这个联盟中只有一条规则：胜者就是一切！</p>
+					</div>
+				</div>
+				<div class="zj2">
+					<div class="zhou show">
+						<div class="zj2z">
+							<h2>全新英雄对战网游</h2>
+							<p>英雄联盟中拥有的海量英雄及皮肤让人印象深刻——这些英雄不仅在外观上风格迥异，甚至个个都有自己独特的性格和脾气，例如：正气凛然的无畏先锋军团领袖—德玛西亚之力盖伦、意志坚强的弗雷尔卓德部族领袖—寒冰射手艾希、乐于钻研的魔法学者—流浪法师瑞兹……除此之外，你还可以在英雄联盟中看到代表不同地域文化特色的角色或皮肤，其中包括中国武术大师、北欧冰雪巨人、日本忍者、古埃及神话角色等。
+							</p>
+							<p>在游戏中，身为召唤师的玩家在每局游戏中都将召唤一位英雄帮助自己进行战斗。目前已经有许多英雄协助他们达成目标，在英雄联盟中完成各自心中的正义之战！我们也深信，在英雄联盟超过100位英雄中，总有一个是合适你的！
+							</p>
+							<p>英雄，为你而战！</p>
+							<p>注：英雄联盟每周有13位免费英雄可供使用。</p>
+							<div class="lkk">
+								<div class="lkk1">
+									<p>寻找您喜爱的英雄</p>
+								</div>
+								<div class="lkk2">
+									<p>查看所有英雄</p>
+								</div>
+							</div>
+						</div>
+						<div class="zj2y"></div>
+					</div>
+					<div class="zhou">
+						<div class="zj2z">
+							<h2>真正的易于上手 难于精通</h2>
+							<p>英雄联盟非常注重游戏上手难度，我们希望让更多用户能够快速了解它，进而认识它，并且爱上它。与传统的英雄对战网游相比，英雄联盟取消了“反补”、“英雄死亡掉落金钱”、“法球效果”等设定，在保留游戏核心玩法的基础上，加入更易特色的召唤师技能、符文、天赋，以及更便捷的匹配机制，让英雄联盟真正变得“易于上手”。
+							</p>
+							<p>与此同时，召唤师技能、符文、天赋搭配带来的可变性让每一位玩家都能按照自己的风格打造英雄，而英雄联盟本身所要求的团队协作能力以及竞技性让它极具可玩性，想成为高手可不是什么简单的事。
+							</p>
+						</div>
+						<div class="zj21y"></div>
+					</div>
+					<div class="zhou">
+						<div class="zj2z">
+							<h2>快速匹配 不惧掉线</h2>
+							<p>英雄联盟拥有一套完善的匹配机制，系统会根据玩家的历史游戏战绩来判断他的水平，并以此匹配实力相当的玩家。我们希望匹配机制能给用户带来更好的游戏体验，并在维持公平的前提下使战斗更加刺激，充分享受游戏的乐趣！
+							</p>
+							<p>面临掉线，你会怎么做？放弃掉一场精彩的战斗？或是直接关掉游戏？这些都不是我们想要的。英雄联盟的“断线重连”机制可以使玩家自豪地对掉线说“拜拜”，无需担心因掉线毁掉一局精彩的游戏。
+							</p>
+						</div>
+						<div class="zj22y"></div>
+					</div>
+					<div class="zhou">
+						<div class="zj2z">
+							<h2>引领电子竞技风潮</h2>
+							<p>作为全球最火的电子竞技游戏之一，英雄联盟在2013年10月结束的第三赛季（S3）世界总决赛上创造了新的记录，来自世界各地的14支顶尖战队共同争夺2,000,000美元奖金以及世界冠军的荣誉，中国战队“皇族”在决赛中不敌韩国“SKT”，最终夺得亚军。据统计，共有超过3200万的玩家通过网络、数字电视等方式观看了比赛。
+							</p>
+							<p>在中国，由腾讯打造的英雄联盟职业联赛（LOL Pro League，简称LPL）同样万众瞩目，这里代表了中国的英雄联盟最高竞技水平。在比赛期的每个周末，你都能欣赏到由WE、OMG、iG、皇族等知名职业战队带来的精彩对决。对所有职业选手而言，这里是梦想的殿堂！
+							</p>
+						</div>
+						<div class="zj23y"></div>
+					</div>
+					<div class="zhou">
+						<div class="zj2z">
+							<h2>全球同时在线人数最高的网络游戏</h2>
+							<p>腾讯公司董事会主席兼首席执行官马化腾在接受媒体访问时提到，“由美国Riot Games制作的竞技对战网游《英雄联盟》最高同时在线已突破500万，在2012年底全球总注册用户数更是超过7000万，玩家的狂热让这款上市仅三年的产品迅速横扫全球，成为目前全世界第一大线上游戏。”
+							</p>
+							<p>在2009年底，由GAMESPY玩家投票，《英雄联盟》获得年度最佳PC游戏；2010年在全球最大的游戏网站IGN的评选中，又又赢得了“玩家最喜爱多人游戏奖”和“年度策略游戏奖”。在2010年下半年的2大游戏评选中，《英雄联盟》囊获了GCD五项大奖，同时获得金摇杆奖年度最佳网络游戏。LOL凭借它的出色游戏设计和超强的竞技性，获得了玩家和媒体的一致好评。
+							</p>
+						</div>
+						<div class="zj24y"></div>
+					</div>
+				</div>
+				<div class="zj3">
+					<ul class="clearfix">
+						<li>
+							<span class="xstb11"></span>
+							<i class="xstb111"></i>
+						</li>
+						<li>
+							<span class="xstb22"></span>
+							<i class="xstb222"></i>
+						</li>
+						<li>
+							<span class="xstb33"></span>
+							<i class="xstb333"></i>
+						</li>
+						<li>
+							<span class="xstb44"></span>
+							<i class="xstb444"></i>
+						</li>
+						<li>
+							<span class="xstb55"></span>
+							<i class="xstb555"></i>
+						</li>
+					</ul>
+				</div>
+				<div class="zj4">
+					<span></span>
+				</div>
+			</div>
+			<div class="box"><!-- 二号盒子-->
+				<div class="zj21">
+					<div class="zj21zz">
+						<a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;查看电脑配置要求</a>
+						<a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;立即下载游戏</a>
+					</div>
+					<div class="zj21yy">
+						<h2>下载与安装《英雄联盟》</h2>
+						<p>
+							在开始你的召唤师之旅前，
+							<br />
+							你需要确认自己下载并且安装了《英雄联盟》的客户端。
+							<br />
+							具体流程如下：
+							<br />
+						</p>
+						<br />
+						<div class="zj21tp">
+							<img src="imgs/zjy/downstep.png"/>
+						</div>
+					</div>
+				</div>
+				<div class="zj22">
+					<h2>&nbsp;&nbsp;&nbsp;&nbsp;安装流程</h2>
+				
+				<ul>
+					<li>
+						<img src="imgs/zjy/newbie_06.jpg"/>
+						<p>
+							<i>1</i>
+							下载客户端
+						</p>
+					</li>
+					<li>
+						<img src="imgs/zjy/newbie_07.jpg"/>
+						<p>
+							<i>2</i>
+							开始安装
+						</p>
+					</li>
+					<li>
+						<img src="imgs/zjy/newbie_08.webp"/>
+						<p>
+							<i>3</i>
+							接受协议
+						</p>
+					</li>
+					<li>
+						<img src="imgs/zjy/newbie_09.webp"/>
+						<p>
+							<i>4</i>
+							安装中
+						</p>
+					</li>
+					<li>
+						<img src="imgs/zjy/newbie_10.jpg"/>
+						<p>
+							<i>5</i>
+							完成安装
+						</p>
+					</li>
+				</ul>
+				</div>
+				<div class="zj23">
+					<div class="zj23zz">
+						<h2>常见问题</h2>
+						<dl>
+							<dt>
+								<b>问题：</b>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;英雄联盟对电脑配置有什么要求？
+							</dt>
+							<dd>
+								<b>解决方法：</b>
+								<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;请您点击该链接了解关于配置要求的更多详情 //kf.qq.com/faq/120322fu63YV130422u2QFbE.html</p>
+							</dd>
+						</dl>
+						<dl>
+							<dt>
+								<b>问题：</b>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;英雄联盟登录提示“遇到未知错误”，怎么办？
+							</dt>
+							<dd>
+								<b>解决方法：</b>
+								<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;请您尝试以下方法：</p>
+								<p class="kcl">
+									1、请您尝试清理IE浏览器缓存之后，再登录游戏；（清理方法请查看：//ctc.qzonestyle.gtimg.cn/qzone/vas/app/app_canvas/browser/ie.htm）<br />
+									2、卸载英雄联盟客户端，再登录游戏下载页面lol.qq.com/download.shtml下载安装最新版本的完整客户端；<br />
+									3、登录游戏补丁下载页面lol.qq.com/download.shtml下载安装最新版本的手动更新包，更新完成后用电脑桌面生成的快捷方式进入游戏；<br />
+									4、删除桌面的英雄联盟快捷方式，在英雄联盟安装路径上找到：“英雄联盟\TCLS\Client.exe”应用程序生成桌面的快捷方式，使用这个快捷方式进入游戏。<br />
+								</p>
+							</dd>
+						</dl>
+						<dl>
+							<dt>
+								<b>问题：</b>
+								&nbsp;&nbsp;&nbsp;&nbsp;英雄联盟游戏崩溃如何处理？
+							</dt>
+							<dd>
+								<b>解决方法：</b>
+								<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;若您出现游戏崩溃的情况，请尝试以下方法：</p>
+								<p class="kcl">
+									1、确保您所在的电脑上不存在任何第三方辅助软件。比如：盒子、大脚等插件；<br />
+									2、请将您的显卡驱动升级到最新版本；<br />
+									3、请您卸载英雄联盟客户端并重新下载最新完整客户端。<br />
+									4、检查防火墙等安全软件的设置是否阻止了游戏连接，游戏中关闭其他不需要的程序，如暂停运行类似BT、迅雷等下载工具；<br />
+									5、在网络条件良好的空闲时段进行尝试或更换网络环境后进行尝试；<br />
+									6、用杀毒软件查询一下是否存在一些不安全的软件；<br />
+									7、如有出现以下错误报告的时候，请您选择send error report，以便我们更好的定位该问题。<br />
+								</p>
+							</dd>
+						</dl>
+						<dl>
+							<dt>
+								<b>问题：</b>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;为什么英雄联盟（LOL）进入游戏的时候一直黑屏？
+							</dt>
+							<dd>
+								<b>解决方法：</b>
+								<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;请您根据以下步骤解决</p>
+								<p class="kcl">
+									1、请您不要使用第三方插件（大脚、盒子等），第三方插件会修改您客户端的文件，可能导致游戏崩溃；<br />
+									2、下载官网最新升级补丁，地址：//lol.qq.com/download.shtml；<br />
+									3、在“英雄联盟”的根目录下面找到“data.ini”这个文件，打开，将版本的最后一个版本号改为前一个版本号，如（v3.0.7.5就改成v3.0.7.4；v3.0.7.3就改成v3.0.7.2；）
+									4、安装您所下载最新升级补丁尝试。<br />
+									如果问题持续，请您检查您的本地网络是否正常，或者可以将客户端重新安装在其他盘符尝试。
+									花屏/白屏的解决方法：若出现白屏/花屏的情况，请您更新一下您的显卡驱动，并更新FLASH控件，登录游戏尝试，若问题持续请您重新下载安装客户端尝试。
+									蓝屏的解决方法：出现蓝屏的情况，还请您前往官网对比运行英雄联盟所需的电脑配置要求，并且检查您的电脑硬件是否正常。<br />
+								</p>
+							</dd>
+						</dl>
+						<dl>
+							<dt>
+								<b>问题：</b>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;自动更新游戏时卡在一个地方很久都没动，应该怎么办？
+							</dt>
+							<dd>
+								<b>解决方法：</b>
+								<p class="kcl" id="fsl">出现这种问题很可能是因为您使用过第三方插件修改过客户端（如换肤），导致需要下载整个资源包，进度长时间停留在此，其实更新依然在进行，没有失败。建议玩家不要自行修改客户端资源。</p>
+							</dd>
+						</dl>
+						<dl>
+							<dt>
+								<b>问题：</b>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在windows7操作系统下，用户在安装客户端时如果遇到报错，提示“请求的操作需要提升”怎么办？
+							</dt>
+							<dd>
+								<b class="fljjff">解决方法：</b>
+								<p class="fljjff">请使用管理员身份运行安装客户端即可。</p>
+							</dd>
+						</dl>
+					</div>
+					<div class="zj23yy">
+						<h2>联系客服</h2>
+						<p>
+							<i class="zj23yybf"></i>
+							<a>&nbsp;QQ在线咨询</a>
+							<span>请确保您已启动QQ</span>
+						</p>
+						<p>
+							<i class="zj23yybf"></i>
+							<a>&nbsp;Q游助手</a>
+							<span>玩家自助查询平台</span>
+							
+						</p><br/>
+						<h2>客服电话</h2>
+						<p>
+							<img src="imgs/zjy/down_number.png"/>
+						</p>
+					</div>
+				</div>
+				<div class="zj4">
+					<span></span>
+				</div>
+			</div>
+			<div class="box"><!-- 三号盒子 -->
+				<div class="zj31">
+					<div class="zj31zz"></div>
+					<div class="zj31yy">
+						<h2>初识《英雄联盟》</h2>
+						<p>首次进入游戏的玩家，系统会提示他选择自己的游戏水平，目前共分为4个等级，分别为</p>
+						<ul>
+							<li>我是新手</li>
+							<li>我玩过英雄对战游戏</li>
+							<li>我是新手</li>
+							<li>我是大湿</li>
+						</ul>
+						<p>
+							<i></i>
+							我们强烈建议新手玩家选择等级 
+							<em>我是新手</em> 通过游戏中的新手教程来了解基础操作。
+						</p>
+					</div>
+				</div>
+				<div class="zj32">
+					<h2>新手不坑爹！快速成长必看指南</h2>
+					<ul>
+						<li>
+							<img src="imgs/zjy/newbie_11.jpg"/>
+							<p>LOL常用词汇</p>
+						</li>
+						<li>
+							<img src="imgs/zjy/newbie_12.webp"/>
+							<p>英雄的分类和选择</p>
+						</li>
+						<li>
+							<img src="imgs/zjy/newbie_13.jpg"/>
+							<p>如何才有钱</p>
+						</li>
+						<li>
+							<img src="imgs/zjy/newbie_14.jpg"/>
+							<p>利用草丛</p>
+						</li>
+						<li>
+							<img src="imgs/zjy/newbie_15.jpg" />
+							<p>小兵、塔和水晶</p>
+						</li>
+						<li>
+							<img src="imgs/zjy/newbie_16.jpg"/>
+							<p>物品和装备</p>
+						</li>
+						<li>
+							<img  src="imgs/zjy/newbie_17.jpg"/>
+							<p>野怪</p>
+						</li>
+						<li>
+							<img src="imgs/zjy/newbie_18.jpg"/>
+							<p>打野</p>
+						</li>
+						<li>
+							<img src="imgs/zjy/newbie_19.jpg"/>
+							<p>放眼</p>
+						</li>
+						<li>
+							<img src="imgs/zjy/newbie_20.webp" />
+							<p>战斗节奏</p>
+						</li>
+					</ul>
+				</div>
+				<div class="zj4">
+					<span></span>
+				</div>
+			</div>
+			<div class="box">
+				<div class="zj41">
+					<div class=" zj41zz"><img src="imgs/zjy/newbie_21.webp"/></div>
+					<div class="zj41yy">
+						<p>通过前面几步，相信你已经初步了解了英雄联盟中的一些基础信息，接下来，我们需要更多知识让自己快速成长起来，以应对瞬息万变的战场。</p><br />
+						<p>赶紧阅读下面的进阶知识，从“英雄”、“物品”、“召唤师技能”、“天赋”、“符文”等内容来全面了解英雄联盟！</p>
+					</div>
+				</div>
+				<div class="zj42">
+					<div class="zj42zz">
+						<h2>进阶知识</h2>
+						<p>英雄信息</p>
+						<p>俗语有云，“知己知彼，百战不殆”，所以，在游戏开始之后，先了解敌我双方的英雄信息总是没错的。用自己的优点来去打击对方的缺点，往往会取得事半功倍的效果。</p>
+						<p>阵容是起步的关键，如何搭配英雄阵容是一门大学问，对于初入英雄联盟的我们来说，可以先从常规配置的理解开始。一般情况下，队伍中的坦克型英雄会选择地图上路（俗称“上单”），法师型英雄会选择地图中路（俗称“中单”），高机动性英雄会选择在地图野区发育（俗称“打野”），射手型英雄（也称“ADC”）和辅助型英雄会选择地图下路（俗称“下路”）。</p>
+						<p>定位你的英雄，并且选择合适的阵容，了解英雄的技能以及发展方向，这都会使你在游戏中更加轻松。</p>
+					</div>
+					<div class="zj42yy">
+						<img src="imgs/zjy/newbie_22.webp"/>
+					</div>
+				</div>
+				<div class="zj43">
+					<div class="zj43zz">
+						<h2>排位赛：像男人一样去战斗</h2>
+						<br />
+						<img src="imgs/zjy/newbie_05 (1).webp"/>
+					</div>
+						<div class="zj43yy">
+							<img src="imgs/zjy/moveon_02.png"/>
+						</div>
+				</div>
+				<div class="zj4">
+					<span></span>
+				</div>
+			</div>
+			<div class="box">
+				<div class="zj51">
+					<div class="zj51zz">
+						<img src="imgs/zjy/lb_01.webp"/>
+					</div>
+					<div class="zj51yy">
+						<h2>新手成长礼包 好礼送不完！</h2>
+						<p>精彩游戏的同时，当然少不了同样精彩的活动，我们为新手玩家准备了丰富的成长礼包。</p>
+						<p>当你的召唤师等级达到5/10/15/20级时，将分别获得一份新手礼包，内含游戏双倍BUFF卡，以及各种珍贵的符文。领取新手成长礼包</p>
+					<span class="zj51tp">&nbsp;&nbsp;&nbsp;&nbsp;领取新手成长礼包</span>
+
+				
+					</div>
+				</div>
+				<div class="zj52">
+					<div class="zj52zz">
+						<h2>精彩活动 一个都少不了</h2><br />
+						<p>春节、国庆节、万圣节、冰雪节…一年365天，天天都有精彩活动。另外，参加互动还有机会获得珍贵的英雄和皮肤礼包，赶紧召唤小伙伴一起参加！</p>
+						<p>看直播，聊比赛，畅享激情四射的英雄联盟电子竞技赛事，进入赛事中心，体验不间断的视觉盛宴！</p>
+						<div class="zj52tb">
+							<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;进入活动中心</span>
+							<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;进入赛事中心</span>
+						</div>
+					</div>
+					<div class="zj52yy">
+						<img src="imgs/zjy/lb_02.webp"/>
+					</div>
+				</div>
+				
+				<div class="zj53">
+					<h2>鲜活社区 尽享游戏激情</h2>
+					<ul>
+							<li>
+								<img src="imgs/zjy/newbie_27.webp" />
+								<p><a>进入我的个人页面</a></p>
+							</li>
+							<li>
+								<img src="imgs/zjy/newbie_28.jpg" />
+								<p><a>进入官方论坛</a></p>
+							</li>
+							<li>
+								<img src="imgs/zjy/newbie_29.jpg" />
+								
+								<p><a>进入QT官网语音频道</a></p>
+							</li>
+							<li>
+								<img src="imgs/zjy/weixin.png" />
+								<br />
+								扫描关注LOL官方微信
+							<a class="flflfl"></a>
+							</li>
+					</ul>
+				</div>
+				<div class="zj54">
+					<h2>精彩活动推荐</h2>
+					<p>精彩活动推荐加载中...</p>
+				</div>
+				<div class="zj4">
+					<span></span>
+				</div>
+			</div>
+			</div>
+			<div class="dw">
+				<div class="dwwz">
+					<div class="dwwzz">
+						<a class="dwtp1"></a>
+						<a class="dwtp2"></a>
+					</div>
+					<div class="dwwzy">
+						<p>
+							<a href="">腾讯互动娱乐</a>
+							<a href="">服务条款</a>
+							<a href="">隐私保护指引</a>
+							<a href="">儿童隐私保护指引</a>
+							<a href="">腾讯游戏招聘</a>
+							<a href="">腾讯游戏客服</a>
+							<a href="">游戏列表</a>
+							<a href="">广告服务及商务合作</a>
+						</p>
+						<p>
+							<a>腾讯公司版权所有</a>
+							<a> 网络游戏行业防沉迷自律公约</a>
+						</p>
+						<p>COPYRIGHT © 1998 - 2023 TENCENT. ALL RIGHTS RESERVED.</p>
+						<p>COPYRIGHT © 2012 Riot Games,Inc. ALL RIGHTS RESERVED.</p>
+						<p>本网络游戏适合16+岁的用户使用；为了您的健康，请合理控制游戏时间。</p>
+						<p>
+						<div class="hztb"></div><a>工商网监电子标识</a>
+						<a href="">粤网文[2011]310号|</a>
+						<a href="">(署)网出证(粤)字第054号</a>
+						</p>
+						<p>批准文号：新出审字[2011]310号 |文网进字[2011] 004号 | 出版物号：ISBN 978-7-89989-145-2|全国文化市场统一举报电话：12318</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+		</div>
+	</body>
+</html>
