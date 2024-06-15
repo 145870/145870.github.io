@@ -1,0 +1,826 @@
+.left .lbottom .lul .lli #mr{
+	fill:#fff5e0 ;
+	color: #fff5e0;
+}
+
+/* 右部分主题内容 */
+.right .rbottom .ztnr .nrbf ul{
+	list-style: none;
+	    display: flex;
+	    flex-wrap: wrap;
+		justify-content: start;
+}
+.right .rbottom .ztnr .nrbf ul li{
+	width: 140px;
+	height: 180px;
+	background-color: black;
+	display:inline-block;
+	margin-bottom:12.8px ;
+	margin-right: 12.8px;
+	border: 1px solid #313e4c;
+	box-sizing: border-box;
+}
+.right .rbottom .ztnr .nrbf ul li{
+	position: relative;
+}
+
+/* 英雄位置左上角的图标 */
+.right .rbottom .ztnr .nrbf li #yxwz img{
+	margin: 7px 0px 0px 7px ;
+	background-color:rgba(0, 0, 0, 0.3); 
+	width: 15px;
+	height: 15px;
+}
+
+/* ------ */
+
+.right .rbottom .ztnr .nrbf ul li #mz{
+	width: 100%;
+	height:35px ;
+	line-height: 35px;
+	background-color:black;
+	position: absolute;
+	bottom: 0;
+	text-align: center;
+	font-size: 13px;
+}
+
+/* 搜索部分 */
+
+.right .rbottom .ztnr .lb #ssk{
+	
+	width: 142px;
+	border:1px solid #313537 ;
+	background-color:#1a2026 ;
+	box-sizing: border-box;
+	float: left;
+	margin-right: 40px;
+}
+.right .rbottom .ztnr .lb #ssk input{
+	background-image: url('../../imgs/cr/图标/搜索.PNG');
+	background-size: 12px;
+	
+	background-repeat: no-repeat;
+	margin-left: 10px;
+	box-sizing: border-box;
+	background-color: transparent;
+	background-position: right;
+	border: none;
+	outline: none;
+	width: 130px;
+	height: 28px;
+	color: #7f6f4e;
+}
+/* 全部位置默认 */
+.right .rbottom .ztnr .lb #wzbf #one{
+	border:1px solid #b59758;
+	color: #b59758;
+}
+/* 列表 */
+.right .rbottom .ztnr .lb #wzbf{
+	
+	
+	
+	/* background-color: #1a2026; */
+	
+	font-size: 14px;
+	line-height: 28px;
+	
+	
+}
+.right .rbottom .ztnr .lb #wzbf a{
+	padding: 0px 15px;
+	border:1px solid #313537 ;
+	height: 28px;
+	display: inline-block;
+	float: left;
+	box-sizing: border-box;
+	color: #5e625a;
+	background-color: #1a2026;
+}
+
+/* 列表部分悬浮 */
+.right .rbottom .ztnr .lb #ssk:hover{
+	border:1px solid #b59758;
+}
+.right .rbottom .ztnr .lb #wzbf a:hover{
+	border:1px solid #b59758 !important;
+	color: #b59758 !important;
+	transition: all 0.2s linear;
+}
+.right .rbottom .ztnr .lb #wzbf a:not(:hover){
+	transition: all 0.2s linear;
+}
+
+/* 英雄背景图片 */
+
+.right .rbottom .ztnr .nrbf ul #yxtp1{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_001.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp2{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_002.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp3{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_003.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp4{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_004.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp5{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_005.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp6{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_006.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp7{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_007.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp8{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_008.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp9{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_009.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp10{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_010.JPEG');
+	background-size: 100%;
+}
+
+.right .rbottom .ztnr .nrbf ul #yxtp11{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_011.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp12{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_012.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp13{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_013.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp14{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_014.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp15{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_015.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp16{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_016.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp17{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_017.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp18{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_018.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp19{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_019.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp20{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_020.JPEG');
+	background-size: 100%;
+}
+
+.right .rbottom .ztnr .nrbf ul #yxtp21{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_021.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp22{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_022.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp23{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_023.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp24{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_024.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp25{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_025.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp26{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_026.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp27{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_027.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp28{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_028.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp29{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_029.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp30{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_030.JPEG');
+	background-size: 100%;
+}
+
+.right .rbottom .ztnr .nrbf ul #yxtp31{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_031.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp32{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_032.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp33{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_033.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp34{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_034.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp35{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_035.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp36{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_036.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp37{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_037.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp38{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_038.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp39{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_039.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp40{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_040.JPEG');
+	background-size: 100%;
+}
+
+.right .rbottom .ztnr .nrbf ul #yxtp41{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_041.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp42{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_042.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp43{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_043.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp44{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_044.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp45{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_045.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp46{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_046.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp47{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_047.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp48{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_048.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp49{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_049.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp50{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_050.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp51{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_051.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp52{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_052.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp53{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_053.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp54{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_054.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp55{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_055.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp56{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_056.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp57{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_057.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp58{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_058.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp59{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_059.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp60{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_060.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp61{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_061.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp62{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_062.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp63{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_063.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp64{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_064.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp65{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_065.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp66{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_066.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp67{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_067.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp68{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_068.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp69{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_069.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp70{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_070.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp71{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_071.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp72{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_072.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp73{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_073.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp74{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_074.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp75{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_075.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp76{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_076.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp77{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_077.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp78{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_078.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp79{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_079.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp80{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_080.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp81{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_081.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp82{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_082.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp83{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_083.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp84{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_084.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp85{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_085.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp86{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_086.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp87{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_087.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp88{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_088.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp89{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_089.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp90{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_090.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp91{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_091.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp92{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_092.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp93{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_093.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp94{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_094.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp95{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_095.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp96{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_096.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp97{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_097.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp98{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_098.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp99{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_099.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp100{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_100.JPEG');
+	background-size: 100%;
+}
+
+.right .rbottom .ztnr .nrbf ul #yxtp101{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_101.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp102{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_102.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp103{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_103.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp104{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_104.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp105{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_105.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp106{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_106.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp107{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_107.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp108{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_108.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp109{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_109.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp110{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_110.JPEG');
+	background-size: 100%;
+}
+
+.right .rbottom .ztnr .nrbf ul #yxtp111{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_111.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp112{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_112.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp113{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_113.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp114{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_114.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp115{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_115.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp116{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_116.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp117{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_117.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp118{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_118.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp119{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_119.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp120{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_120.JPEG');
+	background-size: 100%;
+}
+
+.right .rbottom .ztnr .nrbf ul #yxtp121{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_121.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp122{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_122.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp123{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_123.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp124{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_124.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp125{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_125.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp126{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_126.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp127{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_127.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp128{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_128.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp129{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_129.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp130{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_130.JPEG');
+	background-size: 100%;
+}
+
+.right .rbottom .ztnr .nrbf ul #yxtp131{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_131.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp132{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_132.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp133{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_133.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp134{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_134.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp135{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_135.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp136{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_136.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp137{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_137.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp138{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_138.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp139{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_139.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp140{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_140.JPEG');
+	background-size: 100%;
+}
+
+.right .rbottom .ztnr .nrbf ul #yxtp141{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_141.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp142{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_142.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp143{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_143.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp144{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_144.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp145{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_145.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp146{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_146.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp147{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_147.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp148{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_148.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp149{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_149.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp150{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_150.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp151{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_151.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp152{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_152.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp153{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_153.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp154{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_154.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp155{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_155.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp156{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_156.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp157{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_157.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp158{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_158.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp159{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_159.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp160{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_160.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp161{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_161.JPEG');
+	background-size: 100%;
+}
+.right .rbottom .ztnr .nrbf ul #yxtp162{
+	background-image: url('../../imgs/cr/角色/DM_20230316155206_162.JPEG');
+	background-size: 100%;
+}
+
+
+/* 所有图片放大的动画效果 */
+.right .rbottom .ztnr .nrbf ul li:hover{
+	transform: scale(1.1,1.1);
+	transform-origin: bottom center;
+	transition: all 0.15s linear;
+	border: 1px solid #b59758; 
+	
+}
+.right .rbottom .ztnr .nrbf ul li:not(:hover){
+	transition: all 0.1s linear;
+}
+
+
+/* 全部位置 */
+.right .rbottom .ztnr .nrbf{
+	position: relative;
+	
+	
+}
+
+
+
+/* 定位 */
+.right .rbottom .ztnr .nrbf #sd,#dy,#zl,#xl,#fz{
+	position: absolute;
+	top: 0;
+	
+	
+}
+/* 上路 */
+
+.right .rbottom .ztnr .nrbf #sd{
+	visibility: hidden;
+}
+/* 打野 */
+.right .rbottom .ztnr .nrbf #dy{
+	visibility: hidden;
+}
+/* 中路 */
+.right .rbottom .ztnr .nrbf #zl{
+	visibility: hidden;
+}
+/* 下路 */
+.right .rbottom .ztnr .nrbf #xl{
+	visibility: hidden;
+}
+/* 辅助 */
+.right .rbottom .ztnr .nrbf #fz{
+	visibility: hidden;
+}
+

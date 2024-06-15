@@ -1,0 +1,305 @@
+.left .lbottom .lul .lli #mr{
+	fill:#fff5e0 ;
+	color: #fff5e0;
+}
+
+/* a*/
+.right .rbottom .ztnr .lb #lbl{
+	
+	float: left;
+	font-size: 12px;
+	line-height: 28px;
+	
+	
+}
+.right .rbottom .ztnr .lb #lbl>a{
+	padding: 0px 26px;
+	border:1px solid #313537 ;
+	margin-right: 12px;
+	height: 28px;
+	display: inline-block;
+	float: left;
+	box-sizing: border-box;
+	color: #696d64;
+	background-color: #191d24;
+}
+
+/* 搜素英雄 */
+.right .rbottom .ztnr .lb #lb2 .xlk{
+	float: left;
+	
+	border:1px solid #313537 ;
+	margin-right: 15px;
+	height: 28px;
+	width: 140px;
+	display: inline-block;
+	float: left;
+	box-sizing: border-box;
+	color: #696d64;
+	background-color: #191d24;
+}
+.right .rbottom .ztnr .lb #lb2 .xlk input{
+	box-sizing: border-box;
+	background-color: transparent;
+	background-position: right;
+	border: none;
+	outline: none;
+	width: 90px;
+	height: 28px;
+	margin-left: 10px;
+	color: #7f6f4e;
+}
+.right .rbottom .ztnr .lb #lb2 .xlk #img{
+	box-sizing: border-box;
+	width: 27px;
+	height: 26px;
+	float: right;
+	text-align: center;
+	border-left:1px solid #313537;
+}
+.right .rbottom .ztnr .lb #lb2 .xlk img{
+	width: 10px;
+	height: 6px;
+	vertical-align: middle;
+	position: relative;
+	bottom: 2px;
+}
+
+
+
+
+
+
+.right .rbottom .ztnr .lb #lb2{
+	
+	float: left;
+	font-size: 12px;
+	line-height: 28px;
+	
+	
+}
+.right .rbottom .ztnr .lb #lb2>a{
+	padding: 0px 26px;
+	border:1px solid #313537 ;
+	
+	height: 28px;
+	display: inline-block;
+	float: left;
+	box-sizing: border-box;
+	color: #696d64;
+	background-color: #191d24;
+}
+
+
+/* 内容单体大小 */
+.right .rbottom .ztnr .nrbf div #nr{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: start;
+}
+
+.right .rbottom .ztnr .nrbf div #nr>div{
+	box-sizing: border-box;
+	width: 45%;
+	height: 180px;
+	margin-bottom: 20px;
+	margin-right: 20px;
+	background-color:#161a20 ;
+	border: #161a20;
+}
+
+/* 尾巴 */
+#wb{
+	text-align: center;
+	position: absolute;
+	left: 42%;
+	height: 27px;
+	
+}
+#wb a{
+	border:1px solid #313537;
+	padding: 0 5px;
+	float: left;
+	display: inline-block;
+}
+
+/* 悬浮效果 */
+
+.right .rbottom .ztnr .lb #lbl a:hover{
+	border:1px solid #b59758 !important;
+		color: #b59758 !important;
+		transition: all 0.2s linear;
+}
+.right .rbottom .ztnr .lb #lbl a:not(:hover){
+	transition: all 0.2s linear;
+}
+
+.right .rbottom .ztnr .lb #lb2 .xlk:hover{
+	border:1px solid #b59758 !important;
+		color: #b59758 !important;
+		transition: all 0.2s linear;
+}
+.right .rbottom .ztnr .lb #lb2>a:hover{
+	border:1px solid #b59758 !important;
+		color: #b59758 !important;
+		transition: all 0.2s linear;
+}
+
+.right .rbottom .ztnr .lb #lb2 .xlk:not(:hover){
+	transition: all 0.2s linear;
+}
+.right .rbottom .ztnr .lb #lb2>a:not(:hover){
+	transition: all 0.2s linear;
+}
+
+
+#wb a:hover{
+	border:1px solid #b59758 !important;
+		color: #b59758 !important;
+		transition: all 0.2s linear;
+}
+#wb a:not(:hover){
+	transition: all 0.2s linear;
+}
+
+/* 默认 */
+#wb .wb1{
+	border:1px solid #b59758;
+	color: #b59758;
+}
+
+.right .rbottom .ztnr .lb #lbl .mr{
+	border:1px solid #b59758;
+	color: #b59758;
+}
+
+/* 单区域部分 */
+.right .rbottom .ztnr .nrbf #nr div #tleft{
+	width: 200px;
+	height: 100%;
+	
+	float: left;
+}
+.right .rbottom .ztnr .nrbf #nr div #tleft img{
+	width: 180px;
+	height: 160px;
+	object-fit: cover;
+	margin:10px ;
+} 
+.right .rbottom .ztnr .nrbf #nr div #tright #tx-mz img{
+	width: 25px;
+	height: 25px;
+	vertical-align: middle;
+}
+.right .rbottom .ztnr .nrbf #nr div #tright #tx-mz span{
+	font-size: 12px;
+} 
+
+
+.right .rbottom .ztnr .nrbf #nr div #tright{
+	height: 100%;
+	
+	padding: 20px;
+	
+	box-sizing: border-box;
+	margin-left:210px ;
+}
+.right .rbottom .ztnr .nrbf #nr div #tright #btnr{
+	font-size: 14px;
+	margin-top: 10px;
+	overflow: hidden;		/* 超出部分不可见 */
+	text-overflow: ellipsis;/* 超出部分变成省略号 */
+	white-space: nowrap;	/* 文本不换行 */
+}
+.right .rbottom .ztnr .nrbf #nr div #tright #time{
+	color: #5e625a;
+	font-size: 8px;
+	margin-top: 15px;
+}
+.right .rbottom .ztnr .nrbf #nr div #tright #mg-new{
+	margin-top: 15px;
+	
+}
+
+.right .rbottom .ztnr .nrbf #nr div #tright #mg-new img{
+	width: 22px;
+	height: 10px;
+}
+
+/* 内容悬浮效果 */
+.right .rbottom .ztnr .nrbf div #nr>div:hover{
+	border:1px solid #b59758;
+	transition: all 0.2s linear;
+	
+}
+.right .rbottom .ztnr .nrbf div #nr>div:not(:hover){
+	transition: all 0.2s linear;
+}
+/* 定位 */
+.right .rbottom .ztnr .nrbf{
+	position: relative;
+}
+.right .rbottom .ztnr .nrbf #yxgl1,#yxgl2,#yxgl3,#bbwf{
+	position: absolute;
+	top: 0;
+	
+	
+}
+
+/*隐藏*/
+#zxgl{
+	
+}
+#yxgl1{
+	visibility: hidden;
+
+}
+#yxgl2{
+	visibility: hidden;
+
+}
+#yxgl3{
+	visibility: hidden;
+
+}
+#bbwf{
+	visibility: hidden;
+
+}
+#lb2{
+	visibility: hidden;
+
+}
+
+/* 版本玩法部分 */
+.right .rbottom .ztnr .nrbf #bbwf #nr{
+	display: block;
+	
+}
+.right .rbottom .ztnr .nrbf #bbwf #nr>div{
+	
+	padding: 25px;
+	width: 800px;
+	height: 100px;
+	background-color:#161a20;
+	box-sizing: border-box;
+}
+.right .rbottom .ztnr .nrbf div #nr div p:nth-child(1){
+	font-size: 12px;
+}
+.right .rbottom .ztnr .nrbf div #nr div p:nth-child(2){
+	font-size: 8px;
+	color: #696d64;
+	margin-top: 7px;
+	margin-bottom: 10px;
+}
+.right .rbottom .ztnr .nrbf div #nr div .bbnr{
+	font-size: 10px;
+	color: #b59758;
+	border: 1px solid #b59758;
+	width: 48px;
+	text-align: center;
+	padding: 0 2px;
+	
+}
+

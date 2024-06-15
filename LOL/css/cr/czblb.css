@@ -1,0 +1,179 @@
+.left .lbottom .lul .lli #mr{
+	fill:#fff5e0 ;
+	color: #fff5e0;
+}
+
+/* 右部分主题内容 */
+
+/* 搜索部分 */
+
+.right .rbottom .ztnr .lb #ssk{
+	
+	width: 142px;
+	border:1px solid #313537 ;
+	background-color:#1a2026 ;
+	box-sizing: border-box;
+	float: left;
+	height: 28px;
+}
+.right .rbottom .ztnr .lb #ssk input{
+	background-image: url('../../imgs/cr/图标/搜索.PNG');
+	background-size: 12px;
+	
+	background-repeat: no-repeat;
+	margin-left: 10px;
+	box-sizing: border-box;
+	background-color: transparent;
+	background-position: right;
+	border: none;
+	outline: none;
+	width: 130px;
+	height: 28px;
+	color: #7f6f4e;
+}
+.right .rbottom .ztnr .lb #pzbf{
+	margin-left: 40px;
+	float: left;
+	font-size: 14px;
+	line-height: 28px;
+	
+	
+}
+.right .rbottom .ztnr .lb #pzbf a{
+	padding: 0px 15px;
+	border:1px solid #313537 ;
+	height: 28px;
+	display: inline-block;
+	float: left;
+	box-sizing: border-box;
+	color: #5e625a;
+	background-color: #1a2026;
+}
+/* 全部位置默认 */
+.right .rbottom .ztnr .lb #pzbf #one{
+	border:1px solid #b59758;
+	color: #b59758;
+}
+
+/* 列表部分悬浮 */
+.right .rbottom .ztnr .lb #ssk:hover{
+	border:1px solid #b59758;
+}
+.right .rbottom .ztnr .lb #pzbf a:hover{
+	border:1px solid #b59758 !important;
+	color: #b59758 !important;
+	transition: all 0.2s linear;
+}
+.right .rbottom .ztnr .lb #pzbf a:not(:hover){
+	transition: all 0.2s linear;
+}
+
+/* 列表大小，列表样式 */
+.right .rbottom .ztnr .nrbf ul li{
+	width:100px ;
+	height: 140px;
+	background-color: #111419;
+	margin-bottom: 15px;
+	margin-right: 15px;
+	text-align: center;
+	padding-top: 15px;
+	box-sizing: border-box;
+	border: 1px solid #313e4c;
+	
+}
+
+/* 列表去点 */
+.right .rbottom .ztnr .nrbf ul{
+	list-style: none;
+	    display: flex;
+	    flex-wrap: wrap;
+		justify-content: start;
+}
+
+/* 装备图片大小 */
+.right .rbottom .ztnr .nrbf ul li>img{
+	width: 70px;
+	height: 70px;
+	
+}
+
+/* 装备名字 */
+.right .rbottom .ztnr .nrbf ul li>span{
+	display: block;
+	margin-top: 3px;
+	color: white;
+	font-size: 10.5px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+
+/* 装备价格 */
+.right .rbottom .ztnr .nrbf ul li #zbje{
+	position: relative;
+	top: 8px;
+	
+}
+
+.right .rbottom .ztnr .nrbf ul li #zbje img{
+	width: 11px;
+	height: 11px;
+	vertical-align: middle;
+}
+.right .rbottom .ztnr .nrbf ul li #zbje span{
+	font-size: 10px;
+	font-weight: bold;
+	color: #b59758;
+	
+}
+
+/* 神话装备 */
+.right .rbottom .ztnr .nrbf ul .shzb{
+	border: 1px solid #b59758;
+}
+
+/* 悬浮动画图片 */
+.right .rbottom .ztnr .nrbf ul li:hover{
+				border: 1px solid #b59758;
+				transform: translate(0,-10px);
+				transition: all 0.2s linear;
+}
+.right .rbottom .ztnr .nrbf ul li:not(:hover){
+	transition: all 0.15s linear;
+}
+
+/* 全部 */
+.right .rbottom .ztnr .nrbf #qb{
+
+}
+
+/* 普通 */
+
+.right .rbottom .ztnr .nrbf #pt{
+	visibility: hidden;
+}
+/* 史诗 */
+.right .rbottom .ztnr .nrbf #ss{
+	visibility: hidden;
+}
+/* 传说 */
+.right .rbottom .ztnr .nrbf #cs{
+	visibility: hidden;
+}
+/* 神话 */
+.right .rbottom .ztnr .nrbf #sh{
+	visibility: hidden;
+}
+
+/* 定位 */
+.right .rbottom .ztnr .nrbf{
+	position: relative;
+}
+.right .rbottom .ztnr .nrbf #pt,#ss,#cs,#sh{
+	position: absolute;
+	top: 0;
+	
+	
+}
+
