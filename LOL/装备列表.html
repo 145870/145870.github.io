@@ -1,0 +1,2772 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" href="./css/cr/zt.css">
+		<link rel="stylesheet" href="./css/cr/czblb.css">
+		<script type="text/javascript" src="./js/cr/zblb.js"></script>
+	<style>
+		/* CSS样式设置加载动画 */
+		.loader {
+		  border: 16px solid #f3f3f3; /* Light grey */
+		  border-top: 16px solid #3498db; /* Blue */
+		  border-radius: 50%;
+		  width: 120px;
+		  height: 120px;
+		  animation: spin 2s linear infinite;
+		}
+		
+		@keyframes spin {
+		  0% { transform: rotate(0deg); }
+		  100% { transform: rotate(360deg); }
+		}
+		#qwe{
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: white;
+			z-index: 9999;
+		}
+		</style>
+	</head>
+	
+	<body>
+		<div id="qwe">
+			<div class="loader"></div>
+		</div>
+		<script>
+		window.addEventListener('load', function() {
+		  var loader = document.querySelector('#qwe');
+	
+		      loader.style.display = 'none';
+		   
+		});
+		</script>
+		<div class="big">
+			<!--左边-->
+			<div class="left">
+				<div class="ltop">
+					<img id="glzx"src="./imgs/cr/图标/DM_20230316155207_358.PNG">
+					<span id="ltop1"><img class="tjsc"src="./imgs/cr/图标/收藏.PNG"/>添加收藏</span>
+				</div>
+				<div class="lbottom">
+					<ul class="lul">
+						<li class="lli">
+							<!-- 链接文件 -->
+							<a href="./精品攻略.html">
+							<div class="lxfys">
+								<svg width="22px" height="20" viewBox="0 0 79 79"><path fill-rule="evenodd" clip-rule="evenodd" d="M68.886 48.01C65.711 59.477 55.916 68.17 43.867 69.726L47.379 62.311C56.441 59.314 63.05 50.963 63.469 40.1H69.95H78.1C78.1 40.1 71.562 44.042 68.886 48.01ZM39.1 16.49C39.662 16.49 39.334 16.527 38.1 16.541V10.05V0C38.1 0 43.104 10.961 47.1 11C59.471 14.171 68.169 24.081 69.726 36.133L62.311 32.621C59.214 23.255 50.404 16.49 39.1 16.49ZM16.49 39.1C16.49 40.338 16.526 40.666 16.54 40.1H10.042H0C0 40.1 10.061 36.896 11 31.1C13.928 21.423 22.611 13.217 33.387 10.788L29.477 18.999C21.783 22.862 16.49 30.804 16.49 39.1ZM40 22.1L51 46.1L40 56L28.1 46.1L40 22.1ZM45 46L40 35L35 46L40 49.1L45 46ZM38.1 63.459V69.95V78.1C38.1 78.1 35.958 71.562 31.99 68.886C21.409 65.956 13.206 57.383 10.778 46.609L18.995 50.521C22.719 57.924 30.233 63.089 38.1 63.459Z"></path>		</svg>
+								<span>
+									精品攻略
+								</span>
+							</div>
+							</a>
+							<div id="hot">HOT</div>
+						</li>
+						<li class="lli">
+							<div class="lxfys">
+							<svg width="22px" height="18px"><path stroke-width="0" fill-rule="evenodd" d="M15.572,7.186 L18.908,6.074 L18.908,8.298 L15.572,11.635 L16.684,11.635 L16.684,12.747 L14.459,13.859 L14.459,11.635 L14.459,7.186 L14.459,3.849 L20.020,0.513 L20.020,3.849 L15.572,7.186 ZM7.786,13.859 L7.786,2.737 L12.235,2.737 L12.235,13.859 L10.010,16.084 L7.786,13.859 ZM3.337,11.635 L4.449,11.635 L1.113,8.298 L1.113,6.074 L4.449,7.186 L0.001,3.849 L0.001,0.513 L5.562,3.849 L5.562,7.186 L5.562,11.635 L5.562,13.859 L3.337,12.747 L3.337,11.635 Z"></path></svg>
+							<span>峡谷排位</span>
+							</div>
+							
+						</li>
+						<li class="lli">
+							<div class="lxfys">
+							<svg width="22px" height="18px"><path stroke-width="0" fill-rule="evenodd" d="M19.456,9.386 L18.024,15.969 C17.787,17.060 16.691,17.756 15.576,17.524 L8.850,16.122 C7.736,15.890 7.025,14.817 7.262,13.726 L8.694,7.143 C8.932,6.053 10.027,5.357 11.142,5.589 L17.868,6.991 C18.982,7.223 19.693,8.295 19.456,9.386 ZM10.991,11.378 C10.153,11.199 9.327,11.735 9.149,12.576 C8.970,13.417 9.505,14.244 10.345,14.423 C11.184,14.602 12.009,14.066 12.187,13.225 C12.366,12.384 11.831,11.557 10.991,11.378 ZM16.200,8.233 C15.351,8.052 14.516,8.595 14.335,9.446 C14.154,10.297 14.696,11.135 15.545,11.316 C16.394,11.497 17.229,10.954 17.410,10.103 C17.590,9.251 17.049,8.414 16.200,8.233 ZM6.957,5.170 C6.737,5.105 6.504,5.075 6.262,5.112 C5.394,5.246 4.799,6.051 4.934,6.911 C5.045,7.620 5.622,8.119 6.305,8.207 L5.401,12.457 L4.230,12.635 C3.104,12.806 2.049,12.052 1.874,10.950 L0.819,4.298 C0.644,3.197 1.414,2.164 2.540,1.993 L9.336,0.960 C10.462,0.789 11.516,1.543 11.691,2.645 L11.811,3.400 L10.256,3.069 C8.764,2.751 7.301,3.691 6.957,5.170 Z"></path></svg>
+						<span>大乱斗</span>
+							</div>
+						</li>
+						<li class="lli">
+							<div class="lxfys">
+							<svg width="22px" height="16px"><path stroke-width="0" fill-rule="evenodd" d="M21.830,8.265 C21.457,8.833 19.823,7.863 19.823,7.863 C19.823,7.863 19.272,9.721 17.378,10.611 C17.083,10.218 17.165,9.165 14.979,7.360 C14.854,6.533 14.067,5.700 13.418,5.120 C12.002,3.888 11.267,3.904 11.249,3.882 C11.824,3.050 12.915,1.840 14.402,1.840 L15.406,0.033 L16.409,1.840 C16.409,1.840 18.819,2.047 19.823,4.651 C19.823,4.651 22.418,7.372 21.830,8.265 ZM17.941,5.253 C17.419,5.249 16.788,6.012 16.811,6.643 C16.835,7.290 17.433,7.686 17.800,7.663 C18.166,7.640 18.591,7.453 18.788,6.847 C18.985,6.241 18.196,5.254 17.941,5.253 Z"></path><path stroke-width="0" fill-rule="evenodd" d="M17.197,12.394 C16.709,13.122 14.579,11.878 14.579,11.878 C14.579,11.878 13.346,15.971 8.558,16.000 C3.994,16.027 2.799,11.878 2.799,11.878 C2.799,11.878 0.967,13.027 0.181,12.394 C-0.605,11.760 2.164,8.243 2.799,7.757 C2.799,7.757 4.556,4.151 7.511,4.151 L8.819,1.832 L10.128,4.151 C10.128,4.151 13.271,4.416 14.579,7.757 C14.579,7.757 17.963,11.247 17.197,12.394 ZM5.491,8.577 C5.153,8.579 4.108,9.825 4.369,10.590 C4.630,11.355 5.193,11.592 5.678,11.621 C6.164,11.650 6.955,11.150 6.987,10.333 C7.018,9.535 6.183,8.572 5.491,8.577 ZM12.125,8.529 C11.444,8.524 10.621,9.502 10.652,10.312 C10.683,11.142 11.463,11.650 11.941,11.621 C12.419,11.591 12.973,11.351 13.230,10.574 C13.486,9.797 12.458,8.531 12.125,8.529 Z"></path></svg>
+							<span>最佳双排</span>
+							</div>
+						</li>
+						<li class="lli">
+							<!-- 链接文件 -->
+							<a href="./英雄列表.html">
+							<div class="lxfys">
+							<svg width="22px" height="18px"><path stroke-width="0" fill-rule="evenodd" d="M14.187,6.874 C14.187,2.212 7.838,0.525 7.838,0.525 C7.838,0.525 1.488,2.206 1.488,6.874 C1.488,11.543 1.499,12.140 0.430,13.224 C0.430,13.224 1.952,17.456 5.721,17.456 C5.721,17.456 4.663,16.415 4.663,11.107 C4.663,11.107 2.547,10.656 2.547,6.874 C5.234,6.874 6.779,8.991 6.779,8.991 L6.779,13.224 L7.838,14.282 L8.896,13.224 L8.896,8.991 C8.896,8.991 10.307,6.874 13.128,6.874 C13.128,10.601 11.012,11.107 11.012,11.107 C11.012,16.393 9.954,17.456 9.954,17.456 C13.723,17.456 15.245,13.224 15.245,13.224 C14.092,12.055 14.187,11.537 14.187,6.874 Z"></path></svg>
+							<span>英雄列表</span>
+							</div>
+							</a>
+						</li>
+						<li class="lli">
+							
+							<div id="mr" class="lxfys">
+							<svg width="22px" height="18px"><path stroke-width="0" fill-rule="evenodd" d="M2.990,11.682 L0.161,11.682 L0.868,9.561 L4.404,10.268 L14.303,0.368 L17.132,0.368 L17.132,3.197 L7.232,13.096 L7.939,16.632 L5.818,17.339 L5.818,14.510 L3.697,15.218 L3.697,16.632 L0.868,16.632 L0.868,13.803 L2.282,13.803 L2.990,11.682 Z"></path></svg>
+							<span>装备列表</span>
+							</div>
+							
+						</li>
+						<li class="lli">
+							<div class="lxfys">
+							<svg width="22px" height="16px"><path stroke-width="0" fill-rule="evenodd" d="M20.004,0.907 L14.612,1.986 C14.612,1.986 13.254,0.907 10.298,0.907 C7.342,0.907 5.984,1.986 5.984,1.986 L0.591,0.907 L1.670,6.299 L0.591,9.535 C1.877,12.138 5.536,16.006 10.298,16.006 C15.060,16.006 18.247,12.537 20.004,9.535 L18.925,6.299 L20.004,0.907 ZM3.827,8.456 L3.827,7.378 C3.827,7.378 4.690,5.237 6.010,5.237 C7.331,5.237 8.141,7.378 8.141,7.378 L8.141,8.456 C8.141,8.456 7.275,7.378 5.987,7.378 C4.699,7.378 3.827,8.456 3.827,8.456 ZM10.298,12.782 C8.131,12.782 7.062,10.613 7.062,10.613 L7.062,9.535 C7.062,9.535 8.139,10.613 10.298,10.613 C12.457,10.613 13.533,9.535 13.533,9.535 L13.533,10.613 C13.533,10.613 12.464,12.782 10.298,12.782 ZM16.769,8.456 C16.769,8.456 16.261,7.316 14.593,7.316 C12.924,7.316 12.455,8.456 12.455,8.456 L12.455,7.378 C12.455,7.378 13.087,5.213 14.616,5.213 C16.145,5.213 16.769,7.378 16.769,7.378 L16.769,8.456 Z"></path></svg>
+							<span>趣味数据</span>
+							</div>
+						</li>
+					</ul>  
+					
+				</div>
+			</div>
+			<!-- 右边 -->
+			<div class="right">
+				<div class="rtop">
+					<div class="r-top-left">
+						<div class="r-t-xf0">
+							<!--文件跳转-->
+							<a href="./英雄联盟.html">
+								
+						<img src="./imgs/cr/图标/英雄联盟.png" alt="">
+						</div></a>
+						
+						<div class="r-t-xf">
+							<div id="xflol">
+								<img src="./imgs/cr/图标/lol.PNG">
+								<span>英雄联盟攻略中心</span>
+							</div>
+							<div id="rglzx">
+								<img id="ydzy" src="./imgs/cr/图标/DM_20230316155207_363.PNG"><span>云顶之弈主题战</span>
+							</div>
+							
+							
+						</div>
+					</div>
+					<div class="r-top-right">
+						<ul>
+							<li><img src="./imgs/cr/图标/下载.PNG"></li>
+							<li id="sjxf">
+								<img src="./imgs/cr/图标/手机.PNG">
+								<div id="ewm">
+									<img src="./imgs/cr/二维码.png">
+									<br/>
+									<a>
+										查看装备战绩
+										<br/>
+										掌上英雄联盟
+									</a>
+									
+								</div>
+							</li>
+							<li><img src="./imgs/cr/图标/用户.PNG"></li>
+						</ul>
+					</div>
+				</div>
+				<div class="rbottom">
+					<img id="bgimg" src="./imgs/cr/bg.jpg">
+					<div class="ztnr">
+						<span id="bt">装备列表</span>
+						<div class="lb">
+							<form id="ssk">
+								
+								<input id="ssp" type="text" placeholder="搜索">
+								
+							</form>
+							<div id="pzbf">
+								<a href="#" onclick="qb()" id="one">全部</a>
+								<a href="#" onclick="pt()" id="two">普通</a>
+								<a href="#" onclick="ss()" id="three">史诗</a>
+								<a href="#" onclick="cs()" id="four">传说</a>
+								<a href="#" onclick="sh()" id="five">神话</a>
+								
+							</div>
+						</div>
+						<div class="nrbf">
+							<ul id="qb">
+								<li id="qbzb1">
+									<img  src="imgs/cr/装备/DM_20230321151052_001.PNG"/>
+									<span>
+										鞋子
+									</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>300</span>
+									</div>
+									
+								</li>
+								<li id="qbzb2"><img src="imgs/cr/装备/DM_20230321151052_002.PNG"/>
+									<span>
+										仙女护符
+									</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>250</span>
+									</div>
+								</li>
+								<li id="qbzb3"><img src="imgs/cr/装备/DM_20230321151052_003.PNG"/>
+									<span>治疗宝珠</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>300</span>
+									</div>
+								</li>
+								<li id="qbzb4"><img src="imgs/cr/装备/DM_20230321151052_004.PNG"/>
+									<span>巨人腰带</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>900</span>
+									</div>
+								</li>
+								<li id="qbzb5"><img src="imgs/cr/装备/DM_20230321151052_005.PNG"/>
+									<span>灵巧披风</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>600</span>
+									</div>
+								</li>
+								<li id="qbzb6"><img src="imgs/cr/装备/DM_20230321151052_006.PNG"/>
+									<span>爆裂魔杖</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>850</span>
+									</div>
+								</li>
+								<li id="qbzb7"><img src="imgs/cr/装备/DM_20230321151052_007.PNG"/>
+									<span>蓝水晶</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>350</span>
+									</div>
+								</li>
+								<li id="qbzb8"><img src="imgs/cr/装备/DM_20230321151052_008.PNG"/>
+									<span>红水晶</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>400</span>
+									</div>
+								</li>
+								<li id="qbzb9"><img src="imgs/cr/装备/DM_20230321151052_009.PNG"/>
+									<span>布甲</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>300</span>
+									</div>
+								</li>
+								<li id="qbzb10"><img src="imgs/cr/装备/DM_20230321151052_010.PNG"/>
+									<span>锁子甲</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>800</span>
+									</div>
+								</li>
+								<li id="qbzb11"><img src="imgs/cr/装备/DM_20230321151052_011.PNG"/>
+									<span>抗魔斗篷</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>450</span>
+									</div>
+								</li>
+								<li id="qbzb12"><img src="imgs/cr/装备/DM_20230321151052_012.PNG"/>
+									<span>长剑</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>350</span>
+									</div>
+								</li>
+								<li id="qbzb13"><img src="imgs/cr/装备/DM_20230321151052_013.PNG"/>
+									<span>十字镐</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>875</span>
+									</div>
+								</li>
+								<li id="qbzb14"><img src="imgs/cr/装备/DM_20230321151052_014.PNG"/>
+									<span>暴风之剑</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>1300</span>
+									</div>
+								</li>
+								<li id="qbzb15"><img src="imgs/cr/装备/DM_20230321151052_015.PNG"/>
+									<span>短剑</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>300</span>
+									</div>
+								</li>
+								<li id="qbzb16"><img src="imgs/cr/装备/DM_20230321151052_016.PNG"/>
+									<span>反曲之弓</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>1000</span>
+									</div>
+								</li>
+								<li id="qbzb17"><img src="imgs/cr/装备/DM_20230321151052_017.PNG"/>
+									<span>增幅典籍</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>435</span>
+									</div>
+								</li>
+								<li id="qbzb18"><img src="imgs/cr/装备/DM_20230321151052_018.PNG"/>
+									<span>吸血鬼节杖</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>900</span>
+									</div>
+								</li>
+								<li id="qbzb19"><img src="imgs/cr/装备/DM_20230321151052_019.PNG"/>
+									<span>多兰之盾</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>450</span>
+									</div>
+								</li>
+								<li id="qbzb20"><img src="imgs/cr/装备/DM_20230321151052_020.PNG"/>
+									<span>多兰之刃</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>450</span>
+									</div>
+								</li>
+								<li id="qbzb21"><img src="imgs/cr/装备/DM_20230321151052_021.PNG"/>
+									<span>多兰之戒</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>400</span>
+									</div>
+								</li>
+								<li id="qbzb22"><img src="imgs/cr/装备/DM_20230321151052_022.PNG"/>
+									<span>负极斗篷</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>900</span>
+									</div>
+								</li>
+								<li id="qbzb23"><img src="imgs/cr/装备/DM_20230321151052_023.PNG"/>
+									<span>无用大棒</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>1250</span>
+									</div>
+								</li>
+								<li id="qbzb24"><img src="imgs/cr/装备/DM_20230321151052_024.PNG"/>
+									<span>黑暗封印</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>350</span>
+									</div>
+								</li>
+								<li id="qbzb25"><img src="imgs/cr/装备/DM_20230321151052_025.PNG"/>
+									<span>萃取</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>450</span>
+									</div>
+								</li>
+								<li id="qbzb26"><img src="imgs/cr/装备/DM_20230321151052_026.PNG"/>
+									<span>焰爪猫幼崽</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>450</span>
+									</div>
+								</li>
+								<li id="qbzb27"><img src="imgs/cr/装备/DM_20230321151052_027.PNG"/>
+									<span>风行狐幼体</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>450</span>
+									</div>
+								</li>
+								<li id="qbzb28"><img src="imgs/cr/装备/DM_20230321151052_028.PNG"/>
+									<span>踏苔蜥幼苗</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>450</span>
+									</div>
+								</li>
+								<li id="qbzb29"><img src="imgs/cr/装备/DM_20230321151052_029.PNG"/>
+									<span>生命药水</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>50</span>
+									</div>
+								</li>
+								<li id="qbzb30"><img src="imgs/cr/装备/DM_20230321151052_030.PNG"/>
+									<span>永续意志夹心饼干</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>50</span>
+									</div>
+								</li>
+								<li id="qbzb31"><img src="imgs/cr/装备/DM_20230321151052_031.PNG"/>
+									<span>基舍艾斯碎片</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>700</span>
+									</div>
+								</li>
+								<li id="qbzb32"><img src="imgs/cr/装备/DM_20230321151052_032.PNG"/>
+									<span>复用型药水</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>150</span>
+									</div>
+								</li>
+								<li id="qbzb33"><img src="imgs/cr/装备/DM_20230321151052_033.PNG"/>
+									<span>腐败药水</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>500</span>
+									</div>
+								</li>
+								<li id="qbzb34"><img src="imgs/cr/装备/DM_20230321151052_034.PNG"/>
+									<span>守护者号角</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>950</span>
+									</div>
+								</li>
+								<li id="qbzb35"><img src="imgs/cr/装备/DM_20230321151052_035.PNG"/>
+									<span>魄罗佳肴</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>0</span>
+									</div>
+								</li>
+								<li id="qbzb36"><img src="imgs/cr/装备/DM_20230321151052_036.PNG"/>
+									<span>控制守卫</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>75</span>
+									</div>
+								</li>
+								<li id="qbzb37" class="shzb"><img src="imgs/cr/装备/DM_20230321151052_037.PNG"/>
+									<span>舒瑞娅的战歌</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>2500</span>
+									</div>
+								</li>
+								<li id="qbzb38"><img src="imgs/cr/装备/DM_20230321151052_038.PNG"/>
+									<span>钢铁合剂</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>500</span>
+									</div>
+								</li>
+								<li id="qbzb39"><img src="imgs/cr/装备/DM_20230321151052_039.PNG"/>
+									<span>巫术合剂</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>500</span>
+									</div>
+								</li>
+								<li id="qbzb40"><img src="imgs/cr/装备/DM_20230321151052_040.PNG"/>
+									<span>愤怒合剂</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>500</span>
+									</div>
+								</li>
+								<li id="qbzb41"><img src="imgs/cr/装备/DM_20230321151052_041.PNG"/>
+									<span>小兵去质器</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>0</span>
+									</div>
+								</li>
+								<li id="qbzb42"><img src="imgs/cr/装备/DM_20230321151052_042.PNG"/>
+									<span>始动的秒表</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>0</span>
+									</div>
+								</li>
+								<li id="qbzb43"><img src="imgs/cr/装备/DM_20230321151052_043.PNG"/>
+									<span>秒表</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>750</span>
+									</div>
+								</li>
+								<li id="qbzb44"><img src="imgs/cr/装备/DM_20230321151052_044.PNG"/>
+									<span>破损的秒表</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>750</span>
+									</div>
+								</li>
+								<li id="qbzb45"><img src="imgs/cr/装备/DM_20230321151052_045.PNG"/>
+									<span>有点神奇之鞋</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>300</span>
+									</div>
+								</li>
+								<li id="qbzb46"><img src="imgs/cr/装备/DM_20230321151052_046.PNG"/>
+									<span>完美时机秒表</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>750</span>
+									</div>
+								</li>
+								<li id="qbzb47"><img src="imgs/cr/装备/DM_20230321151052_047.PNG"/>
+									<span>破损的秒表</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>750</span>
+									</div>
+								</li>
+								<li id="qbzb48" class="shzb"><img src="imgs/cr/装备/DM_20230321151052_048.PNG"/>
+									<span>薄暮法袍</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>2500</span>
+									</div>
+								</li>
+								<li id="qbzb49"><img src="imgs/cr/装备/DM_20230321151052_049.PNG"/>
+									<span>大天使之杖</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3000</span>
+									</div>
+								</li>
+								<li id="qbzb50"><img src="imgs/cr/装备/DM_20230321151052_050.PNG"/>
+									<span>魔宗</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>2900</span>
+									</div>
+								</li>
+								<li id="qbzb51"><img src="imgs/cr/装备/DM_20230321151052_051.PNG"/>
+									<span>狂战士胫甲</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>1100</span>
+									</div>
+								</li>
+								<li id="qbzb52"><img src="imgs/cr/装备/DM_20230321151052_052.PNG"/>
+									<span>轻灵之靴</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>900</span>
+									</div>
+								</li>
+								<li id="qbzb53"><img src="imgs/cr/装备/DM_20230321151052_053.PNG"/>
+									<span>炼金科技纯化器</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>2300</span>
+									</div>
+								</li>
+								<li id="qbzb54"><img src="imgs/cr/装备/DM_20230321151052_054.PNG"/>
+									<span>法师之靴</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>1100</span>
+									</div>
+								</li>
+								<li id="qbzb55"><img src="imgs/cr/装备/DM_20230321151052_055.PNG"/>
+									<span>冰川圆盾</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>900</span>
+									</div>
+								</li>
+								<li id="qbzb56"><img src="imgs/cr/装备/DM_20230321151052_056.PNG"/>
+									<span>守护天使</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3000</span>
+									</div>
+								</li>
+								<li id="qbzb57"><img src="imgs/cr/装备/DM_20230321151052_057.PNG"/>
+									<span>无尽之刃</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3400</span>
+									</div>
+								</li>
+								<li id="qbzb58"><img src="imgs/cr/装备/DM_20230321151052_058.PNG"/>
+									<span>凡性的提醒</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3000</span>
+									</div>
+								</li>
+								<li id="qbzb59"><img src="imgs/cr/装备/DM_20230321151052_059.PNG"/>
+									<span>最后的轻语</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>1450</span>
+									</div>
+								</li>
+								<li id="qbzb60"><img src="imgs/cr/装备/DM_20230321151052_060.PNG"/>
+									<span>多兰尼克领主的致意</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3000</span>
+									</div>
+								</li>
+								<li id="qbzb61"><img src="imgs/cr/装备/DM_20230321151052_061.PNG"/>
+									<span>炽天使之拥</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3000</span>
+									</div>
+								</li>
+								<li id="qbzb62"><img src="imgs/cr/装备/DM_20230321151052_062.PNG"/>
+									<span>梅贾的窃魂卷</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>1600</span>
+									</div>
+								</li>
+								<li id="qbzb63"><img src="imgs/cr/装备/DM_20230321151052_063.PNG"/>
+									<span>魔切</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3000</span>
+									</div>
+								</li>
+								<li id="qbzb64"><img src="imgs/cr/装备/DM_20230321151052_064.PNG"/>
+									<span>净蚀</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>1100</span>
+									</div>
+								</li>
+								<li id="qbzb65"><img src="imgs/cr/装备/DM_20230321151052_065.PNG"/>
+									<span>幻影之舞</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>2600</span>
+									</div>
+								</li>
+								<li id="qbzb66"><img src="imgs/cr/装备/DM_20230321151052_066.PNG"/>
+									<span>铁板靴</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>1100</span>
+									</div>
+								</li>
+								<li id="qbzb67"><img src="imgs/cr/装备/DM_20230321151052_067.PNG"/>
+									<span>基克的聚合</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>2400</span>
+									</div>
+								</li>
+								<li id="qbzb68"><img src="imgs/cr/装备/DM_20230321151052_068.PNG"/>
+									<span>缚炉之斧</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>1000</span>
+									</div>
+								</li>
+								<li id="qbzb69"><img src="imgs/cr/装备/DM_20230321151052_069.PNG"/>
+									<span>斯特拉克的挑战护手</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3100</span>
+									</div>
+								</li>
+								<li id="qbzb70"><img src="imgs/cr/装备/DM_20230321151052_070.PNG"/>
+									<span>耀光</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>700</span>
+									</div>
+								</li>
+								<li id="qbzb71"><img src="imgs/cr/装备/DM_20230321151052_071.PNG"/>
+									<span>振奋盔甲</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>2900</span>
+									</div>
+								</li>
+								<li id="qbzb72"><img src="imgs/cr/装备/DM_20230321151052_072.PNG"/>
+									<span>带翼的月板甲</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>800</span>
+									</div>
+								</li>
+								<li id="qbzb73"><img src="imgs/cr/装备/DM_20230321151052_073.PNG"/>
+									<span>燃烧宝石</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>800</span>
+									</div>
+								</li>
+								<li id="qbzb74"><img src="imgs/cr/装备/DM_20230321151052_074.PNG"/>
+									<span>日炎圣盾</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>2700</span>
+									</div>
+								</li>
+								<li id="qbzb75"><img src="imgs/cr/装备/DM_20230321151052_075.PNG"/>
+									<span>女神之泪</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>400</span>
+									</div>
+								</li>
+								<li id="qbzb76"><img src="imgs/cr/装备/DM_20230321151052_076.PNG"/>
+									<span>黑色切割者</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3100</span>
+									</div>
+								</li>
+								<li id="qbzb77"><img src="imgs/cr/装备/DM_20230321151052_077.PNG"/>
+									<span>饮血剑</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3200</span>
+									</div>
+								</li>
+								<li id="qbzb78"><img src="imgs/cr/装备/DM_20230321151052_078.PNG"/>
+									<span>贪欲九头蛇</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3400</span>
+									</div>
+								</li>
+								<li id="qbzb79"><img src="imgs/cr/装备/DM_20230321151052_079.PNG"/>
+									<span>荆棘之甲</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>2700</span>
+									</div>
+								</li>
+								<li id="qbzb80"><img src="imgs/cr/装备/DM_20230321151052_080.PNG"/>
+									<span>荆棘背心</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>800</span>
+									</div>
+								</li>
+								<li id="qbzb81"><img src="imgs/cr/装备/DM_20230321151052_081.PNG"/>
+									<span>提亚马特</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>1200</span>
+									</div>
+								</li>
+								<li id="qbzb82" class="shzb"><img src="imgs/cr/装备/DM_20230321151052_082.PNG"/>
+									<span>三相之力</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3333</span>
+									</div>
+								</li>
+								<li id="qbzb83"><img src="imgs/cr/装备/DM_20230321151052_083.PNG"/>
+									<span>守望者铠甲</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>1000</span>
+									</div>
+								</li>
+								<li id="qbzb84"><img src="imgs/cr/装备/DM_20230321151052_084.PNG"/>
+									<span>狂徒铠甲</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3000</span>
+									</div>
+								</li>
+								<li id="qbzb85" class="shzb"><img src="imgs/cr/装备/DM_20230321151052_085.PNG"/>
+									<span>心之刚</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3200</span>
+									</div>
+								</li>
+								<li id="qbzb86"><img src="imgs/cr/装备/DM_20230321151052_086.PNG"/>
+									<span>卢安娜的飓风</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>2600</span>
+									</div>
+								</li>
+								<li id="qbzb87"><img src="imgs/cr/装备/DM_20230321151052_087.PNG"/>
+									<span>狂热</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>1050</span>
+									</div>
+								</li>
+								<li id="qbzb88"><img src="imgs/cr/装备/DM_20230321151052_088.PNG"/>
+									<span>灭世者的死亡之帽</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3600</span>
+									</div>
+								</li>
+								<li id="qbzb89"><img src="imgs/cr/装备/DM_20230321151052_089.PNG"/>
+									<span>智慧末刃</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3100</span>
+									</div>
+								</li>
+								<li id="qbzb90"><img src="imgs/cr/装备/DM_20230321151052_090.PNG"/>
+									<span>疾射火炮</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>2500</span>
+									</div>
+								</li>
+								<li id="qbzb91"><img src="imgs/cr/装备/DM_20230321151052_091.PNG"/>
+									<span>岚切</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>2700</span>
+									</div>
+								</li>
+								<li id="qbzb92"><img src="imgs/cr/装备/DM_20230321151052_092.PNG"/>
+									<span>巫妖之祸</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3000</span>
+									</div>
+								</li>
+								<li id="qbzb93"><img src="imgs/cr/装备/DM_20230321151052_093.PNG"/>
+									<span>女妖面纱</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>2600</span>
+									</div>
+								</li>
+								<li id="qbzb94"><img src="imgs/cr/装备/DM_20230321151052_094.PNG"/>
+									<span>军团圣盾</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>1200</span>
+									</div>
+								</li>
+								<li id="qbzb95"><img src="imgs/cr/装备/DM_20230321151052_095.PNG"/>
+									<span>救赎</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>2300</span>
+									</div>
+								</li>
+								<li id="qbzb96"><img src="imgs/cr/装备/DM_20230321151052_096.PNG"/>
+									<span>恶魔法典</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>900</span>
+									</div>
+								</li>
+								<li id="qbzb97"><img src="imgs/cr/装备/DM_20230321151052_097.PNG"/>
+									<span>骑士之誓</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>2300</span>
+									</div>
+								</li>
+								<li id="qbzb98"><img src="imgs/cr/装备/DM_20230321151052_098.PNG"/>
+									<span>冰霜之心</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>2700</span>
+									</div>
+								</li>
+								<li id="qbzb99"><img src="imgs/cr/装备/DM_20230321151052_099.PNG"/>
+									<span>水银之靴</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>1100</span>
+									</div>
+								</li>
+								<li id="qbzb100"><img src="imgs/cr/装备/DM_20230321151052_100.PNG"/>
+									<span>守护者法球</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>950</span>
+									</div>
+								</li>
+								<li id="qbzb101">
+									<img  src="imgs/cr/装备/DM_20230321151052_101.PNG"/>
+									<span>
+										以太精魂
+									</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>850</span>
+									</div>
+									
+								</li>
+								<li id="qbzb102"><img src="imgs/cr/装备/DM_20230321151052_102.PNG"/>
+									<span>
+										禁忌雕像
+									</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>800</span>
+									</div>
+								</li>
+								<li id="qbzb103"><img src="imgs/cr/装备/DM_20230321151052_103.PNG"/>
+									<span>纳什之牙</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3000</span>
+									</div>
+								</li>
+								<li id="qbzb104"><img src="imgs/cr/装备/DM_20230321151052_104.PNG"/>
+									<span>瑞莱的冰晶节杖</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>2600</span>
+									</div>
+								</li>
+								<li id="qbzb105"><img src="imgs/cr/装备/DM_20230321151052_105.PNG"/>
+									<span>疾行之靴</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>1000</span>
+									</div>
+								</li>
+								<li id="qbzb106"><img src="imgs/cr/装备/DM_20230321151052_106.PNG"/>
+									<span>凛冬之临</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>2600</span>
+									</div>
+								</li>
+								<li id="qbzb107"><img src="imgs/cr/装备/DM_20230321151052_107.PNG"/>
+									<span>末日寒冬</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>2700</span>
+									</div>
+								</li>
+								<li id="qbzb108"><img src="imgs/cr/装备/DM_20230321151052_108.PNG"/>
+									<span>死刑宣告</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>800</span>
+									</div>
+								</li>
+								<li id="qbzb109"><img src="imgs/cr/装备/DM_20230321151052_109.PNG"/>
+									<span>鬼索的狂暴之刃</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>2600</span>
+									</div>
+								</li>
+								<li id="qbzb110"><img src="imgs/cr/装备/DM_20230321151052_110.PNG"/>
+									<span>考尔菲德的战锤</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>1100</span>
+									</div>
+								</li>
+								<li id="qbzb111"><img src="imgs/cr/装备/DM_20230321151052_111.PNG"/>
+									<span>锯齿短匕</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>1100</span>
+									</div>
+								</li>
+								<li id="qbzb112"><img src="imgs/cr/装备/DM_20230321151052_112.PNG"/>
+									<span>虚空之杖</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>2800</span>
+									</div>
+								</li>
+								<li id="qbzb113"><img src="imgs/cr/装备/DM_20230321151052_113.PNG"/>
+									<span>水银弯刀</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3000</span>
+									</div>
+								</li>
+								<li id="qbzb114"><img src="imgs/cr/装备/DM_20230321151052_114.PNG"/>
+									<span>水银饰带</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>1300</span>
+									</div>
+								</li>
+								<li id="qbzb115"><img src="imgs/cr/装备/DM_20230321151052_115.PNG"/>
+									<span>幽梦之灵</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3000</span>
+									</div>
+								</li>
+								<li id="qbzb116"><img src="imgs/cr/装备/DM_20230321151052_116.PNG"/>
+									<span>兰顿之兆</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3000</span>
+									</div>
+								</li>
+								<li id="qbzb117"><img src="imgs/cr/装备/DM_20230321151052_117.PNG"/>
+									<span>海克斯科技发电机</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>1050</span>
+									</div>
+								</li>
+								<li id="qbzb118" class="shzb"><img src="imgs/cr/装备/DM_20230321151052_118.PNG"/>
+									<span>海克斯科技火箭腰带</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3200</span>
+									</div>
+								</li>
+								<li id="qbzb119"><img src="imgs/cr/装备/DM_20230321151052_119.PNG"/>
+									<span>破败王者之刃</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3300</span>
+									</div>
+								</li>
+								<li id="qbzb120"><img src="imgs/cr/装备/DM_20230321151052_120.PNG"/>
+									<span>海克斯饮魔刀</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>1300</span>
+									</div>
+								</li>
+								<li id="qbzb121"><img src="imgs/cr/装备/DM_20230321151052_121.PNG"/>
+									<span>玛莫提乌斯之噬</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>2900</span>
+									</div>
+								</li>
+								<li id="qbzb122"><img src="imgs/cr/装备/DM_20230321151052_122.PNG"/>
+									<span>中娅沙漏</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3000</span>
+									</div>
+								</li>
+								<li id="qbzb123"><img src="imgs/cr/装备/DM_20230321151052_123.PNG"/>
+									<span>明朗之靴</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>950</span>
+									</div>
+								</li>
+								<li id="qbzb124"><img src="imgs/cr/装备/DM_20230321151052_124.PNG"/>
+									<span>朔极之矛</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3400</span>
+									</div>
+								</li>
+								<li id="qbzb125"><img src="imgs/cr/装备/DM_20230321151052_125.PNG"/>
+									<span>莫雷洛秘典</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3000</span>
+									</div>
+								</li>
+								<li id="qbzb126"><img src="imgs/cr/装备/DM_20230321151052_126.PNG"/>
+									<span>守护者之刃</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>950</span>
+									</div>
+								</li>
+								<li id="qbzb127"><img src="imgs/cr/装备/DM_20230321151052_127.PNG"/>
+									<span>黯影阔剑</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>2300</span>
+									</div>
+								</li>
+								<li id="qbzb128"><img src="imgs/cr/装备/DM_20230321151052_128.PNG"/>
+									<span>破舰者</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>2800</span>
+									</div>
+								</li>
+								<li id="qbzb129"><img src="imgs/cr/装备/DM_20230321151052_129.PNG"/>
+									<span>守护者战锤</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>950</span>
+									</div>
+								</li>
+								<li id="qbzb130" class="shzb"><img src="imgs/cr/装备/DM_20230321151052_130.PNG"/>
+									<span>钢铁烈阳之匣</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>2500</span>
+									</div>
+								</li>
+								<li id="qbzb131"><img src="imgs/cr/装备/DM_20230321151052_131.PNG"/>
+									<span>探索者的护臂</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>1000</span>
+									</div>
+								</li>
+								<li id="qbzb132"><img src="imgs/cr/装备/DM_20230321151052_132.PNG"/>
+									<span>石像鬼板甲</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3200</span>
+									</div>
+								</li>
+								<li id="qbzb133"><img src="imgs/cr/装备/DM_20230321151052_133.PNG"/>
+									<span>幽魂斗篷</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>1250</span>
+									</div>
+								</li>
+								<li id="qbzb134"><img src="imgs/cr/装备/DM_20230321151052_134.PNG"/>
+									<span>米凯尔的祝福</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>2300</span>
+									</div>
+								</li>
+								<li id="qbzb135"><img src="imgs/cr/装备/DM_20230321151052_135.PNG"/>
+									<span>草间人</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>0</span>
+									</div>
+								</li>
+								<li id="qbzb136"><img src="imgs/cr/装备/DM_20230321151052_136.PNG"/>
+									<span>侦察守卫</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>0</span>
+									</div>
+								</li>
+								<li id="qbzb137"><img src="imgs/cr/装备/DM_20230321151052_137.PNG"/>
+									<span>远见改造</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>0</span>
+									</div>
+								</li>
+								<li id="qbzb138"><img src="imgs/cr/装备/DM_20230321151052_138.PNG"/>
+									<span>神谕透镜</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>0</span>
+									</div>
+								</li>
+								<li id="qbzb139"><img src="imgs/cr/装备/DM_20230321151052_139.PNG"/>
+									<span>你也有份</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>0</span>
+									</div>
+								</li>
+								<li id="qbzb140"><img src="imgs/cr/装备/DM_20230321151052_140.PNG"/>
+									<span>炽热香炉</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>2300</span>
+									</div>
+								</li>
+								<li id="qbzb141"><img src="imgs/cr/装备/DM_20230321151052_141.PNG"/>
+									<span>夺萃之镰</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>2900</span>
+									</div>
+								</li>
+								<li id="qbzb142"><img src="imgs/cr/装备/DM_20230321151052_142.PNG"/>
+									<span>先锋之眼</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>0</span>
+									</div>
+								</li>
+								<li id="qbzb143"><img src="imgs/cr/装备/DM_20230321151052_143.PNG"/>
+									<span>卡莉斯塔的黑色长矛</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>0</span>
+									</div>
+								</li>
+								<li id="qbzb144"><img src="imgs/cr/装备/DM_20230321151052_144.PNG"/>
+									<span>亡者的板甲</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>2900</span>
+									</div>
+								</li>
+								<li id="qbzb145"><img src="imgs/cr/装备/DM_20230321151052_145.PNG"/>
+									<span>巨型九头蛇</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3300</span>
+									</div>
+								</li>
+								<li id="qbzb146"><img src="imgs/cr/装备/DM_20230321151052_146.PNG"/>
+									<span>晶体护腕</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>800</span>
+									</div>
+								</li>
+								<li id="qbzb147"><img src="imgs/cr/装备/DM_20230321151052_147.PNG"/>
+									<span>遗失的章节</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>1300</span>
+									</div>
+								</li>
+								<li id="qbzb148"><img src="imgs/cr/装备/DM_20230321151052_148.PNG"/>
+									<span>万世催化石</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>1100</span>
+									</div>
+								</li>
+								<li id="qbzb149"><img src="imgs/cr/装备/DM_20230321151052_149.PNG"/>
+									<span>夜之锋刃</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>2900</span>
+									</div>
+								</li>
+								<li id="qbzb150"><img src="imgs/cr/装备/DM_20230321151052_150.PNG"/>
+									<span>窃法之刃</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>400</span>
+									</div>
+								</li>
+								<li id="qbzb151"><img src="imgs/cr/装备/DM_20230321151052_151.PNG"/>
+									<span>冰霜之牙</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>400</span>
+									</div>
+								</li>
+								<li id="qbzb152"><img src="imgs/cr/装备/DM_20230321151052_152.PNG"/>
+									<span>极冰碎片</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>400</span>
+									</div>
+								</li>
+								<li id="qbzb153"><img src="imgs/cr/装备/DM_20230321151052_153.PNG"/>
+									<span>钢铁护肩</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>400</span>
+									</div>
+								</li>
+								<li id="qbzb154"><img src="imgs/cr/装备/DM_20230321151052_154.PNG"/>
+									<span>符钢肩甲</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>400</span>
+									</div>
+								</li>
+								<li id="qbzb155"><img src="imgs/cr/装备/DM_20230321151052_155.PNG"/>
+									<span>白岩肩凯</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>400</span>
+									</div>
+								</li>
+								<li id="qbzb156"><img src="imgs/cr/装备/DM_20230321151052_156.PNG"/>
+									<span>圣物之盾</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>400</span>
+									</div>
+								</li>
+								<li id="qbzb157"><img src="imgs/cr/装备/DM_20230321151052_157.PNG"/>
+									<span>巨神峰圆盾</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>400</span>
+									</div>
+								</li>
+								<li id="qbzb158"><img src="imgs/cr/装备/DM_20230321151052_158.PNG"/>
+									<span>山脉壁垒</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>400</span>
+									</div>
+								</li>
+								<li id="qbzb159"><img src="imgs/cr/装备/DM_20230321151052_159.PNG"/>
+									<span>幽魂镰刀</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>400</span>
+									</div>
+								</li>
+								<li id="qbzb160"><img src="imgs/cr/装备/DM_20230321151052_160.PNG"/>
+									<span>鬼影斩月</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>400</span>
+									</div>
+								</li>
+								<li id="qbzb161"><img src="imgs/cr/装备/DM_20230321151052_161.PNG"/>
+									<span>黑雾巨镰</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>400</span>
+									</div>
+								</li>
+								<li id="qbzb162"><img src="imgs/cr/装备/DM_20230321151052_162.PNG"/>
+									<span>随意开火</span>
+									<div id="zbje">
+										<span>500银蛇币</span>
+									</div>
+								</li>
+								<li id="qbzb163"><img src="imgs/cr/装备/DM_20230321151052_163.PNG"/>
+									<span>死亡之女</span>
+									<div id="zbje">
+										<span>500银蛇币</span>
+									</div>
+								</li>
+								<li id="qbzb164"><img src="imgs/cr/装备/DM_20230321151052_164.PNG"/>
+									<span>鼓舞士气</2span>
+									<div id="zbje">
+										<span>500银蛇币</span>
+									</div>
+								</li>
+								<li id="qbzb165"><img src="imgs/cr/装备/DM_20230321151052_165.PNG"/>
+									<span>湮灭宝珠</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>800</span>
+									</div>
+								</li>
+								<li id="qbzb166" class="shzb"><img src="imgs/cr/装备/DM_20230321151052_166.PNG"/>
+									<span>帝国指令</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>2500</span>
+									</div>
+								</li>
+								<li id="qbzb167"><img src="imgs/cr/装备/DM_20230321151052_167.PNG"/>
+									<span>自然之力</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>2900</span>
+									</div>
+								</li>
+								<li id="qbzb168"><img src="imgs/cr/装备/DM_20230321151052_168.PNG"/>
+									<span>金铲铲</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>7187</span>
+									</div>
+								</li>
+								<li id="qbzb169"><img src="imgs/cr/装备/DM_20230321151052_169.PNG"/>
+									<span>视界专注</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3000</span>
+									</div>
+								</li>
+								<li id="qbzb170"><img src="imgs/cr/装备/DM_20230321151052_170.PNG"/>
+									<span>星界驱驰</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3000</span>
+									</div>
+								</li>
+								<li id="qbzb171"><img src="imgs/cr/装备/DM_20230321151052_171.PNG"/>
+									<span>枯萎珠宝</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>1250</span>
+									</div>
+								</li>
+								<li id="qbzb172"><img src="imgs/cr/装备/DM_20230321151052_172.PNG"/>
+									<span>翠绿屏障</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>1000</span>
+									</div>
+								</li>
+								<li id="qbzb173" class="shzb"><img src="imgs/cr/装备/DM_20230321151052_173.PNG"/>
+									<span>峡谷制造者</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3200</span>
+									</div>
+								</li>
+								<li id="qbzb174"><img src="imgs/cr/装备/DM_20230321151052_174.PNG"/>
+									<span>榨血睥睨</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>1300</span>
+									</div>
+								</li>
+								<li id="qbzb175" class="shzb"><img src="imgs/cr/装备/DM_20230321151052_175.PNG"/>
+									<span>暗夜收割者</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3200</span>
+									</div>
+								</li>
+								<li id="qbzb176"><img src="imgs/cr/装备/DM_20230321151052_176.PNG"/>
+									<span>恶魔之拥</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3000</span>
+									</div>
+								</li>
+								<li id="qbzb177"><img src="imgs/cr/装备/DM_20230321151052_177.PNG"/>
+									<span>戒备眼石</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>1100</span>
+									</div>
+								</li>
+								<li id="qbzb178"><img src="imgs/cr/装备/DM_20230321151052_178.PNG"/>
+									<span>萌动眼石</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>1200</span>
+									</div>
+								</li>
+								<li id="qbzb179"><img src="imgs/cr/装备/DM_20230321151052_179.PNG"/>
+									<span>班德尔玻璃镜</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>950</span>
+									</div>
+								</li>
+								<li id="qbzb180"><img src="imgs/cr/装备/DM_20230321151052_180.PNG"/>
+									<span>警觉眼石</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>1100</span>
+									</div>
+								</li>
+								<li id="qbzb181" class="shzb"><img src="imgs/cr/装备/DM_20230321151052_181.PNG"/>
+									<span>破碎王后之冕</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>2800</span>
+									</div>
+								</li>
+								<li id="qbzb182"><img src="imgs/cr/装备/DM_20230321151052_182.PNG"/>
+									<span>影焰</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3000</span>
+									</div>
+								</li>
+								<li id="qbzb183"><img src="imgs/cr/装备/DM_20230321151052_183.PNG"/>
+									<span>铁刺鞭</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>1100</span>
+									</div>
+								</li>
+								<li id="qbzb184"><img src="imgs/cr/装备/DM_20230321151052_184.PNG"/>
+									<span>密银黎明</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3000</span>
+									</div>
+								</li>
+								<li id="qbzb185"><img src="imgs/cr/装备/DM_20230321151052_185.PNG"/>
+									<span>死亡之舞</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3300</span>
+									</div>
+								</li>
+								<li id="qbzb186"><img src="imgs/cr/装备/DM_20230321151052_186.PNG"/>
+									<span>炼金朋克链锯剑</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>2800</span>
+									</div>
+								</li>
+								<li id="qbzb187"><img src="imgs/cr/装备/DM_20230321151052_187.PNG"/>
+									<span>流水法杖</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>2300</span>
+									</div>
+								</li>
+								<li id="qbzb188" class="shzb"><img src="imgs/cr/装备/DM_20230321151052_188.PNG"/>
+									<span>月石再生器</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>2500</span>
+									</div>
+								</li>
+								<li id="qbzb189" class="shzb"><img src="imgs/cr/装备/DM_20230321151052_189.PNG"/>
+									<span>渴血战斧</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3300</span>
+									</div>
+								</li>
+								<li id="qbzb190" class="shzb"><img src="imgs/cr/装备/DM_20230321151052_190.PNG"/>
+									<span>挺进破坏者</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3300</span>
+									</div>
+								</li>
+								<li id="qbzb191" class="shzb"><img src="imgs/cr/装备/DM_20230321151052_191.PNG"/>
+									<span>神圣分离者</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3300</span>
+									</div>
+								</li>
+								<li id="qbzb192" class="shzb"><img src="imgs/cr/装备/DM_20230321151052_192.PNG"/>
+									<span>兰德里的苦楚</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3200</span>
+									</div>
+								</li>
+								<li id="qbzb193" class="shzb"><img src="imgs/cr/装备/DM_20230321151052_193.PNG"/>
+									<span>卢登的激荡</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3200</span>
+									</div>
+								</li>
+								<li id="qbzb194" class="shzb"><img src="imgs/cr/装备/DM_20230321151052_194.PNG"/>
+									<span>永霜</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>2800</span>
+									</div>
+								</li>
+								<li id="qbzb195" class="shzb"><img src="imgs/cr/装备/DM_20230321151052_195.PNG"/>
+									<span>时光之杖</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>2800</span>
+									</div>
+								</li>
+								<li id="qbzb196"><img src="imgs/cr/装备/DM_20230321151052_196.PNG"/>
+									<span>斑比的熔渣</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>1000</span>
+									</div>
+								</li>
+								<li id="qbzb197" class="shzb"><img src="imgs/cr/装备/DM_20230321151052_197.PNG"/>
+									<span>冰脉护手</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3200</span>
+									</div>
+								</li>
+								<li id="qbzb198"><img src="imgs/cr/装备/DM_20230321151052_198.PNG"/>
+									<span>涡轮炼金罐</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>2800</span>
+									</div>
+								</li>
+								<li id="qbzb199" class="shzb"><img src="imgs/cr/装备/DM_20230321151052_199.PNG"/>
+									<span>千变者贾修</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3200</span>
+									</div>
+								</li>
+								<li id="qbzb200" class="shzb"><img src="imgs/cr/装备/DM_20230321151052_200.PNG"/>
+									<span>耀辉美德</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3200</span>
+									</div>
+								</li>
+								<li id="qbzb201">
+									<img  src="imgs/cr/装备/DM_20230321151052_201.PNG"/>
+									<span>
+										正午箭袋
+									</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>1300</span>
+									</div>
+									
+								</li>
+								<li id="qbzb202" class="shzb"><img src="imgs/cr/装备/DM_20230321151052_202.PNG"/>
+									<span>
+										狂风之力
+									</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3400</span>
+									</div>
+								</li>
+								<li id="qbzb203" class="shzb"><img src="imgs/cr/装备/DM_20230321151052_203.PNG"/>
+									<span>海妖杀手</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3400</span>
+									</div>
+								</li>
+								<li id="qbzb204" class="shzb"><img src="imgs/cr/装备/DM_20230321151052_204.PNG"/>
+									<span>不朽盾弓</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3400</span>
+									</div>
+								</li>
+								<li id="qbzb205"><img src="imgs/cr/装备/DM_20230321151052_205.PNG"/>
+									<span>纳沃利讯刃</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3400</span>
+									</div>
+								</li>
+								<li id="qbzb206"><img src="imgs/cr/装备/DM_20230321151052_206.PNG"/>
+									<span>收集者</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3000</span>
+									</div>
+								</li>
+								<li id="qbzb207"><img src="imgs/cr/装备/DM_20230321151052_207.PNG"/>
+									<span>狂怒小刀</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>800</span>
+									</div>
+								</li>
+								<li id="qbzb208" class="shzb"><img src="imgs/cr/装备/DM_20230321151052_208.PNG"/>
+									<span>德拉克萨的幕刃</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3100</span>
+									</div>
+								</li>
+								<li id="qbzb209" class="shzb"><img src="imgs/cr/装备/DM_20230321151052_209.PNG"/>
+									<span>星蚀</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3100</span>
+									</div>
+								</li>
+								<li id="qbzb210" class="shzb"><img src="imgs/cr/装备/DM_20230321151052_210.PNG"/>
+									<span>暗行者之爪</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3100</span>
+									</div>
+								</li>
+								<li id="qbzb211"><img src="imgs/cr/装备/DM_20230321151052_211.PNG"/>
+									<span>赛瑞尔达的怨恨</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3200</span>
+									</div>
+								</li>
+								<li id="qbzb212"><img src="imgs/cr/装备/DM_20230321151052_212.PNG"/>
+									<span>巨蛇之牙</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>2600</span>
+									</div>
+								</li>
+								<li id="qbzb213"><img src="imgs/cr/装备/DM_20230321151052_213.PNG"/>
+									<span>公理圆弧</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3000</span>
+									</div>
+								</li>
+								<li id="qbzb214"><img src="imgs/cr/装备/DM_20230321151052_214.PNG"/>
+									<span>悔恨锁链</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>2500</span>
+									</div>
+								</li>
+								<li id="qbzb215"><img src="imgs/cr/装备/DM_20230321151052_215.PNG"/>
+									<span>深渊面具</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3000</span>
+									</div>
+								</li>
+							</ul>
+							<!-- 普通 -->
+							<ul id="pt">
+								<li id="qbzb1">
+									<img  src="imgs/cr/装备/DM_20230321151052_001.PNG"/>
+									<span>
+										鞋子
+									</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>300</span>
+									</div>
+									
+								</li><li id="qbzb2"><img src="imgs/cr/装备/DM_20230321151052_002.PNG"/>
+									<span>
+										仙女护符
+									</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>250</span>
+									</div>
+								</li><li id="qbzb3"><img src="imgs/cr/装备/DM_20230321151052_003.PNG"/>
+									<span>治疗宝珠</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>300</span>
+									</div>
+								</li><li id="qbzb5"><img src="imgs/cr/装备/DM_20230321151052_005.PNG"/>
+									<span>灵巧披风</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>600</span>
+									</div>
+								</li><li id="qbzb6"><img src="imgs/cr/装备/DM_20230321151052_006.PNG"/>
+									<span>爆裂魔杖</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>850</span>
+									</div>
+								</li><li id="qbzb7"><img src="imgs/cr/装备/DM_20230321151052_007.PNG"/>
+									<span>蓝水晶</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>350</span>
+									</div>
+								</li><li id="qbzb8"><img src="imgs/cr/装备/DM_20230321151052_008.PNG"/>
+									<span>红水晶</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>400</span>
+									</div>
+								</li>
+								<li id="qbzb9"><img src="imgs/cr/装备/DM_20230321151052_009.PNG"/>
+									<span>布甲</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>300</span>
+									</div>
+								</li><li id="qbzb11"><img src="imgs/cr/装备/DM_20230321151052_011.PNG"/>
+									<span>抗魔斗篷</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>450</span>
+									</div>
+								</li>
+								<li id="qbzb12"><img src="imgs/cr/装备/DM_20230321151052_012.PNG"/>
+									<span>长剑</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>350</span>
+									</div>
+								</li>
+								<li id="qbzb13"><img src="imgs/cr/装备/DM_20230321151052_013.PNG"/>
+									<span>十字镐</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>875</span>
+									</div>
+								</li>
+								<li id="qbzb14"><img src="imgs/cr/装备/DM_20230321151052_014.PNG"/>
+									<span>暴风之剑</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>1300</span>
+									</div>
+								</li>
+								<li id="qbzb15"><img src="imgs/cr/装备/DM_20230321151052_015.PNG"/>
+									<span>短剑</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>300</span>
+									</div>
+								</li><li id="qbzb17"><img src="imgs/cr/装备/DM_20230321151052_017.PNG"/>
+									<span>增幅典籍</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>435</span>
+									</div>
+								</li><li id="qbzb19"><img src="imgs/cr/装备/DM_20230321151052_019.PNG"/>
+									<span>多兰之盾</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>450</span>
+									</div>
+								</li>
+								<li id="qbzb20"><img src="imgs/cr/装备/DM_20230321151052_020.PNG"/>
+									<span>多兰之刃</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>450</span>
+									</div>
+								</li>
+								<li id="qbzb21"><img src="imgs/cr/装备/DM_20230321151052_021.PNG"/>
+									<span>多兰之戒</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>400</span>
+									</div>
+								</li><li id="qbzb23"><img src="imgs/cr/装备/DM_20230321151052_023.PNG"/>
+									<span>无用大棒</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>1250</span>
+									</div>
+								</li>
+								<li id="qbzb24"><img src="imgs/cr/装备/DM_20230321151052_024.PNG"/>
+									<span>黑暗封印</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>350</span>
+									</div>
+								</li>
+								<li id="qbzb25"><img src="imgs/cr/装备/DM_20230321151052_025.PNG"/>
+									<span>萃取</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>450</span>
+									</div>
+								</li><li id="qbzb42"><img src="imgs/cr/装备/DM_20230321151052_042.PNG"/>
+									<span>始动的秒表</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>0</span>
+									</div>
+								</li><li id="qbzb70"><img src="imgs/cr/装备/DM_20230321151052_070.PNG"/>
+									<span>耀光</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>700</span>
+									</div>
+								</li><li id="qbzb75"><img src="imgs/cr/装备/DM_20230321151052_075.PNG"/>
+									<span>女神之泪</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>400</span>
+									</div>
+								</li><li id="qbzb150"><img src="imgs/cr/装备/DM_20230321151052_150.PNG"/>
+									<span>窃法之刃</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>400</span>
+									</div>
+								</li><li id="qbzb153"><img src="imgs/cr/装备/DM_20230321151052_153.PNG"/>
+									<span>钢铁护肩</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>400</span>
+									</div>
+								</li><li id="qbzb156"><img src="imgs/cr/装备/DM_20230321151052_156.PNG"/>
+									<span>圣物之盾</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>400</span>
+									</div>
+								</li><li id="qbzb159"><img src="imgs/cr/装备/DM_20230321151052_159.PNG"/>
+									<span>幽魂镰刀</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>400</span>
+									</div>
+								</li>
+								
+							</ul>
+							<!-- 史诗 -->
+							<ul id="ss">
+								<li id="qbzb4"><img src="imgs/cr/装备/DM_20230321151052_004.PNG"/>
+									<span>巨人腰带</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>900</span>
+									</div>
+								</li><li id="qbzb10"><img src="imgs/cr/装备/DM_20230321151052_010.PNG"/>
+									<span>锁子甲</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>800</span>
+									</div>
+								</li><li id="qbzb16"><img src="imgs/cr/装备/DM_20230321151052_016.PNG"/>
+									<span>反曲之弓</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>1000</span>
+									</div>
+								</li><li id="qbzb18"><img src="imgs/cr/装备/DM_20230321151052_018.PNG"/>
+									<span>吸血鬼节杖</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>900</span>
+									</div>
+								</li><li id="qbzb22"><img src="imgs/cr/装备/DM_20230321151052_022.PNG"/>
+									<span>负极斗篷</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>900</span>
+									</div>
+								</li><li id="qbzb31"><img src="imgs/cr/装备/DM_20230321151052_031.PNG"/>
+									<span>基舍艾斯碎片</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>700</span>
+									</div>
+								</li><li id="qbzb55"><img src="imgs/cr/装备/DM_20230321151052_055.PNG"/>
+									<span>冰川圆盾</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>900</span>
+									</div>
+								</li><li id="qbzb59"><img src="imgs/cr/装备/DM_20230321151052_059.PNG"/>
+									<span>最后的轻语</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>1450</span>
+									</div>
+								</li><li id="qbzb64"><img src="imgs/cr/装备/DM_20230321151052_064.PNG"/>
+									<span>净蚀</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>1100</span>
+									</div>
+								</li><li id="qbzb68"><img src="imgs/cr/装备/DM_20230321151052_068.PNG"/>
+									<span>缚炉之斧</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>1000</span>
+									</div>
+								</li><li id="qbzb72"><img src="imgs/cr/装备/DM_20230321151052_072.PNG"/>
+									<span>带翼的月板甲</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>800</span>
+									</div>
+								</li><li id="qbzb73"><img src="imgs/cr/装备/DM_20230321151052_073.PNG"/>
+									<span>燃烧宝石</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>800</span>
+									</div>
+								</li><li id="qbzb80"><img src="imgs/cr/装备/DM_20230321151052_080.PNG"/>
+									<span>荆棘背心</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>800</span>
+									</div>
+								</li>
+								<li id="qbzb81"><img src="imgs/cr/装备/DM_20230321151052_081.PNG"/>
+									<span>提亚马特</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>1200</span>
+									</div>
+								</li><li id="qbzb83"><img src="imgs/cr/装备/DM_20230321151052_083.PNG"/>
+									<span>守望者铠甲</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>1000</span>
+									</div>
+								</li><li id="qbzb87"><img src="imgs/cr/装备/DM_20230321151052_087.PNG"/>
+									<span>狂热</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>1050</span>
+									</div>
+								</li>
+								<li id="qbzb94"><img src="imgs/cr/装备/DM_20230321151052_094.PNG"/>
+									<span>军团圣盾</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>1200</span>
+									</div>
+								</li><li id="qbzb96"><img src="imgs/cr/装备/DM_20230321151052_096.PNG"/>
+									<span>恶魔法典</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>900</span>
+									</div>
+								</li><li id="qbzb101">
+									<img  src="imgs/cr/装备/DM_20230321151052_101.PNG"/>
+									<span>
+										以太精魂
+									</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>850</span>
+									</div>
+									
+								</li>
+								<li id="qbzb102"><img src="imgs/cr/装备/DM_20230321151052_102.PNG"/>
+									<span>
+										禁忌雕像
+									</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>800</span>
+									</div>
+								</li><li id="qbzb108"><img src="imgs/cr/装备/DM_20230321151052_108.PNG"/>
+									<span>死刑宣告</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>800</span>
+									</div>
+								</li><li id="qbzb110"><img src="imgs/cr/装备/DM_20230321151052_110.PNG"/>
+									<span>考尔菲德的战锤</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>1100</span>
+									</div>
+								</li>
+								<li id="qbzb111"><img src="imgs/cr/装备/DM_20230321151052_111.PNG"/>
+									<span>锯齿短匕</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>1100</span>
+									</div>
+								</li>
+								<li id="qbzb114"><img src="imgs/cr/装备/DM_20230321151052_114.PNG"/>
+									<span>水银饰带</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>1300</span>
+									</div>
+								</li><li id="qbzb117"><img src="imgs/cr/装备/DM_20230321151052_117.PNG"/>
+									<span>海克斯科技发电机</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>1050</span>
+									</div>
+								</li><li id="qbzb120"><img src="imgs/cr/装备/DM_20230321151052_120.PNG"/>
+									<span>海克斯饮魔刀</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>1300</span>
+									</div>
+								</li><li id="qbzb131"><img src="imgs/cr/装备/DM_20230321151052_131.PNG"/>
+									<span>探索者的护臂</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>1000</span>
+									</div>
+								</li><li id="qbzb133"><img src="imgs/cr/装备/DM_20230321151052_133.PNG"/>
+									<span>幽魂斗篷</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>1250</span>
+									</div>
+								</li><li id="qbzb146"><img src="imgs/cr/装备/DM_20230321151052_146.PNG"/>
+									<span>晶体护腕</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>800</span>
+									</div>
+								</li>
+								<li id="qbzb147"><img src="imgs/cr/装备/DM_20230321151052_147.PNG"/>
+									<span>遗失的章节</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>1300</span>
+									</div>
+								</li>
+								<li id="qbzb148"><img src="imgs/cr/装备/DM_20230321151052_148.PNG"/>
+									<span>万世催化石</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>1100</span>
+									</div>
+								</li><li id="qbzb165"><img src="imgs/cr/装备/DM_20230321151052_165.PNG"/>
+									<span>湮灭宝珠</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>800</span>
+									</div>
+								</li><li id="qbzb172"><img src="imgs/cr/装备/DM_20230321151052_172.PNG"/>
+									<span>翠绿屏障</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>1000</span>
+									</div>
+								</li><li id="qbzb174"><img src="imgs/cr/装备/DM_20230321151052_174.PNG"/>
+									<span>榨血睥睨</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>1300</span>
+									</div>
+								</li><li id="qbzb177"><img src="imgs/cr/装备/DM_20230321151052_177.PNG"/>
+									<span>戒备眼石</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>1100</span>
+									</div>
+								</li><li id="qbzb179"><img src="imgs/cr/装备/DM_20230321151052_179.PNG"/>
+									<span>班德尔玻璃镜</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>950</span>
+									</div>
+								</li><li id="qbzb183"><img src="imgs/cr/装备/DM_20230321151052_183.PNG"/>
+									<span>铁刺鞭</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>1100</span>
+									</div>
+								</li><li id="qbzb196"><img src="imgs/cr/装备/DM_20230321151052_196.PNG"/>
+									<span>斑比的熔渣</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>1000</span>
+									</div>
+								</li><li id="qbzb201">
+									<img  src="imgs/cr/装备/DM_20230321151052_201.PNG"/>
+									<span>
+										正午箭袋
+									</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>1300</span>
+									</div>
+									
+								</li><li id="qbzb207"><img src="imgs/cr/装备/DM_20230321151052_207.PNG"/>
+									<span>狂怒小刀</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>800</span>
+									</div>
+								</li>
+								
+							</ul>
+							<!-- 传说 -->
+							<ul id="cs">
+								<li id="qbzb49"><img src="imgs/cr/装备/DM_20230321151052_049.PNG"/>
+									<span>大天使之杖</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3000</span>
+									</div>
+								</li>
+								<li id="qbzb50"><img src="imgs/cr/装备/DM_20230321151052_050.PNG"/>
+									<span>魔宗</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>2900</span>
+									</div>
+								</li><li id="qbzb53"><img src="imgs/cr/装备/DM_20230321151052_053.PNG"/>
+									<span>炼金科技纯化器</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>2300</span>
+									</div>
+								</li><li id="qbzb56"><img src="imgs/cr/装备/DM_20230321151052_056.PNG"/>
+									<span>守护天使</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3000</span>
+									</div>
+								</li>
+								<li id="qbzb57"><img src="imgs/cr/装备/DM_20230321151052_057.PNG"/>
+									<span>无尽之刃</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3400</span>
+									</div>
+								</li>
+								<li id="qbzb58"><img src="imgs/cr/装备/DM_20230321151052_058.PNG"/>
+									<span>凡性的提醒</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3000</span>
+									</div>
+								</li><li id="qbzb60"><img src="imgs/cr/装备/DM_20230321151052_060.PNG"/>
+									<span>多兰尼克领主的致意</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3000</span>
+									</div>
+								</li><li id="qbzb62"><img src="imgs/cr/装备/DM_20230321151052_062.PNG"/>
+									<span>梅贾的窃魂卷</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>1600</span>
+									</div>
+								</li><li id="qbzb65"><img src="imgs/cr/装备/DM_20230321151052_065.PNG"/>
+									<span>幻影之舞</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>2600</span>
+									</div>
+								</li><li id="qbzb67"><img src="imgs/cr/装备/DM_20230321151052_067.PNG"/>
+									<span>基克的聚合</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>2400</span>
+									</div>
+								</li><li id="qbzb69"><img src="imgs/cr/装备/DM_20230321151052_069.PNG"/>
+									<span>斯特拉克的挑战护手</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3100</span>
+									</div>
+								</li><li id="qbzb71"><img src="imgs/cr/装备/DM_20230321151052_071.PNG"/>
+									<span>振奋盔甲</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>2900</span>
+									</div>
+								</li><li id="qbzb74"><img src="imgs/cr/装备/DM_20230321151052_074.PNG"/>
+									<span>日炎圣盾</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>2700</span>
+									</div>
+								</li><li id="qbzb76"><img src="imgs/cr/装备/DM_20230321151052_076.PNG"/>
+									<span>黑色切割者</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3100</span>
+									</div>
+								</li>
+								<li id="qbzb77"><img src="imgs/cr/装备/DM_20230321151052_077.PNG"/>
+									<span>饮血剑</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3200</span>
+									</div>
+								</li>
+								<li id="qbzb78"><img src="imgs/cr/装备/DM_20230321151052_078.PNG"/>
+									<span>贪欲九头蛇</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3400</span>
+									</div>
+								</li>
+								<li id="qbzb79"><img src="imgs/cr/装备/DM_20230321151052_079.PNG"/>
+									<span>荆棘之甲</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>2700</span>
+									</div>
+								</li><li id="qbzb84"><img src="imgs/cr/装备/DM_20230321151052_084.PNG"/>
+									<span>狂徒铠甲</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3000</span>
+									</div>
+								</li><li id="qbzb86"><img src="imgs/cr/装备/DM_20230321151052_086.PNG"/>
+									<span>卢安娜的飓风</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>2600</span>
+									</div>
+								</li><li id="qbzb88"><img src="imgs/cr/装备/DM_20230321151052_088.PNG"/>
+									<span>灭世者的死亡之帽</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3600</span>
+									</div>
+								</li><li id="qbzb89"><img src="imgs/cr/装备/DM_20230321151052_089.PNG"/>
+									<span>智慧末刃</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3100</span>
+									</div>
+								</li>
+								<li id="qbzb90"><img src="imgs/cr/装备/DM_20230321151052_090.PNG"/>
+									<span>疾射火炮</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>2500</span>
+									</div>
+								</li>
+								<li id="qbzb91"><img src="imgs/cr/装备/DM_20230321151052_091.PNG"/>
+									<span>岚切</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>2700</span>
+									</div>
+								</li>
+								<li id="qbzb92"><img src="imgs/cr/装备/DM_20230321151052_092.PNG"/>
+									<span>巫妖之祸</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3000</span>
+									</div>
+								</li>
+								<li id="qbzb93"><img src="imgs/cr/装备/DM_20230321151052_093.PNG"/>
+									<span>女妖面纱</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>2600</span>
+									</div>
+								</li><li id="qbzb95"><img src="imgs/cr/装备/DM_20230321151052_095.PNG"/>
+									<span>救赎</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>2300</span>
+									</div>
+								</li><li id="qbzb97"><img src="imgs/cr/装备/DM_20230321151052_097.PNG"/>
+									<span>骑士之誓</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>2300</span>
+									</div>
+								</li>
+								<li id="qbzb98"><img src="imgs/cr/装备/DM_20230321151052_098.PNG"/>
+									<span>冰霜之心</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>2700</span>
+									</div>
+								</li><li id="qbzb103"><img src="imgs/cr/装备/DM_20230321151052_103.PNG"/>
+									<span>纳什之牙</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3000</span>
+									</div>
+								</li>
+								<li id="qbzb104"><img src="imgs/cr/装备/DM_20230321151052_104.PNG"/>
+									<span>瑞莱的冰晶节杖</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>2600</span>
+									</div>
+								</li><li id="qbzb106"><img src="imgs/cr/装备/DM_20230321151052_106.PNG"/>
+									<span>凛冬之临</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>2600</span>
+									</div>
+								</li>
+								<li id="qbzb107"><img src="imgs/cr/装备/DM_20230321151052_107.PNG"/>
+									<span>末日寒冬</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>2700</span>
+									</div>
+								</li><li id="qbzb109"><img src="imgs/cr/装备/DM_20230321151052_109.PNG"/>
+									<span>鬼索的狂暴之刃</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>2600</span>
+									</div>
+								</li><li id="qbzb112"><img src="imgs/cr/装备/DM_20230321151052_112.PNG"/>
+									<span>虚空之杖</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>2800</span>
+									</div>
+								</li>
+								<li id="qbzb113"><img src="imgs/cr/装备/DM_20230321151052_113.PNG"/>
+									<span>水银弯刀</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3000</span>
+									</div>
+								</li><li id="qbzb115"><img src="imgs/cr/装备/DM_20230321151052_115.PNG"/>
+									<span>幽梦之灵</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3000</span>
+									</div>
+								</li>
+								<li id="qbzb116"><img src="imgs/cr/装备/DM_20230321151052_116.PNG"/>
+									<span>兰顿之兆</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3000</span>
+									</div>
+								</li><li id="qbzb119"><img src="imgs/cr/装备/DM_20230321151052_119.PNG"/>
+									<span>破败王者之刃</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3300</span>
+									</div>
+								</li><li id="qbzb121"><img src="imgs/cr/装备/DM_20230321151052_121.PNG"/>
+									<span>玛莫提乌斯之噬</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>2900</span>
+									</div>
+								</li>
+								<li id="qbzb122"><img src="imgs/cr/装备/DM_20230321151052_122.PNG"/>
+									<span>中娅沙漏</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3000</span>
+									</div>
+								</li><li id="qbzb124"><img src="imgs/cr/装备/DM_20230321151052_124.PNG"/>
+									<span>朔极之矛</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3400</span>
+									</div>
+								</li>
+								<li id="qbzb125"><img src="imgs/cr/装备/DM_20230321151052_125.PNG"/>
+									<span>莫雷洛秘典</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3000</span>
+									</div>
+								</li><li id="qbzb127"><img src="imgs/cr/装备/DM_20230321151052_127.PNG"/>
+									<span>黯影阔剑</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>2300</span>
+									</div>
+								</li>
+								<li id="qbzb128"><img src="imgs/cr/装备/DM_20230321151052_128.PNG"/>
+									<span>破舰者</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>2800</span>
+									</div>
+								</li><li id="qbzb132"><img src="imgs/cr/装备/DM_20230321151052_132.PNG"/>
+									<span>石像鬼板甲</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3200</span>
+									</div>
+								</li><li id="qbzb134"><img src="imgs/cr/装备/DM_20230321151052_134.PNG"/>
+									<span>米凯尔的祝福</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>2300</span>
+									</div>
+								</li><li id="qbzb140"><img src="imgs/cr/装备/DM_20230321151052_140.PNG"/>
+									<span>炽热香炉</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>2300</span>
+									</div>
+								</li>
+								<li id="qbzb141"><img src="imgs/cr/装备/DM_20230321151052_141.PNG"/>
+									<span>夺萃之镰</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>2900</span>
+									</div>
+								</li><li id="qbzb144"><img src="imgs/cr/装备/DM_20230321151052_144.PNG"/>
+									<span>亡者的板甲</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>2900</span>
+									</div>
+								</li>
+								<li id="qbzb145"><img src="imgs/cr/装备/DM_20230321151052_145.PNG"/>
+									<span>巨型九头蛇</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3300</span>
+									</div>
+								</li><li id="qbzb149"><img src="imgs/cr/装备/DM_20230321151052_149.PNG"/>
+									<span>夜之锋刃</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>2900</span>
+									</div>
+								</li><li id="qbzb167"><img src="imgs/cr/装备/DM_20230321151052_167.PNG"/>
+									<span>自然之力</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>2900</span>
+									</div>
+								</li><li id="qbzb169"><img src="imgs/cr/装备/DM_20230321151052_169.PNG"/>
+									<span>视界专注</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3000</span>
+									</div>
+								</li>
+								<li id="qbzb170"><img src="imgs/cr/装备/DM_20230321151052_170.PNG"/>
+									<span>星界驱驰</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3000</span>
+									</div>
+								</li><li id="qbzb176"><img src="imgs/cr/装备/DM_20230321151052_176.PNG"/>
+									<span>恶魔之拥</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3000</span>
+									</div>
+								</li><li id="qbzb182"><img src="imgs/cr/装备/DM_20230321151052_182.PNG"/>
+									<span>影焰</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3000</span>
+									</div>
+								</li><li id="qbzb184"><img src="imgs/cr/装备/DM_20230321151052_184.PNG"/>
+									<span>密银黎明</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3000</span>
+									</div>
+								</li>
+								<li id="qbzb185"><img src="imgs/cr/装备/DM_20230321151052_185.PNG"/>
+									<span>死亡之舞</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3300</span>
+									</div>
+								</li>
+								<li id="qbzb186"><img src="imgs/cr/装备/DM_20230321151052_186.PNG"/>
+									<span>炼金朋克链锯剑</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>2800</span>
+									</div>
+								</li>
+								<li id="qbzb187"><img src="imgs/cr/装备/DM_20230321151052_187.PNG"/>
+									<span>流水法杖</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>2300</span>
+									</div>
+								</li><li id="qbzb198"><img src="imgs/cr/装备/DM_20230321151052_198.PNG"/>
+									<span>涡轮炼金罐</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>2800</span>
+									</div>
+								</li><li id="qbzb205"><img src="imgs/cr/装备/DM_20230321151052_205.PNG"/>
+									<span>纳沃利讯刃</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3400</span>
+									</div>
+								</li>
+								<li id="qbzb206"><img src="imgs/cr/装备/DM_20230321151052_206.PNG"/>
+									<span>收集者</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3000</span>
+									</div>
+								</li><li id="qbzb211"><img src="imgs/cr/装备/DM_20230321151052_211.PNG"/>
+									<span>赛瑞尔达的怨恨</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3200</span>
+									</div>
+								</li>
+								<li id="qbzb212"><img src="imgs/cr/装备/DM_20230321151052_212.PNG"/>
+									<span>巨蛇之牙</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>2600</span>
+									</div>
+								</li>
+								<li id="qbzb213"><img src="imgs/cr/装备/DM_20230321151052_213.PNG"/>
+									<span>公理圆弧</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3000</span>
+									</div>
+								</li>
+								<li id="qbzb214"><img src="imgs/cr/装备/DM_20230321151052_214.PNG"/>
+									<span>悔恨锁链</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>2500</span>
+									</div>
+								</li>
+								<li id="qbzb215"><img src="imgs/cr/装备/DM_20230321151052_215.PNG"/>
+									<span>深渊面具</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3000</span>
+									</div>
+								</li>
+							</ul>
+							<!-- 神话 -->
+							<ul id="sh">
+								<li id="qbzb37" class="shzb"><img src="imgs/cr/装备/DM_20230321151052_037.PNG"/>
+									<span>舒瑞娅的战歌</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>2500</span>
+									</div>
+								</li><li id="qbzb48" class="shzb"><img src="imgs/cr/装备/DM_20230321151052_048.PNG"/>
+									<span>薄暮法袍</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>2500</span>
+									</div>
+								</li><li id="qbzb82" class="shzb"><img src="imgs/cr/装备/DM_20230321151052_082.PNG"/>
+									<span>三相之力</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3333</span>
+									</div>
+								</li><li id="qbzb85" class="shzb"><img src="imgs/cr/装备/DM_20230321151052_085.PNG"/>
+									<span>心之刚</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3200</span>
+									</div>
+								</li><li id="qbzb118" class="shzb"><img src="imgs/cr/装备/DM_20230321151052_118.PNG"/>
+									<span>海克斯科技火箭腰带</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3200</span>
+									</div>
+								</li><li id="qbzb130" class="shzb"><img src="imgs/cr/装备/DM_20230321151052_130.PNG"/>
+									<span>钢铁烈阳之匣</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>2500</span>
+									</div>
+								</li><li id="qbzb166" class="shzb"><img src="imgs/cr/装备/DM_20230321151052_166.PNG"/>
+									<span>帝国指令</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>2500</span>
+									</div>
+								</li><li id="qbzb173" class="shzb"><img src="imgs/cr/装备/DM_20230321151052_173.PNG"/>
+									<span>峡谷制造者</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3200</span>
+									</div>
+								</li><li id="qbzb175" class="shzb"><img src="imgs/cr/装备/DM_20230321151052_175.PNG"/>
+									<span>暗夜收割者</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3200</span>
+									</div>
+								</li><li id="qbzb181" class="shzb"><img src="imgs/cr/装备/DM_20230321151052_181.PNG"/>
+									<span>破碎王后之冕</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>2800</span>
+									</div>
+								</li><li id="qbzb188" class="shzb"><img src="imgs/cr/装备/DM_20230321151052_188.PNG"/>
+									<span>月石再生器</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>2500</span>
+									</div>
+								</li><li id="qbzb189" class="shzb"><img src="imgs/cr/装备/DM_20230321151052_189.PNG"/>
+									<span>渴血战斧</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3300</span>
+									</div>
+								</li>
+								<li id="qbzb190" class="shzb"><img src="imgs/cr/装备/DM_20230321151052_190.PNG"/>
+									<span>挺进破坏者</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3300</span>
+									</div>
+								</li>
+								<li id="qbzb191" class="shzb"><img src="imgs/cr/装备/DM_20230321151052_191.PNG"/>
+									<span>神圣分离者</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3300</span>
+									</div>
+								</li>
+								<li id="qbzb192" class="shzb"><img src="imgs/cr/装备/DM_20230321151052_192.PNG"/>
+									<span>兰德里的苦楚</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3200</span>
+									</div>
+								</li>
+								<li id="qbzb193" class="shzb"><img src="imgs/cr/装备/DM_20230321151052_193.PNG"/>
+									<span>卢登的激荡</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3200</span>
+									</div>
+								</li>
+								<li id="qbzb194" class="shzb"><img src="imgs/cr/装备/DM_20230321151052_194.PNG"/>
+									<span>永霜</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>2800</span>
+									</div>
+								</li>
+								<li id="qbzb195" class="shzb"><img src="imgs/cr/装备/DM_20230321151052_195.PNG"/>
+									<span>时光之杖</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>2800</span>
+									</div>
+								</li><li id="qbzb197" class="shzb"><img src="imgs/cr/装备/DM_20230321151052_197.PNG"/>
+									<span>冰脉护手</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3200</span>
+									</div>
+								</li><li id="qbzb199" class="shzb"><img src="imgs/cr/装备/DM_20230321151052_199.PNG"/>
+									<span>千变者贾修</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3200</span>
+									</div>
+								</li>
+								<li id="qbzb200" class="shzb"><img src="imgs/cr/装备/DM_20230321151052_200.PNG"/>
+									<span>耀辉美德</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3200</span>
+									</div>
+								</li><li id="qbzb202" class="shzb"><img src="imgs/cr/装备/DM_20230321151052_202.PNG"/>
+									<span>
+										狂风之力
+									</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3400</span>
+									</div>
+								</li>
+								<li id="qbzb203" class="shzb"><img src="imgs/cr/装备/DM_20230321151052_203.PNG"/>
+									<span>海妖杀手</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3400</span>
+									</div>
+								</li>
+								<li id="qbzb204" class="shzb"><img src="imgs/cr/装备/DM_20230321151052_204.PNG"/>
+									<span>不朽盾弓</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3400</span>
+									</div>
+								</li><li id="qbzb208" class="shzb"><img src="imgs/cr/装备/DM_20230321151052_208.PNG"/>
+									<span>德拉克萨的幕刃</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3100</span>
+									</div>
+								</li>
+								<li id="qbzb209" class="shzb"><img src="imgs/cr/装备/DM_20230321151052_209.PNG"/>
+									<span>星蚀</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3100</span>
+									</div>
+								</li>
+								<li id="qbzb210" class="shzb"><img src="imgs/cr/装备/DM_20230321151052_210.PNG"/>
+									<span>暗行者之爪</span>
+									<div id="zbje">
+										<img src="./imgs/cr/图标/金币.PNG">
+										<span>3100</span>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+									
+				</div>
+			</div>3
+		</div>
+	</body>
+</html>

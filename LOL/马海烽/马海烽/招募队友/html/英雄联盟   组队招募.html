@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			*{
+				margin: 0px auto;
+				padding: 0px;
+			}
+			.bj{
+				background-image: url('../images/组队首页图.webp');
+				height: 2740px;
+				width: 1920px;	
+				background-position: center;
+				background-repeat: no-repeat;
+				position: relative;
+				top: 89px;
+				
+			}
+			.ds{
+				background-image: url('../images/顶部首行.webp');
+				background-repeat: no-repeat;
+				height: 90px;
+				background-position: center;
+				position: relative;
+				bottom: 89px;
+			}
+			.db{
+				float: left;
+				background-image: url('../images/英雄联盟.png');
+				background-repeat: no-repeat;
+				width: 167px;
+				height: 60px;
+				transform: scale(0.7);
+				margin-left: 30px;
+				margin-top: 20px;
+			}
+			.db2{
+				float: left;
+				background-image: url('../images/组对招募.png ');
+				background-repeat: no-repeat;
+				width: 144px;
+				transform: scale(1);
+				height: 40px;
+				margin-top: 30px;
+			}
+			.u{
+				float: left;
+				width: 115px;
+				height: 90px;
+				position: absolute;
+				margin-left: 115px;
+			}
+			.u:hover{
+				
+				background-image: url('../images/文字底色.png');
+				background-repeat: no-repeat;
+				width: 115px;
+				height: 90px;
+			}
+			.ur{
+				float: left;
+				background-image: url('../images/文字底色.png');
+				background-repeat: no-repeat;
+				width: 115px;
+				height: 90px;
+			}
+			.wz{
+				width:233px;
+				height: 90px;
+				list-style: none;
+				position: absolute;
+				left: 50%;
+				margin-left: -115px;
+			}
+			.w{
+				font-size: 16px;
+				color: blanchedalmond;
+				text-align: center;
+				position: absolute;
+				text-decoration: none;
+				top: 27px;
+				left: 33px;
+			}
+			.w1{
+				
+				font-size: 16px;
+				color: antiquewhite;
+				text-align: center;
+				position: absolute;
+				top: 27px;
+				left: 25px;
+			}
+			.t1{
+				 width:0.4px;
+				 height:90px;
+				 position: relative;
+				 left: 109px;
+			}
+			.dl{
+				width: 100%;
+				height: 30px;
+				line-height: 30px;
+				font-size: 15px;
+				text-align: center;
+				color: grey;
+			}
+			.dl>a{
+				color: beige;
+			}
+			.tp2{
+				margin-top: 120px;
+				width: 600px;
+				height: 180px;
+				background-image: url('../images/首2.png');
+				background-repeat: no-repeat;
+				position: relative;
+				left: 50%;
+				margin-left: -300px;
+			}
+			.kjbj{
+				width: 1200px;
+				height: 535px;
+				background-image: url('../images/背景大框.png');
+				background-repeat: no-repeat;
+				position: relative;
+				left: 50%;
+				margin-left: -600px;
+				margin-top: 20px;
+			}
+			.t3,.t2{
+				float: left;
+				background-image: url('../images/2号.png');
+				background-repeat: no-repeat;
+				width: 546px;
+				height: 250px;
+				margin: 20px;
+				margin-top: 90px;
+			}
+			.t2{
+				margin-left: 33px;
+			}
+			.t2>p{
+				width: 546px;
+				height: 80px;
+				text-align: center;
+				line-height: 80px;
+				font-size: 20px;
+				color: antiquewhite;
+			}
+			.tw{
+				margin-left: 15px;
+			}
+			.tw>input{
+				width: 50px;
+				height: 60px;
+				background-color: rgba(00, 000, 00, 0);
+				border: 0px;
+				margin: 0px;
+			}
+			.t3>p{
+				width: 546px;
+				height: 80px;
+				text-align: center;
+				line-height: 80px;
+				font-size: 20px;
+				color: antiquewhite;
+			}
+			.t3>input{
+				width: 97px;
+				height: 128px;
+				background-color: rgba(00, 000, 00, 0);
+				border: 0px;
+				margin-left: 7px;
+			}
+			.dw{
+				background-image: url('../images/段位.png');
+				background-repeat: no-repeat;
+				margin-left: 60px;
+			}
+			.dw1{
+				background-image: url('../images/段位.png');
+				background-repeat: no-repeat;
+				background-position: -60px 0px;
+			}
+			.dw2{
+				background-image: url('../images/段位.png');
+				background-repeat: no-repeat;
+				background-position: -120px 0px;
+			}
+			.dw3{
+				background-image: url('../images/段位.png');
+				background-repeat: no-repeat;
+				background-position: -180px 0px;
+			}
+			.dw4{
+				background-image: url('../images/段位.png');
+				background-repeat: no-repeat;
+				background-position: -240px 0px;
+			}
+			.dw5{
+				background-image: url('../images/段位.png');
+				background-repeat: no-repeat;
+				background-position: -300px 0px;
+			}
+			.dw6{
+				background-image: url('../images/段位.png');
+				background-repeat: no-repeat;
+				background-position: -360px 0px;
+			}
+			.dw7{
+				background-image: url('../images/段位.png');
+				background-repeat: no-repeat;
+				background-position: -420px 0px;
+			}
+			.dw8{
+				background-image: url('../images/段位.png');
+				background-repeat: no-repeat;
+				background-position: -480px 0px;
+			}
+			.dw:hover{
+				background-image: url('../images/段位.png');
+				background-repeat: no-repeat;
+				background-position: 0px -60px;
+			}
+			.dw1:hover{
+				background-image: url('../images/段位.png');
+				background-repeat: no-repeat;
+				background-position: -60px -60px;
+			}
+			.dw2:hover{
+				background-image: url('../images/段位.png');
+				background-repeat: no-repeat;
+				background-position: -120px -60px;
+			}
+			.dw3:hover{
+				background-image: url('../images/段位.png');
+				background-repeat: no-repeat;
+				background-position: -180px -60px;
+			}
+			.dw4:hover{
+				background-image: url('../images/段位.png');
+				background-repeat: no-repeat;
+				background-position: -240px -60px;
+			}
+			.dw5:hover{
+				background-image: url('../images/段位.png');
+				background-repeat: no-repeat;
+				background-position: -300px -60px;
+			}
+			.dw6:hover{
+				background-image: url('../images/段位.png');
+				background-repeat: no-repeat;
+				background-position: -360px -60px;
+			}
+			.dw7:hover{
+				background-image: url('../images/段位.png');
+				background-repeat: no-repeat;
+				background-position: -420px -60px;
+			}
+			.dw8:hover{
+				background-image: url('../images/段位.png');
+				background-repeat: no-repeat;
+				background-position: -480px -60px;
+			}
+			.sd{
+				background-image: url('../images/上单 (2).gif');
+				background-repeat: no-repeat;
+				color: gray;
+				line-height: 200px;
+			}
+			.sd1{
+				background-image: url('../images/打野 (1).gif');
+				background-repeat: no-repeat;
+				color: gray;
+				line-height: 200px;
+			}
+			.sd2{
+				background-image: url('../images/中路 (1).gif');
+				background-repeat: no-repeat;
+				color: gray;
+				line-height: 200px;
+			}
+			.sd3{
+				background-image: url('../images/射手 (2).gif');
+				background-repeat: no-repeat;
+				color: gray;
+				line-height: 200px;
+			}
+			.sd4{
+				background-image: url('../images/辅助 (1).gif');
+				background-repeat: no-repeat;
+				color: gray;
+				line-height: 200px;
+			}
+			.sd:hover{
+				background-image: url('../images/上单 (1).gif');
+				background-repeat: no-repeat;
+				color: bisque;
+			}
+			.sd1:hover{
+				background-image: url('../images/打野 (2).gif');
+				background-repeat: no-repeat;
+				color: bisque;
+			}
+			.sd2:hover{
+				background-image: url('../images/中路 (2).gif');
+				background-repeat: no-repeat;
+				color: bisque;
+			}
+			.sd3:hover{
+				background-image: url('../images/射手 (1).gif');
+				background-repeat: no-repeat;
+				color: bisque;
+			}
+			.sd4:hover{
+				background-image: url('../images/辅助 (2).gif');
+				background-repeat: no-repeat;
+				color: bisque;
+			}
+			.zh{
+				background-image: url('../images/框.png');
+				width: 356px;
+				background-size: cover;
+				height: 83px;
+				text-align: center;
+				line-height: 83px;
+				background-repeat:no-repeat;
+				font-size: 30px;
+				color: cadetblue;
+				
+				position: absolute;
+				bottom: 30px;
+				
+				left: 50%;
+				margin-left: -178px;
+			}
+			.zdd3{
+				margin-top: 120px;
+				width: 600px;
+				height: 180px;
+				background-image: url('../images/首2.png');
+				background-position: 0px -180px;
+				background-repeat: no-repeat;
+				position: relative;
+				left: 50%;
+				margin-left: -300px;
+			}
+			.z,.zz{
+				float: left;
+				background-image: url('../images/图框.png');
+				background-repeat: no-repeat;
+				width: 360px;
+				height: 389px;
+				margin-top: 70px;
+				margin-left: 20px;
+			}
+			.zz{
+				margin-left: 35px;
+			}
+			.z9,.z7,.z5{
+				background-repeat: no-repeat;
+				transform: scale(0.2);
+				 width: 1790px;
+				height: 1600px;
+				position: absolute;
+				 top: -569px;
+			}
+			.z9{
+				background-image: url('../images/图一.jpg');
+				position: absolute;
+				 left: -680px;
+			}
+			.z7{
+				background-image: url('../images/图二.jpg');
+				position: absolute;
+				 left: -300px;
+			}
+			.z5{
+				background-image: url('../images/图三.jpg');
+				position: absolute;
+				 left: 80px;
+			}
+			.p{
+				text-align: center;
+				line-height: 39px;
+				width: 360px;
+				height: 39px;
+				color: beige;
+				font-size: 20px;
+				margin-top: 335px;
+			}
+			.dibu{
+				background-color: black;
+				width: 1880px;
+				font-size: 5px;
+				text-align: center;
+				color: white;
+				margin-top: 140px;
+				padding: 20px;
+			}
+			.clj{
+				color: white;
+				text-decoration: none;
+			}
+			.ziti{
+				margin-top: 10px;
+			}
+			.ty{
+				background-image:  url('../images/条一.png');
+				background-position: 0rem 20px;
+				 height: 10px;
+				 width: 480px;
+				 margin-left: 20px;
+			}
+			.ty:hover{
+				background-position: 0rem -10px;
+			}
+			.wzbs>span{
+				color: darkgray;
+				font-size: 16px;
+				margin: 9px;
+				text-align: center;
+			}
+			.wzbs>span:hover{
+				color: bisque;
+			}
+			.jjdfh{
+				width: 1920px;
+				position: absolute;
+				left: 50%;
+				margin-left: -960px;
+			}
+		</style>
+	</head>
+	<body style="overflow-x: hidden;">
+		<div class="jjdfh">
+		<div class="bj">
+			<div class="ds">
+				<a class="db" href="../../../../英雄联盟.html"></a>
+				<a class="db2"></a>
+				<div class="wz">
+					<div class="ur">
+						<a class="w" href="#">
+							<p>首页</p>
+							<p class="z1">HOME</p>
+						</a>
+						<img src="../images/线.png" width="1px" height="90px" class="h1"/>
+					</div>
+					<div class="u">
+						<img src="../images/线.png" width="1px" height="90px" class="h1"/>
+						<a class="w1"><p>找队友</p><p class="z1">PLAYERS</p></a>
+						<img src="../images/线.png" class="t1"/>
+					</div>
+				</div>
+			</div>
+		
+			<div style="height: 700px;"></div>
+			<div class="dl">
+				<span>你好，请</span>
+				<a href="#" style="text-decoration: none;">&nbsp;登录</a>
+			</div>
+			<div class="tp2"></div>
+			<div class="kjbj">
+				<div class="t2">
+					<p>段位</p>
+					<div class="tw">
+						<input type="button" class="dw"/>
+						<input type="button" class="dw1"/>
+						<input type="button" class="dw2"/>
+						<input type="button" class="dw3"/>
+						<input type="button" class="dw4"/>
+						<input type="button" class="dw5"/>
+						<input type="button" class="dw6"/>
+						<input type="button" class="dw7"/>
+						<input type="button" class="dw8"/>
+					</div>
+					<div class="ty"></div>
+					<div class="wzbs">
+						<span style="margin-left: 30px;">黑铁</span>
+						<span>青铜</span>
+						<span>白银</span>
+						<span>黄金</span>
+						<span>铂金</span>
+						<span>钻石</span>
+						<span>大师</span>
+						<span>宗师</span>
+						<span>王者</span>
+					</div>
+				</div>
+				<div class="t3">
+					<p>位置</p>
+					<input type="button"  class="sd" value="上单"/>
+					<input type="button"  class="sd1" value="打野"/>
+					<input type="button"  class="sd2" value="中路"/>
+					<input type="button"  class="sd3" value="下路"/>
+					<input type="button"  class="sd4" value="辅助"/>
+					
+				</div>
+				<a href="#">
+					<div class="zh">招募队友</div>
+				</a>
+			</div>
+			<div class="zdd3"></div>
+			<div class="kjbj">
+				<div class="zz">
+					<div class="z9"></div>
+					<div class="p">夜里谁与你一起度过</div>
+				</div>
+				<div class="z">
+					<div class="z7"></div>
+					<div class="p">偶遇路人的突发事件</div>
+				</div>
+				<div class="z">
+					<div class="z5"></div>
+					<div class="p">组队参加冠军赛领取荣誉</div>
+				</div>
+			</div>
+			<div class="dibu">
+				<p class="ziti">
+					<a href="#" class="clj">腾讯互动娱乐</a><span> | </span>
+					<a href="#" class="clj">服务条款</a><span> | </span>
+					<a href="#" class="clj">隐私保护指引</a><span<span> | </span>
+					<a href="#" class="clj">儿童隐私保护指引</a><span> | </span>
+					<a href="#" class="clj">腾讯游戏招聘</a><span> | </span>
+					<a href="#" class="clj">腾讯游戏客服</a><span> | </span>
+					<a href="#" class="clj">游戏列表</a><span> | </span>
+					<a href="#" class="clj">成长守护平台</a><span> | </span>
+					<a href="https://www.tencent.com/zh-cn/partnership.html" class="clj">广告服务及商务合作</a></p>
+					<a href="#" class="clj ziti">COPYRIGHT © 1998 – 2023 TENCENT. ALL RIGHTS RESERVED.
+				</p>
+				<a href="https://www.tencent.com/zh-cn/statement.html?/law/copyright.htm" class="clj ziti">腾讯公司&nbsp;版权所有</a>
+			</div>
+		</div>
+		</div>
+	</body>
+</html>

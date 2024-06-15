@@ -1,0 +1,2206 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			
+			.navm{
+				list-style: none;
+				float: left;
+				margin-left: 30px;
+				padding-top: 16px;
+				width: 55%;
+				height: 78px;
+				box-sizing: border-box;
+				
+				
+			}
+			
+			#nav-li{
+				float: left;
+				width: 20%;
+				height: 78px;
+				text-align: center;
+				
+			}
+			.navm li a span:nth-child(1){
+				display: block;
+				color: #fff;
+				font-size: 18px;
+				letter-spacing: 1px;
+			}
+			.navm li a span:nth-child(2){
+				display: block;
+				color: #aeaeae;
+				font-size: 11px;
+				margin-top: -1px;
+				letter-spacing: 1px;
+			}
+			.navm a{
+				text-decoration: none;
+				
+			}
+			.loding{
+				float: right;
+				width: 244px;
+				height: 78px;
+				position: relative;
+			}
+			.loding-img{
+				float: left;
+				width: 48px;
+				height: 48px;
+				position: relative;
+				margin-top: 14px;
+				line-height: 48px;
+				text-align: center;
+				font-size: 0;
+			}
+			.loding-img>img {
+				width: 36px;
+				height: 36px;
+				border-radius:50%;
+				display: inline-block;
+				vertical-align: middle;
+				height: auto;
+				
+			}
+			.loding-text{
+				float: left;
+				margin-left:10px;
+			}
+			.summoner{
+				color: #fefefe;
+				font-size: 16px;
+				line-height: 78px;
+			}
+			.summoner a{
+				color: #fff3d0;
+			}
+			.pone{
+				float: right;
+				width: 40px;
+				height: 40px;
+				line-height: 40px;
+				margin: 23px 0px 0px 0px;
+				vertical-align: middle;
+			}
+			.pone a{
+				display: inline-block;
+				width: 20px;
+				height: 28px;
+				text-align: center;
+				background-image: url('../../imgs/tht/素材3.png');
+				background-repeat: no-repeat;
+				background-position:-50px 4px;
+				
+			}
+			.search{
+				float: right;
+				width: 40px;
+				height: 40px;
+				text-align: center;
+				line-height: 40px;
+				margin: 20px 14px 0px 0px;
+				vertical-align: middle;
+			}
+			.search>a{
+				width: 21px;
+				height: 21px;
+				display: inline-block;
+				background-image: url('../../imgs/tht/素材4.png');
+				background-repeat: no-repeat;
+				background-position:-380px -39px;
+			}
+			.bgbod{
+				width: 100%;
+				background-color:#081322;
+				height: 78px;
+				overflow: visible;
+				display: none; 
+				position: relative;
+				top: 0px;
+				left: -700px;
+			}
+			.bgbod-show{
+				display: block;
+				animation: show 0.3s;
+				/* 设置过渡时间及命名 */
+				width: 2800px;
+				z-index: 999;
+				
+			}
+			/* 直接过渡 */
+			@keyframes show {
+				from{
+					opacity: 0.1;
+				}
+				to{
+					opacity: 1;
+				}
+			}
+			.bgbod-box{
+				width: 30%;
+				height: 78px;
+				margin: 0px auto;
+				position: relative;
+			}
+			.dk2{
+				width: 21px;
+				height: 21px;
+				display: inline-block;
+				background-image: url(../../imgs/tht/素材4.png);
+				background-repeat: no-repeat;
+				background-position: -380px -39px;
+				position: absolute;
+				right: 70px;
+				top: 24px;
+				
+			}
+			.gb-box{
+				float: right;
+				width: 40px;
+				height: 40px;
+				margin: 23px -100px;
+			}
+			.gb{
+				display: inline-block;
+				width: 24px;
+				height: 24px;
+				background-image: url('../../imgs/tht/素材4.png');
+				background-position: 84% -64%;
+			}
+			.search-t{
+				float: right;
+				width: 368px;
+				height: 40px;
+				line-height: 40px;
+				background-color: #081322;
+				box-sizing: border-box;
+				padding-left: 5px;
+				color: #fff;
+				font-size: 16px;
+				margin: -60px 321px 0px 0px;
+				border: none;
+				outline: none;
+			}
+			.pone-hover{
+				background-image: url('../../imgs/tht/素材4.png');
+				background-position: 0 0;
+				width: 211px;
+				height: 178px;
+				position: absolute;
+				top: 55px;
+				right: 252px;
+				display: none;
+				
+			}
+			/* 联盟二维码死定位 */
+			@media only screen and (min-width:1395px) and (max-width:1535px){
+				.pone-hover{
+					top: 55px;
+					right: 183px;
+				}	
+			}
+			@media only screen and (min-width:1537px) and (max-width:1710px){
+				.pone-hover{
+					top: 55px;
+					right: 336px;
+				}	
+			}
+			@media only screen and (min-width:1711px) and (max-width:1950px){
+				.pone-hover{
+					top: 55px;
+					right: 442px;
+				}	
+			}
+			.pone a:hover .pone-hover{
+				display: block;
+				animation: ewm 0.5s;
+			}
+			@keyframes ewm{
+				from{
+					top: 45px;
+					
+				}
+				top{
+					top: 55px;
+				}
+			}
+			.ewm-box{
+				margin-top: 30px;
+				margin-left: 50px;
+			}
+			.ewm-box img{
+				border-radius: 8px;
+			}
+			.pone-hover>p{
+				color: #cdbe91;
+				font-size: 12px;
+				width: 100%;
+				margin-top: 10px;
+				text-align: center;
+				line-height: 20px;
+			}
+			.polo{
+				width: 50px;
+				height: 50px;
+				display: block;
+				position: absolute;
+				right: -8px;
+				bottom: -2px;
+			}
+			.lode{
+				width: 300px;
+				height: auto;
+				background-color: #000;
+				position: absolute;	
+				display: none;
+				top: 0;
+				right: -38px;
+			}
+			.lode p{
+				width: 100%;
+				height: auto;
+				box-sizing: border-box;
+				padding: 0 24px;
+				font-size: 12px;
+				color: #848383;
+				text-align: center;
+			}
+			
+			.loding:hover .lode{
+				display: block;
+				padding-top: 90px;
+				padding-bottom: 20px;
+				opacity: 0.8;
+				z-index: -1;
+				animation: lode 0.3s;
+			}
+			@keyframes lode{
+				from{
+					padding: 0px;
+				}
+				to{
+					padding-top: 90px;
+				}
+			}
+			.nav-y{
+				width: 2800px;
+				overflow: visible;
+				z-index: -11;
+				height: 354px;
+				background-color: #000;
+				opacity: 0.7;
+				position: relative;
+				top: -16px;
+				right: 898px;
+				padding: 88px 0px 32px 0px;
+				display: none;
+			}
+			
+			.navm:hover .nav-y{
+				display: block;
+				animation: nav-x 0.2s;
+			}
+			@keyframes nav-x{
+				from{
+					padding: 0px;
+				}
+				to{
+					padding-top: 88px;
+				}
+			}
+			.y-box{
+				width: 100%;
+				max-width: 1358px;
+				min-width: 1230px;
+				height: auto;
+				margin: 0 auto;
+			}
+			.y-box_1{
+				width: 55%;
+				overflow: visible;
+				margin-left: 161px;
+				padding-left: 1%;
+			}
+			.y-box_1 li{
+				list-style: none;
+				width: 20%;
+				float: left;
+				height: auto;
+				overflow: visible;
+			}
+			.y-box_1 li a{
+				display: block;
+				width: 100%;
+				overflow: visible;
+				line-height: 30px;
+				color: #e1e1e1;
+				font-size: 14px;
+				text-align: center;
+				position: relative;
+				vertical-align: middle;
+				
+				
+			}
+			.yu-N{
+				width: 14px;
+				height: 14px;
+				display: inline-block;
+				background-image: url('../../imgs/tht/素材4.png');
+				margin: -2px 2px 0px 0px;
+				background-position: -381px -65px;
+				vertical-align: middle;
+			}
+			.yu-H{
+				width: 14px;
+				height: 14px;
+				display: inline-block;
+				background-image: url('../../imgs/tht/素材4.png');
+				margin: -2px 2px 0px 0px;
+				background-position: -347px -84px;
+				vertical-align: middle;
+			}
+			.y-box_1 a:hover{
+				color: #e9c06c;
+				
+			}
+			#topgg{
+				width: 100%;
+				min-width: 1230px;
+				height: 360px;
+				overflow: hidden;
+				position: relative;
+				top: -95px;
+				background:url('../../imgs/tht/导航背景.jpg') center top no-repeat;
+				z-index: 0;
+			}
+			.mask{
+				width: 100%;
+				height: 131px;
+				position: absolute;
+				left: 0;
+				top: 0;
+				background: url("imgs/zjy/dark-jianbian-repeatx-0.png");
+			}
+			.look{
+				width: auto;
+				max-width: 1358px;
+				min-width: 1230px;
+				height: 100%;
+				position: relative;
+				margin: 0 auto;
+			}
+			.look>a{
+				display: block;
+				position: absolute;
+				z-index: 1;
+				left: 50%;
+				margin-left: -77px;
+				bottom: 32px;
+				background-image: url('../../imgs/tht/素材4.png');
+				background-position: -216px -39px;
+				width: 160px;
+				height: 40px;
+				font-size: 0;
+			}
+			
+			.version{
+				position: absolute;
+				z-index: 2;
+				right: 0;
+				bottom: 28px;
+				font-size: 14px;
+				color: #888787;
+			}
+			.version span{
+				color: #f5d185;
+				margin-right: 10px;
+			}
+			.more{
+				display: inline-block;
+				padding: 0 15px;
+				height: 22px;
+				border: 2px solid #f5d185;
+				text-align: center;
+				line-height: 22px;
+				background: rgba(0,0,0,0.6);
+				font-size: 12px;
+				color: #f5d185;
+			}
+			.more:hover{
+				background: #000;
+			}
+			#body{
+				width: 100%;
+				min-width: 1358px;
+				height: auto;
+				margin: 0px auto;
+			}
+			.news{
+				width: 1358px;
+				/* height: auto; */
+				height: 1200px;
+				margin: 0 auto;
+				padding: 40px 0px 80px 0px;
+				
+			}
+			
+			.vedio{
+				width: 100%;
+				min-width: 1358px;
+				background-color: #e3e2e2;
+				padding: 64px 0px 66px 0px;
+				/* 自适应只是打框架 */
+				height: 593px;
+			}
+			.match{
+				width: 1358px;
+				/* height: auto; */
+				height: 569px;
+				margin: 0px auto;
+				padding: 64px 0px 80px 0px;
+			}
+			.banner{
+				float: left;
+				width: 820px;
+				height: 380px;
+				overflow: hidden;
+				background-color: #e3e2e2;
+				position: relative;
+			}
+			.list{
+				width: 496px;
+				height: 405px;
+				overflow: hidden;
+				float: right;
+			}
+			.activity{
+				width: 820px;
+				height: 335px;
+				float: left;
+				margin-top: 50px;
+			}
+			.donw{
+				width: 496px;
+				height: 335px;
+				float: right;
+				margin-top: 50px;
+				position: relative;
+			}
+			.hero{
+				float: left;
+				width: 820px;
+				height: 254px;
+				margin-top: 51px;
+			}
+			.week-free{
+				width: 496px;
+				height: 255px;
+				float: right;
+				position: relative;
+				padding-top: 51px;
+			}
+			.vedio-box{
+				width: 1358px;
+				height: auto;
+				margin: 0px auto;
+				padding-bottom: 0;
+			}
+			#vedio-box{
+				width: 100%;
+				height: 463px;
+				float: left;
+			}
+			.mp{
+				width: 100%;
+				height: 35px;
+				overflow: visible;
+				position: relative;
+			}
+			.vedio-img{
+				width: 1378px;
+				height: auto;
+				
+				min-height: 130px;
+				position: relative;
+				margin-top: 32px;
+				overflow: hidden;
+			}
+			.match-top{
+				width: 100%;
+				height: 35px;
+				overflow: visible;
+				position: relative;
+			}
+			.match-box{
+				width: 100%;
+				height: auto;
+				min-height: 300px;
+				position: relative;
+				padding-top: 26px;
+			}
+			.team{
+				height: 364px;
+				margin-top: 0px;
+				float: left;
+				width: 820px;
+			}
+			.score{
+				float: right;
+				margin-top:0px;
+				width: 496px;
+				height: auto;
+			}
+			.right-nav{
+				width: 70px;
+				/* height: auto; */
+				height: 328px;
+				background-color: #fff;
+				position: fixed;
+				top: 130px;
+				right: 0px;
+				padding-bottom: 8px;
+				padding-top: 6px;
+				border-radius: 8px 0px 0px 8px;
+				z-index: 999;
+			}
+			.right-nav>ul{
+				margin-left: 4px;
+				height: 298px;
+				padding-bottom: 10px;
+				box-sizing: border-box;
+				
+			}
+			.right-nav li{
+				width: 66px;
+				text-align: center;
+				margin-bottom: 14px;
+			}
+			.right-nav div{
+				width: 66px;
+				height: 26px;
+			}
+			.fire{
+				display: block;
+				width: 19px;
+				height: 22px;
+				background-image: url('../../imgs/tht/素材.png');
+				background-repeat: no-repeat;
+				background-position: -239px -99px;
+				margin: 4px auto;
+			}
+			.right-nav a{
+				color: #92a8ab;
+				font-size: 12px;
+				text-align: center;
+				margin-left: -1px;
+			}
+			.jiao{
+				display: block;
+				width: 19px;
+				height: 22px;
+				background-image: url('../../imgs/tht/素材.png');
+				background-repeat: no-repeat;
+				background-position: -262px -99px;
+				margin: 4px auto;
+			}
+			.cup{
+				display: block;
+				width: 23px;
+				height: 22px;
+				background-image: url('../../imgs/tht/素材.png');
+				background-repeat: no-repeat;
+				background-position: -220px -46px;
+				margin: 4px auto;
+			}
+			.sm-hero{
+				display: block;
+				width: 23px;
+				height: 22px;
+				background-image: url('../../imgs/tht/素材.png');
+				background-repeat: no-repeat;
+				background-position: -269px -72px;
+				margin: 4px auto;
+			}
+			.sm-polo{
+				display: block;
+				width: 37px;
+				height: 31px;
+				background-image: url('../../imgs/tht/素材.png');
+				background-repeat: no-repeat;
+				background-position: -193px -12px;
+				margin: 4px auto;
+			}
+			.right-nav li:hover a{
+				color: #309cac;
+				font-weight: 700;
+			}
+			.list-top{
+				width: 496px;
+				height: 35px;
+				overflow: visible;
+				box-sizing: border-box;
+				border-bottom: 1px #e0e2e2 solid;
+				position: relative;
+			}
+			.list-bottom{
+				width: 496px;
+				height: 354px;
+			}
+			.list-bottom ul{
+				width: 496px;
+				height: 305px;
+				position: relative;
+			}
+			
+			.list-bottom li{
+				width: 496px;
+				height: 41px;
+				line-height: 41px;
+				overflow: hidden;
+				box-sizing: border-box;
+				border-top: 1px #e0e2e2 solid;
+				text-align: left;
+				font-size: 14px;
+			}
+			.list-bottom .li-st{
+				background-image: url('../../imgs/tht/素材2.png');
+				background-position: -21px -458px;
+				width: 496px;
+				height: 59px;
+				overflow: hidden;
+				line-height: 59px;
+				text-align: center;
+				font-size: 22px;
+				font-weight: 700;
+				box-sizing: border-box;
+				padding: 0 12px;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				color: #0da0b4;
+			}
+			#list-warp{
+				display: block;
+				width: 496px;
+				height: 40px;
+				background-color: #e3e2e2;
+				line-height: 40px;
+				text-align: center;
+				margin-left: 0px;
+			}
+			.c1{
+				font-size: 14px;
+				color: #676767;
+			}
+			.c2{
+				font-size: 14px;
+				color: #7ea1a6;
+			}
+			.activity-top{
+				width: 100%;
+				height: 35px;
+				overflow: visible;
+				position: relative;
+			}
+			
+			.bottom-warp{
+				position: absolute;
+				width: 692px;
+				height: 35px;
+				left: 128px;
+				box-sizing: border-box;
+				border-bottom: 1px #e0e2e2 solid;
+			}
+			.bottom-warp li{
+				margin-right: 16px;
+				float: left;
+				width: 193px;
+				height: 278px;
+			}
+			.donw .st{
+				float: left;
+			}
+			.st{
+				width: 366px;
+				height: 168px;
+				overflow: hidden;
+				background-image: url('../../imgs/tht/下载游戏.png');
+			}
+			.newer{
+				margin-left: 12px;
+				background-image: url('../../imgs/tht/素材2.png');
+				background-position: -193px -316px;
+				width: 118px;
+				height: 76px;
+				color: #fff;
+				font-size: 14px;
+				font-weight: 700;
+				text-align: center;
+				line-height: 76px;
+				overflow: hidden;
+				position: relative;
+				float: right;
+			}
+			.gift{
+				margin: 16px 0 0 12px;
+				background-image: url('../../imgs/tht/素材2.png');
+				background-position: -193px -316px;
+				width: 118px;
+				height: 76px;
+				color: #fff;
+				font-size: 14px;
+				font-weight: 700;
+				text-align: center;
+				line-height: 76px;
+				overflow: hidden;
+				position: relative;
+				float: right;
+			}
+			.p1{
+				float: left;
+				width: 112px;
+				height: 68px;
+				color: #424242;
+				text-align: center;
+				line-height: 68px;
+				background-color: #fefefe;
+				margin: 15px 16px 0 0;
+			}
+			.pp{
+				margin-right: 0px;
+			}
+			
+			.pfu{
+				margin-left: 16px;
+			}
+			.w1{
+				background-color: #f7f6f6;
+				position: relative;
+				float: left;
+				width: 240px;
+				height: 120px;
+				overflow: visible;
+				margin-bottom: 15px;
+			}
+			.w2{
+				width: 242px;
+				height: 180px;
+				position: relative;
+				background-color: #f7f6f6;
+				float: right;
+			}
+			.w3{
+				background-color: #f7f6f6;
+				position: relative;
+				float: left;
+				width: 240px;
+				height: 120px;
+				overflow: visible;
+			}
+			.w4{
+				float: right;
+				width: 239px;
+				height: 58px;
+				overflow: visible;
+				position: relative;
+				margin-top: 17px;
+				/* 可删 */
+				background-color: gold;
+			}
+			.vedio-img>li{
+				width: 213px;
+				height: 195px;
+				overflow: hidden;
+				margin: 0 16px 16px 0;
+				position: relative;
+				float: left;
+			}
+			.score-top{
+				width: 100%;
+				height: 35px;
+				overflow: hidden;
+				position: relative;
+			
+			}
+			.score-bottom{
+				width: 496px;
+				height: 308px;
+				margin-top: 21px;
+			}
+			/* 最新视频 */
+			.vedio-img div{
+				width: 213px;
+				height: 118px;
+				display: block;
+				overflow: hidden;
+				position: relative;
+			}
+			.vedio-img p{
+				position: absolute;
+				left: 0;
+				top: 128px;
+				width: 100%;
+				height: 42px;
+				overflow: hidden;
+				padding: 0 10px;
+				box-sizing: border-box;
+				font-size: 14px;
+				line-height: 21px;
+				color: #424242;
+			}
+			.vedio-img .a1{
+				position: absolute;
+				left: 9px;
+				bottom: 4px;
+				font-size: 12px;
+				color: #919091;
+			}
+			.vedio-img .a2{
+				position: absolute;
+				right: 13px;
+				bottom: 4px;
+				font-size: 12px;
+				color: #919091;
+			}
+			.team-warp{
+				height: 308px;
+				position: relative;
+				width: 840px;
+				overflow: hidden;
+				margin-top: 21px;
+			}
+			.team-warp li{
+				float: left;
+				width: 151px;
+				height: 257px;
+				margin-right: 16px;
+				background-color: #fefefe;
+			}
+			.team-warp div:nth-child(1){
+				width: 151px;
+				height: 203px;
+				position: relative;
+			}
+			.team-warp p:nth-child(2){
+				color: #424242;
+				font-size: 16px;
+				width: 100%;
+				height: 54px;
+				line-height: 54px;
+				box-sizing: border-box;
+				text-align: center;
+			}
+			.top-text{
+				width: 596px;
+				height: 35px;
+				position: absolute;
+				left: 0px;
+				box-sizing: border-box;
+				border-bottom: 1px #e0e2e2 solid;
+				
+			}
+			.top-text li{
+				font-size: 18px;
+				line-height: 24px;
+				margin-right: 74px;
+				position: relative;
+				cursor: pointer;
+				float: left;
+				width: auto;
+				min-width: 40px;
+				height: 37px;
+				overflow: visible;
+				text-align: center;
+			}
+			.list-bottom>ul span:nth-child(1){
+				display: inline-block;
+				vertical-align: middle;
+				width: 36px;
+				height: 20px;
+				box-sizing: border-box;
+				font-size: 12px;
+				line-height: 18px;
+				text-align: center;
+			}
+			.list-bottom>ul span:nth-child(3){
+				display: inline-block;
+				vertical-align: middle;
+				width: 50px;
+				height: 39px;
+				overflow: hidden;
+				text-align: right;
+				font-size: 14px;
+				letter-spacing: 1px;
+				color: #9d9d9d;
+				margin-left: 11px;
+			}
+			.sp1{
+				color: #e9852d;
+				border: 1px #e9852d solid;
+			}
+			.sp2{
+				color: #bb9a6c;
+				border: 1px #c5ab86 solid;
+			}
+			.sp3{
+				border: 1px #69c5d2 solid;
+				color: #1da6ba;
+			}
+			.list-bottom a{
+				display: inline-block;
+				vertical-align: middle;
+				width: 370px;
+				height: 39px;
+				overflow: hidden;
+				margin-left: 20px;
+				color: #424242;
+				font-size: 14px;
+				letter-spacing: 1px;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+			}
+			.you{
+				display: inline-block;
+				background-image: url('../../imgs/tht/素材.png');
+				background-position: -213px -126px;
+				width: 15px;
+				height: 9px;
+			}
+			.li-st:hover{
+				color: #bb9a6c;
+			}
+			#a1:hover{
+				color: #e9852d;
+			}
+			#a2:hover{
+				color: #bb9a6c;
+			}
+			#a3:hover{
+				color: #1da6ba;
+			}
+			#list-warp:hover{
+				background-color: #dad8d8;
+				border-radius: 4px;
+			}
+			.activity-top h2{
+				position: absolute;
+				width: auto;
+				height: 28px;
+				top: 5px;
+				left: -6px;
+				box-sizing: border-box;
+				color: #0b0b0b;
+				font-size: 24px;
+				line-height: 28px;
+				font-weight: 400;
+			}
+			.activity-top h2::before{
+				content: '\0020';
+				display: inline-block;
+				vertical-align: middle;
+				width: 4px;
+				height: 28px;
+				background-color: #1da6ba;
+				margin-right: 10px;
+			}
+			.bottom-warp li{
+				list-style: none;
+				position: relative;
+				cursor: pointer;
+				float: left;
+				width: auto;
+				min-width: 40px;
+				height: 37px;
+				overflow: visible;
+				color: #676767;
+				font-size: 16px;
+				letter-spacing: 1px;
+				line-height: 35px;
+				text-align: center;
+			}
+			.activity-top a{
+				position: absolute;
+				top: 0;
+				right: 2px;
+				display: block;
+				width: auto;
+				height: 35px;
+				font-size: 12px;
+				color: #7ea1a6;
+				line-height: 35px;
+				z-index: 1;
+			}
+			.ii{
+				background-image: url('../../imgs/tht/素材.png');
+				background-position: -213px -126px;
+				background-repeat: no-repeat;
+				width: 15px;
+				height: 12px;
+				display: inline-block;
+				vertical-align: middle;
+			}
+			.activity-bottom{
+				width: 820px;
+				height: 278px;
+				margin-top: 21px;
+			}
+			.bottom-ul{
+				width: 840px;
+				height: 278px;
+				position: relative;
+			}
+			.bottom-ul li{
+				float: left;
+				width: 193px;
+				height: 278px;
+				margin-right: 16px;
+				overflow: hidden;
+				position: relative;
+				background-color: #fefefe;
+			}
+			.bottom-ul li img:nth-child(1){
+				display: block;
+				width: 193px;
+				height: 207px;
+			}
+			.bottom-ul li p:nth-child(2){
+				width: 100%;
+				overflow: hidden;
+				box-sizing: border-box;
+				padding: 6px 10px 4px 10px;
+				font-size: 14px;
+				color: #424242;
+				line-height: 18px;
+				text-align: left;
+			}
+			.bottom-ul li a:nth-child(3){
+				position: absolute;
+				font-size: 12px;
+				color: #1da6ba;
+				left: 10px;
+				bottom: 6px;
+			}
+			
+			.donw li a{
+				font-size: 12px;
+			}
+			.p1 a{
+				float: left;
+				width: 112px;
+				height: 68px;
+				color: #424242;
+				text-align: center;
+				line-height: 68px;
+				position: relative;
+			}
+			.p1 a .i1{
+				background-image: url('../../imgs/tht/素材.png');
+				background-position: -316px -12px;
+				width: 22px;
+				height: 20px;
+				display: inline-block;
+				vertical-align: middle;
+			}
+			.i2{
+				background-image: url('../../imgs/tht/素材.png');
+				background-position: -219px -72px;
+				width: 22px;
+				height: 20px;
+				display: inline-block;
+				vertical-align: middle;
+			}
+			.i3{
+				background-image: url('../../imgs/tht/素材.png');
+				background-position: -343px -12px;
+				width: 22px;
+				height: 20px;
+				display: inline-block;
+				vertical-align: middle;
+			}
+			.i4{
+				background-image: url('../../imgs/tht/素材.png');
+				background-position: -193px -72px;
+				width: 22px;
+				height: 20px;
+				display: inline-block;
+				vertical-align: middle;
+			}
+			.i5{
+				background-image: url('../../imgs/tht/素材.png');
+				background-position: -280px -125px;
+				width: 22px;
+				height: 19px;
+				display: inline-block;
+				vertical-align: middle;
+			}
+				
+			.i6{
+				background-image: url('../../imgs/tht/素材.png');
+				background-position: -371px -12px;
+				width: 22px;
+				height: 19px;
+				display: inline-block;
+				vertical-align: middle;
+			}
+			.i7{
+				background-image: url('../../imgs/tht/素材.png');
+				background-position: -274px -46px;
+				width: 22px;
+				height: 19px;
+				display: inline-block;
+				vertical-align: middle;
+			}
+			.i8{
+				background-image: url('../../imgs/tht/素材.png');
+				background-position: -193px -46px;
+				width: 22px;
+				height: 21px;
+				display: inline-block;
+				vertical-align: middle;
+			}
+			.bb{
+				position: absolute;
+				left: 0;
+				background-image: url('../../imgs/tht/素材.png');
+				background-position: -301px -46px;
+				width: 29px;
+				height: 14px;
+			}
+			.st:hover{
+				filter: brightness(1.15);
+				animation: st 0.3s;
+			}
+			@keyframes st{
+				from{
+					filter: brightness(0.99);
+				}
+				to{
+					filter: brightness(1.15);
+				}
+			}
+			.gift:hover{
+				filter: brightness(1.15);
+				animation: gift 0.3s;
+			}
+			@keyframes gift{
+				from{
+					filter: brightness(0.99);
+				}
+				to{
+					filter: brightness(1.15);
+				}
+			}
+			.p1 a:hover{
+				border-radius: 4px;
+				box-shadow: 0 0 10px #ccc;
+				color: #0da0b4;
+				animation: a 0.5s;
+			}
+			@keyframes a{
+				from{
+					box-shadow: 0 0 0px;
+				}
+				to{
+					box-shadow: 0 0 10px #ccc;
+				}
+			}
+			.human{
+				float: left;
+				position: relative;
+				width: 402px;
+				height: 254px;
+				background-color: #f7f6f6;
+			}
+			.pfu{
+				float: left;
+				position: relative;
+				width: 402px;
+				height: 254px;
+				background-color: #f7f6f6;
+			}
+			.human-bot{
+				position: absolute;
+				background-image: url("imgs/zjy/dark-jianbian-repeatx-0.png");
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				height: 133px;
+			}
+			.pfu-bot{
+				position: absolute;
+				background-image: url("imgs/zjy/dark-jianbian-repeatx-0.png");
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				height: 133px;
+			}
+			.human-a{
+				position: absolute;	
+				display: block;
+				left: 9px;
+				top: 6px;
+				width: auto;
+				height: 20px;
+				font-size:12px ;
+				color: #cdbe91;
+				background-color: #000;
+				padding: 0px 6px ;
+				line-height: 19px;
+				text-align: center;
+			}
+			.pfu-a{
+				position: absolute;
+				display: block;
+				left: 9px;
+				top: 6px;
+				width: auto;
+				height: 20px;
+				font-size:12px ;
+				color: #cdbe91;
+				background-color: #000;
+				padding: 0px 6px ;
+				line-height: 19px;
+				text-align: center;
+			}
+			.hm-p1{
+				width: 100%;
+				padding: 0 17px;
+				box-sizing: border-box;
+				position: absolute;
+				left: 0;
+				bottom: 33px;
+				font-size: 16px;
+				font-weight: 700;
+				color: #cdbe91;
+			}
+			.pf-p1{
+				width: 100%;
+				padding: 0 17px;
+				box-sizing: border-box;
+				position: absolute;
+				left: 0;
+				bottom: 33px;
+				font-size: 16px;
+				font-weight: 700;
+				color: #cdbe91;
+			}
+			.hm-p2{
+				width: 100%;
+				padding-left: 17px;
+				box-sizing: border-box;
+				position: absolute;
+				left: 0;
+				bottom: 12px;
+				font-size: 14px;
+			}
+			.pf-p2{
+				width: 100%;
+				padding-left: 17px;
+				box-sizing: border-box;
+				position: absolute;
+				left: 0;
+				bottom: 12px;
+				font-size: 14px;
+			}
+			.hm-p2>a{
+				color:#cfcfcf;
+			}
+			.pf-p2>a{
+				color:#cfcfcf;
+			}
+			.w1 img{
+				width: 240px;
+				height: 120px;
+			}
+			.w2 img{
+				width: 242px;
+				height: 180px;
+			}
+			.w3 img{
+				width: 240px;
+				height: 120px;
+			
+			}
+			.w4 a{
+				display: block;
+				background-image: url('../../imgs/tht/素材2.png');
+				background-position: -193px -253px;
+				width: 239px;
+				height: 58px;
+				line-height: 58px;
+				text-align: center;
+				font-size: 16px;
+				color: #fff;
+				position: relative;
+			}
+			.w4-i1{
+				background-image: url('../../imgs/tht/素材2.png');
+				display: inline-block;
+				background-position: -531px -226px;
+				width: 20px;
+				height: 9px;
+				vertical-align: middle;
+				margin-right: 4px;
+			}
+			.w4-i2{
+				background-image: url('../../imgs/tht/素材.png');
+				background-position: -342px -99px;
+				display: inline-block;
+				vertical-align: middle;
+				margin: 0px 0px 2px 4px;
+				width: 15px;
+				height: 9px;
+			}
+			.w4-i3{
+				background-image: url('../../imgs/tht/素材2.png');
+				display: inline-block;
+				background-position: -506px -226px;
+				width: 20px;
+				height: 9px;
+				vertical-align: middle;
+				margin-top: -2px;
+			}
+			.w4:hover{
+				filter: brightness(1.15);
+				animation: w4 0.3s;
+			}
+			@keyframes w4 {
+				from{
+					filter: brightness(0.9);
+				}
+				to{
+					filter: brightness(1.15);
+				}
+			}
+				
+			.mp h2{
+				position: absolute;
+				width: auto;
+				height: 28px;
+				top: 5px;
+				left: -6px;
+				box-sizing: border-box;
+				color: #0b0b0b;
+				font-size: 24px;
+				line-height: 28px;
+				font-weight: 400;
+			}
+			.mp h2::before{
+				content: '\0020';
+				display: inline-block;
+				vertical-align: middle;
+				width: 4px;
+				height: 28px;
+				background-color: #1da6ba;
+				margin-right: 10px;
+			}
+			.mp-ul{
+				width: 1234px;
+				position: absolute;
+				height: 35px;
+				left: 128px;
+				box-sizing: border-box;
+				border-bottom: 1px #e0e2e2 solid;
+				border-bottom-color: #d6d7d8;
+			}
+			.mp-ul li{
+				margin-right: 40px;
+				position: relative;
+				cursor: pointer;
+				float: left;
+				width: auto;
+				min-width: 40px;
+				height: 37px;
+				overflow: visible;
+				font-size: 16px;
+				letter-spacing: 1px;
+				line-height: 35px;
+				text-align: center;
+				color: #676767;
+				
+			}
+			.newer:hover{
+				filter: brightness(1.15);
+				animation: gift 0.3s;
+			}
+			.mp-more{
+				position: absolute;
+				top: 0;
+				right: 2px;
+				display: block;
+				width: auto;
+				height: 35px;
+				font-size: 12px;
+				color: #7ea1a6;
+				line-height: 35px;
+				z-index: 1;
+			}
+			.mp-more i{
+				display: inline-block;
+				vertical-align: middle;
+				background-image: url('../../imgs/tht/素材.png');
+				background-position: -213px -126px;
+				background-repeat: no-repeat;
+				width: 15px;
+				height: 9px;
+				margin: -2px 0 0 5px;
+			}
+			.mp-change{
+				position: absolute;
+				right: 90px;
+				top: 0;
+				color: #7ea1a6;
+				font-size: 12px;
+				height: 35px;
+				line-height: 35px;
+				vertical-align: middle;
+			}
+			.mp-change i{
+				position: absolute;
+				right: -19px;
+				top: 11px;
+				background-image: url('../../imgs/tht/素材.png');
+				background-position: -369px -46px;
+				width: 13px;
+				height: 12px;
+				vertical-align: middle;
+			}
+			.mp-change::after{
+				content: '';
+				width: 1px;
+				height: 10px;
+				position: absolute;
+				top: 12px;
+				right: -28px;
+				background-color: #cacbcc;
+			}
+			.ved-1 img{
+				width: 216px;
+				height: 120px;
+				
+			}
+			.length{
+				position: absolute;
+				right: 10px;
+				top: 95px;
+				color: #fff;
+				font-size: 12px;
+			}
+			.vedio-img p>a{
+				color: #424242;
+			}
+			.vedio-img img{
+				width: 213px;
+				height: 195px;
+			}
+			.top-center{
+				position: absolute;
+				width: auto;
+				height: 28px;
+				top: 5px;
+				left: -6px;
+				box-sizing: border-box;
+				color: #0b0b0b;
+				font-size: 24px;
+				line-height: 28px;
+				font-weight: 400;
+			}
+			.top-center::before{
+				content: '\0020';
+				display: inline-block;
+				vertical-align: middle;
+				width: 4px;
+				height: 28px;
+				background-color: #1da6ba;
+				margin-right: 10px;
+			}
+			.top-ul{
+				width: 1230px;
+				position: absolute;
+				height: 35px;
+				left: 128px;
+				box-sizing: border-box;
+				border-bottom: 1px #e0e2e2 solid;
+			}
+			.top-ul li{
+				margin-right: 54px;
+				font-weight: 700;
+				color: #1da6ba;
+				list-style: none;
+				position: relative;
+				cursor: pointer;
+				float: left;
+				width: auto;
+				min-width: 40px;
+				height: 37px;
+				overflow: visible;
+				font-size: 16px;
+				letter-spacing: 1px;
+				line-height: 35px;
+				text-align: center;
+			}
+			.top-ul li::after{
+				content: '\0020';
+				position: absolute;
+				background-image: url('../../imgs/tht/点横.png');
+				background-position: center center;
+				box-sizing: border-box;
+				width: 100%;
+				height: 7px;
+				left: 0;
+				bottom: 0;
+				transition: width .2s,left .2s,margin-left .2s;
+				background-size: auto auto;
+				margin-left: 0;
+			}
+			.year{
+				display: block;
+				position: absolute;
+				top: 0;
+				right: 61px;
+				width: auto;
+				height: 35px;
+				line-height: 35px;
+				font-size: 16px;
+				font-weight: 700;
+				color: #676767;
+			}
+			.top-more{
+				position: absolute;
+				top: 0;
+				right: 2px;
+				display: block;
+				width: auto;
+				height: 35px;
+				font-size: 12px;
+				color: #7ea1a6;
+				line-height: 35px;
+				z-index: 1;
+			}
+			.top-more i{
+				display: inline-block;
+				vertical-align: middle;
+				background-image: url('../../imgs/tht/素材.png');
+				margin: -2px 0 0 5px;
+				background-position: -213px -126px;
+				width: 15px;
+				height: 9px;
+			}
+			.zr{
+				width: 100%;
+				height: 35px;
+				overflow: visible;
+				position: relative;	
+			}
+			.zr h2{
+				font-weight: bold;
+				font-size: 18px;
+				color: #0b0b0b;
+				left: 0;
+				position: absolute;
+				width: auto;
+				height: 28px;
+				top: 5px;
+			}
+			.player1 img:nth-child(1){
+				position: absolute;
+				display: block;
+				width: 151px;
+				height: auto;
+				bottom: 0;
+				left: 0;
+				background: -webkit-linear-gradient(top, #fefefe, #fefefe, #8a8a8a);
+			}
+			.player1 a{
+				display: block;
+				position: absolute;
+				left: 10px;
+				top: 10px;
+				text-align: center;
+				width: 30px;
+				height: 30px;
+			}
+			.player1 a i{
+				display: inline-block;
+				vertical-align: middle;
+				background-image: url('../../imgs/tht/分路.png');
+				background-position: -52px 0;
+				width: 18px;
+				height: 18px;
+			}
+			.player2 a i{
+				display: inline-block;
+				vertical-align: middle;
+				background-image: url('../../imgs/tht/分路.png');
+				background-position: -0px 0;
+				width: 18px;
+				height: 18px;
+			}
+			.player3 a i{
+				display: inline-block;
+				vertical-align: middle;
+				background-image: url('../../imgs/tht/分路.png');
+				background-position:-23px -27px;
+				width: 18px;
+				height: 18px;
+			}
+			.player4 a i{
+				display: inline-block;
+				vertical-align: middle;
+				background-image: url('../../imgs/tht/分路.png');
+				background-position:0px -27px;
+				width: 18px;
+				height: 18px;
+			}
+			.player5 a i{
+				display: inline-block;
+				vertical-align: middle;
+				background-image: url('../../imgs/tht/分路.png');
+				background-position:25px 0px;
+				width: 26px;
+				height: 18px;
+			}
+			.player1 img:nth-child(3){
+				display: block;
+				width: 30px;
+				height: auto;
+				position: absolute;
+				top: 8px;
+				right: 9px;
+			}
+			.score-top h2{
+				font-size: 18px;
+				color: #0b0b0b;
+				left: 0
+				font-weight: bold;
+			}
+			.score-bottom h4{
+				width: 496px;
+				height: 32px;
+				line-height: 32px;
+				box-sizing: border-box;
+				padding: 0 18px;
+				
+				font-size: 16px;
+				font-weight: 400;
+				background-color: #e0e0e0;
+			}
+			.score-bottom h4>a{
+				float: left;
+				color: #151517;
+			}
+			.a-1{
+				width: 44px;
+			}
+			.a-2{
+				width: 124px;
+				margin-left: 60px;
+			}
+				
+			.a-3{
+				width: 100px;
+				text-align: center;
+				margin-left: 45px;
+			}
+			#a-4{
+				float: right;
+				width: 44px;
+				text-align: center;
+			}
+			.part-score{
+				width: 496px;
+				background-color: #fefefe;
+				overflow: hidden;
+				position: relative;
+				height: 276px;
+				margin: 0 auto;
+				direction: ltr;
+				backface-visibility: hidden;
+				z-index: 1;
+			}
+			.show{
+				transition-duration: 0.3s;
+				transform: translate3d(0px, 0px, 0px);
+				width: 532px;
+				height: 782px;
+				transition-timing-function: ease-out;
+				margin: 0 auto;
+				box-sizing: content-box;
+			}
+			.show-ul{
+				width: 496px;
+				height: auto;
+				box-sizing: border-box!important;
+				padding: 0 18px;
+				float: left;
+			}
+			.show-ul li{
+				width: 460px;
+				height: 46px;
+				line-height: 46px;
+				overflow: hidden;
+				list-style: none;
+				box-sizing: border-box;
+				border-bottom: 1px #e0e2e2 solid;
+			}
+			.show-a1{
+				float: left;
+				width: 44px;
+				height: 46px;
+				text-align: center;
+				font-family: tttgbnumber,sans-serif;
+				font-size: 18px;
+				color: #7b7b7b;
+			}
+			.show-a2{
+				width: 150px;
+				margin-left: 58px;
+				float: left;	
+				font-size: 13px;
+				color: #151517;
+			}
+			.show-a2 img{
+				display: inline-block;
+				vertical-align: middle;
+				width: 25px;
+				height: auto;
+				margin: -2px 12px 0 0;
+			}
+			.show-a3{
+				margin-left: 30px;
+				float: left;
+				width: 100px;
+				text-align: center;
+				font-size: 16px;
+				color: #5f8d94;	
+			}
+			.show-a4{
+				float: right;
+				width: 44px;
+				text-align: center;
+				font-size: 16px;
+				color: #5f8d94;
+			}
+			.p1 a:hover #i1{
+			
+				animation: i1 1s;
+			}
+			@keyframes i1 {
+				from{
+					background-size: 30px 30px;
+				}
+				to{
+					background-size: 20px 22px;
+				}
+			}
+			.right-nav li:hover .fire{
+				background-image: url('../../imgs/tht/素材.png');
+				background-position: -216px -99px;
+				animation: fire 0.2s;
+			}
+			.right-nav li:hover .jiao{
+				background-image: url('../../imgs/tht/素材.png');
+				background-position: -193px -99px;
+				animation: jiao 0.3s;
+			}
+			.right-nav li:hover .cup{
+				background-image: url('../../imgs/tht/素材.png');
+				background-position: -247px -46px;
+				animation: cup 0.3s;
+			}
+			.right-nav li:hover .sm-hero{
+				background-image: url('../../imgs/tht/素材.png');
+				background-position: -293px -72px;
+				animation: sm-hero 0.3s;
+			}
+			.right-nav li:hover .sm-polo{
+				background-image: url('../../imgs/tht/素材.png');
+				background-position: -193px -12px;
+				animation: sm-polo 0.2s;
+			}
+			@keyframes fire {
+				from{
+					background-position: -180px -120px;
+				}
+				to{
+					background-position: -216px -99px;
+				}
+			}
+			@keyframes jiao {
+				from{
+					background-position: -0px -120px;
+				}
+				to{
+					background-position: -193px -99px;
+				}
+			}
+			@keyframes cup {
+				from{
+					background-position: -300px 0px;
+				}
+				to{
+					background-position: -247px -46px;
+				}
+			}	
+			@keyframes sm-hero {
+				from{
+					background-position: 0px -300px;
+				}
+				to{
+					background-position:  -293px -72px;
+				}
+			}
+			@keyframes sm-polo {
+				from{
+					background-position: 0px -300px;
+				}
+				to{
+					background-position: -193px -12px;
+				}
+			}
+			a{
+				text-decoration: none !important;
+			}
+			#foot{
+				width: 100%;
+				min-width: 1230px;
+				padding: 45px 0;
+				background-color: #e3e2e2;
+				color: #9f9378;
+				font-size: 12px;
+				line-height: 24px;
+			}
+			.foot-nr{
+				max-width: 1358px;
+				min-width: 1230px;
+				height: auto;
+				margin: 0 auto;
+				overflow: hidden;
+				position: relative;
+			}
+			.nr-nr{
+				background-color: #e3e2e2;
+				font: 12px/20px "微软雅黑","宋体";
+				min-width: 1050px;
+				margin: 0 auto;
+				text-align: left;
+				color: #494949;
+			}
+			.tx{
+				padding: 15px 20px;
+			}
+			.tx-left{
+				display: block!important;
+				height: 100px;
+				width: 380px;
+				line-height: 100px;
+				font-size: 0;
+				text-align: left;
+				position: absolute;
+				left: 20px;
+				top: 30%;
+			}
+			.left-tx{
+				background-image: url(../../imgs/tht/素材4.png);
+				background-repeat: no-repeat;
+				background-position: -215px 12px;
+				width: 191px;
+				height: 49px;
+				margin-right: 30px;
+				display: block;
+				float: left;
+			}
+			.tx-left span{
+				background-image: url(../../imgs/tht/拳头.png);
+			    background-size: 97px 28px;
+			    background-position: 1px 16px;
+			    width: 98px;
+			    height: 52px;
+			    display: block;
+			    float: left;
+			    background-repeat: no-repeat;
+			}
+			.tx-right{
+				width: 750px;
+				margin-left: 500px;
+				display: inline;
+			    float: right;
+				margin-right:0px ;
+			}
+			.tx-right li{
+				color: #9f9378;
+				line-height: 20px;
+				overflow: hidden;
+			}
+			.rt-li1{
+				font-size: 0;
+			}
+			.rt-li1 a,span{
+				color: #9f9378;
+				font-size: 12px;
+			}
+			.rt-li1 span{
+				color: #9f9378;
+				margin: 0 2px;
+			}
+			.rt-li2 a{
+				color: #9f9378;
+			}
+			.rt-li3 p{
+				font-size: 10px;
+				margin-bottom: 0px;
+			}
+			.rt-li5 img{
+				vertical-align: middle;
+				margin-right: 3px;
+				display: inline
+			}
+			.rt-li5 a{
+				color: #9f9378;
+			}
+
+		
+					*{
+						margin: 0px;
+						padding: 0px;
+					}
+					a{
+						text-decoration: none;
+					}
+					ul{
+						list-style: none;
+					}
+					body{
+						background-color: #eee;
+					}
+					#head{
+						width: 100%;
+						height: 78px;
+						overflow: visible;
+						position: relative;
+						z-index: 1;
+					}
+					.head-nr{
+						width: 100%;
+						max-width: 1358px;
+						min-width: 1230px;
+						margin: 0px auto;
+						
+					}
+					.logo{
+						float: left;
+						margin-top: 10px;
+						
+					}
+					@media only screen (min-width:1396.63px) and (max-width:1536px){
+						.pone-hover{
+							top: 55px;
+							left: 0px;
+						}
+						p{
+							color: black;
+						}
+					}
+				</style>
+			</head>
+			<body>
+				<div id="head">
+							<!-- 导航栏内容 -->
+							<div class="head-nr">
+								<!-- 跳转首页 -->
+								<a  class="logo" href="" title="英雄联盟官网"><img src="imgs/tht/logo.png" alt="英雄联盟"></a>
+								<!-- 游戏导航栏 -->
+								<ul class="navm">
+									<li id="nav-li"><a href="">
+										<span>游戏资料</span>
+										<span>GAME INFO</span>
+									</a></li>
+									<li  id="nav-li"><a href="">
+										<span>商城/合作</span>
+										<span>STORE</span>
+									</a></li>
+									<li  id="nav-li"><a href="">
+										<span>社区互动</span>
+										<span>COMMUNITY</span>
+									</a></li>
+									<li  id="nav-li"><a href="">
+										<span>赛事官网</span>
+										<span>ESPORTS</span>
+									</a></li>
+									<li  id="nav-li"><a href="">
+										<span>自助系统</span>
+										<span>SYSTEM</span>
+									</a></li>
+									<!-- 导航子菜单 -->
+									<div class="nav-y">
+										<div class="y-box">
+											<ul class="y-box_1">
+												<li>
+													<a href="">游戏下载</a>
+													<a href="">新手指引</a>
+													<a href="">资料库</a>
+													<a href="">
+														<div class="yu-N"></div>
+														云顶之奕
+														</a>
+													<a href="">
+														<div class="yu-N"></div>
+														攻略中心
+														</a>
+													<a href="">开发者基地</a>
+													<a href="">海克斯战利品库</a>
+													<a href="">英雄联盟宇宙</a>
+												</li>
+												<li>
+													<a href="">点券充值</a>
+													<a href="">
+														<div class="yu-H"></div>
+														道聚城
+														</a>
+													<a href="">周边商城</a>
+													<a href="">LOL桌游</a>
+													<a href="">网吧特权</a>
+													<a href="">电竞小说</a>
+												</li>
+												<li>
+													<a href="视频中心.html">视频中心</a>
+													<a href="">官方微信</a>
+													<a href="">官方微博</a>
+													<a href="">玩家服务</a>
+													<a href="">
+														<div class="yu-N"></div>
+														LOL组队专区
+														</a>
+													<a href="">
+														<div class="yu-N"></div>
+														作者入驻计划
+														</a>
+													<a href="">
+														<div class="yu-N"></div>
+														英雄联盟素材库
+														</a>
+												</li>
+												<li>
+													<a href="">
+														<div class="yu-H"></div>
+														LPL职业联赛
+														</a>
+													<a href="">德玛西亚杯</a>
+													<a href="">全球总决赛</a>
+													<a href="">季中冠军赛</a>
+													<a href="">LDL发展联赛</a>
+													<a href="">城市英雄争霸赛</a>
+													<a href="">全国高校联赛</a>
+													<a href="">
+														<div class="yu-N"></div>
+														云顶之奕公开战
+														</a>
+												</li>
+												<li>
+													<a href="">
+														<div class="yu-H"></div>
+														图标自主领取
+														</a>
+													<a href="">
+														<div class="yu-N"></div>
+														转区系统
+														</a>
+													<a href="">
+														<div class="yu-H"></div>
+														封号查询
+														</a>
+													<a href="">账号注销</a>
+													<a href="">
+														<div class="yu-N"></div>
+														信誉分系统
+														</a>
+													<a href="">服务器状态查询</a>
+													<a href='秩序殿堂.html'>秩序殿堂</a>
+													<a href="">峡谷之巅</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</ul>
+								<!-- 登录  -->
+								<div class="loding">
+									<div class="loding-img">
+										<img src="imgs/tht/头.png" alt="">
+									</div>
+									
+									<div class="loding-text">
+										<p class="summoner">亲爱的召唤师，欢迎<a href="" title="登录">登录</a></p>
+										<!-- 登录文字 -->
+										
+									</div>
+									<div class="lode">
+										<p>登录并且绑定大区后才可以查看到您的具体信息哦
+										<br />
+										(包括战绩、资产、声望)
+										</p>
+										<p>官网个人信息显示略有延迟，请以游戏数据为准</p>
+									</div>
+								</div>
+								<!-- 手机掌上联盟 -->
+								<span class="pone">
+									<a >
+										<!-- 联盟二维码 -->
+										<div class="pone-hover">
+											<div class="ewm-box" style="width: 110px;height: 110px;">
+												<img style="width: 110px;height: 110px;" src="imgs/tht/二维码.jpg">
+											</div>
+											<p>扫码下载掌上英雄联盟</p>
+											<img class="polo" src="imgs/tht/polo.gif"/>
+										</div>
+									</a>
+								</span>
+								
+								<!-- 搜索 -->
+								<span class="search" href="">
+									<a class="dk"  title="搜索"></a>
+								</span>
+								<!-- 搜索蒙版 -->
+								<div class="bgbod">
+									<div class="bgbod-box">
+										<a class="dk dk2"  title="点击搜索"></a>
+										<div class="gb-box">
+											<a class="gb" title="关闭搜索"></a>
+										</div>
+										<input class="search-t"  type="text" placeholder="搜索 lol.qq.com"/>
+										
+									</div>
+								</div>
+								
+								
+							</div>
+							
+						</div>
+			</body>
+			<script src='popper.min.js'></script>
+			<script>
+				<!-- 搜索框嵌套 -->
+					<script>
+						var a=0;
+						for(;a<100;a++){
+							if(a%2==0){
+						$(
+							
+							$('.dk').click(function(){
+							$('.bgbod').addClass('bgbod-show');
+							$('.bgbod').css('display','block');
+						})
+						)}
+						if(a%2!=0){
+						$(
+							$('.gb').click(function(){
+								$('.bgbod').css('display','none');
+							})
+						)}
+						}
+					</script>
+		
+
+</html>

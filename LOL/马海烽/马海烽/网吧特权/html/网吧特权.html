@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		
+		<link  rel="stylesheet"/>
+		<link  rel="stylesheet" type="text/css" href="../../css/mhf/new_file.css"/>
+		<style>
+			
+				*{
+					margin: 0px auto;
+					padding: 0px;
+				}
+				.qw{
+					width: 1920px;
+					height: 3000px;
+					position: relative;
+					left: 50%;
+					margin-left: -960px;
+					z-index: 999;
+				}
+			.dbu{
+				width: 100%;
+				height: 43px;
+				background-color: white;
+				border-bottom: solid 3px salmon;
+			}
+			.dbujz{
+				position: relative;
+				width: 860px;
+				height: 43px;
+			}	
+			.ljie{
+				float: left;
+				width: 260px;
+			}
+			.ljie>span{
+				margin-left: 10px;
+				margin-right: 10px;
+				font-size: 15px;
+				height: 43px;
+				line-height: 43px;
+				color: dimgray;
+				text-align: center;
+				
+			}
+			.ljie>a{
+				font-size: 15px;
+				height: 43px;
+				line-height: 43px;
+				color: dimgray;
+				text-align: center;
+				text-decoration: none;
+			}
+			.qqwb{
+				float: left;
+				background-image: url('../image/QQ图标.png');
+				width: 120px;
+				height: 42px;
+				margin-right: 260px;
+			}
+			.yxlm{
+				float: left;
+				width: 130px;
+				height: 43px;
+				overflow:hidden;
+			}
+			.xian{
+				float: left;
+				background-image: url('../../招募队友/images/线.png');
+				background-position: 0px 64px;
+				width: 1px;
+				height: 43px;
+				margin-left: 20px;
+				margin-right: 20px;
+			}
+			
+			.sznq1{
+				float: left;
+				background-image: url('../../海克斯科技/image/十周年.png');
+				background-position: center;
+				background-repeat: no-repeat;
+				background-position: -60px -43px;
+				height: 40px;
+				width: 122px;
+				position: absolute;
+				left: -40%;
+			}
+			.sous{
+				border: solid 1px gray;
+				width: 244px;
+				height: 35px;
+				margin-top: 3.5px;
+				position: absolute;
+				right: -30%;
+				border-radius: 17.5px;
+			}
+			.sous2{
+				background-image: url('../image/搜索.png');
+				background-repeat: no-repeat;
+				background-position: 210px;
+				text-indent: 15px;
+			}
+			.fm{
+				background-image: url('../image/封面.jpg');
+				height: 642px;
+				width: 1920px;
+				position: relative;
+			}
+			.fmdibu{
+				width: 1240px;
+				height: 70px;
+				position: absolute;
+				bottom: 0px;
+				left: 50%;
+				margin-left: -620px;
+			}
+			.wz{
+				float: left;
+				width: 177px;
+				height: 65px;
+				text-align: center;
+				font-size: 17px;
+				color: #11aaf1;
+				border-bottom: solid 5px #11aaf1;
+				line-height: 25px;
+			}
+			.span{
+				line-height: 35px;
+				font-size: 22px;
+			}
+			.wz1{
+				float: left;
+				width: 177px;
+				height: 65px;
+				text-align: center;
+				font-size: 17px;
+				color: white;
+				line-height: 25px;
+			}
+			.wz1:hover{
+				color: #11aaf1;
+				border-bottom: solid 5px #11aaf1;
+			}
+			.lbo{
+				width: 1240px;
+				height: 360px;
+				position: relative;
+				margin-top: 20px;
+				left: 50%;
+				margin-left: -620px;
+			}
+			.dw{
+				width: 140px;
+				height: 160px;
+				position: fixed;
+				bottom: 50%;
+				right: 2%;
+				z-index: 99;
+				color: gray;
+				text-align: center;
+				font-size: 15px;
+			}
+			.ww{
+				float: left;
+				width: 418px;
+				height: 360px;
+				margin-left: 35px;
+			}
+			.hk{
+				float: left;
+				background-color: rgba(1, 1,1, 0.8);
+				width: 138px;
+				height: 30px;
+				text-align: center;
+				line-height: 30px ;
+				border-right: solid 1px white;
+				border-bottom: solid 3px #11aaf1;
+				color: white;
+			}
+			.xlb{
+				float: left;
+				width: 26.125rem;
+				height: 34px;
+				background-color: #ddd;
+				color: dimgray;
+				text-align: center;
+				line-height: 34px;
+				margin-top: 10px;
+			}
+			.wzbb{
+				float: left;
+				background-image: url('../image/小头子.png');
+				background-position: 5px 8px;
+				background-repeat: no-repeat;
+				width: 26.126rem;
+				height: 28px;
+			}
+			.wzbb>.a2:hover{
+				color: #11aaf1;
+			}
+			.a1{
+				float: left;
+				font-size: 13px;
+				color: #999;
+				line-height: 28px;
+				margin-left: 25px;
+			}
+			.a2{
+				float: left;
+				width: 250px;
+				height: 28px;
+				color: black;
+				font-size: 13px;
+				line-height: 28px;
+				overflow: hidden;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+			}
+			.a3{
+				float: right;
+				font-size: 13px;
+					color: #999;
+					line-height: 28px;
+			}
+			.lj{
+				margin-top: 15px;
+				font-size: 10px;
+				color: #11aaf1;
+				float: right;
+				text-decoration: none;
+			}
+			.xcc{
+				width: 780px;
+				height: 70px;
+			}
+			.lb2{
+				width: 1240px;
+				height: 414px;
+				margin-top: 54px;
+				position: relative;
+				left: 50%;
+				margin-left: -620px;
+			}
+			.lbdk{
+				float: left;
+				width: 780px;
+				height: 414px;
+			}
+			.wbhd{
+				float: right;
+				width: 418px;
+				height: 414px;
+			}
+			.tub{
+				float: left;
+				background-image: url('../image/复合图.png');
+				background-position: 9px 5px;
+				background-repeat: no-repeat;
+				width: 350px;
+				height: 70px;
+				border-bottom: solid 2px #11aaf1;
+			}
+			.tupxc{
+				width: 430px;
+				height: 70px;
+				float: right;
+				border-bottom: solid 2px #999;
+			}
+			.tpjz{
+				float: right;
+				margin: 15px;
+			}
+			.wz9{
+				font-size: 16px;
+				margin-left: 65px;
+			}
+			.wz8{
+				font-size: 30px;
+				margin-left: 65px;
+			}
+			.lbtpk{
+				width: 730px;
+				height: 212px;
+				position: absolute;
+				top: 50%;
+				margin-top: -106px;
+				left: 50%;
+				margin-left: -365px;
+			}
+			.dsw{
+				width: 130px;
+				height: 212px;
+				float: left;	
+				margin-right: 20px;
+				position: relative;
+			}
+			.dsw>div{
+				width: 130px;
+				color: white;
+				height: 50px;
+				background-color: #00000080;
+				text-align: center;
+				font-size: 16px;
+				position: absolute;
+				bottom: 0px;
+			}
+			.hdkj{
+				float: left;
+				width: 418px;
+				height: 70px;
+			}
+			.kkjj{
+				float: left;
+				background-image: url('../image/复合图.png');
+				background-position: 9px -200px;
+				background-repeat: no-repeat;
+				width: 209px;
+				height: 70px;
+				border-bottom: solid 2px #11aaf1;
+			}
+			.qndmd{
+				float: right;
+				 width: 209px; 
+				 height:70px;
+				 border-bottom: solid  2px #999;
+			}
+			.djibk{
+				width: 414px;
+				height: 32px;
+				margin-top: 120px;
+				margin-bottom: 20px;
+			}
+			.dji{
+				float: left;
+				width: 205px;
+				height: 30px;
+				background-color: #333;
+				text-align: center;
+				font-size: 16px;
+				line-height: 30px;
+				color: white;
+				border-right: solid 1px white;
+				border-bottom: solid 2px #11aaf1;
+			}
+			.dji:hover{
+				color: black;
+				background-color: #11aaf1;
+			}
+			.yxwb{
+				width: 1240px;
+				height: 574px;
+			}
+			.yxdb{
+				width: 1240px;
+				height: 70px;
+				border-bottom: solid 2px #999;
+			}
+			.yxtb{
+				background-image: url('../image/复合图.png');
+				background-position: 0px -60px;
+				background-repeat: no-repeat;
+				float: left;
+				width: 260px;
+				height: 70px;
+				border-bottom: solid 2px #11aaf1;
+			}
+			.wzkjj{
+				width: 1200px;
+				height: 70px;
+			}
+			.wzkjj>span{
+				float: left;
+				line-height: 70px;
+				color: #999;
+			}
+			.wzkjj>a{
+				float: right;
+				margin: 15px;
+			}
+			.wbnr{
+				height: 438px;
+				width: 1240px;
+				margin-top: 30px;
+			}
+			.yyjq{
+				width: 1240px;
+				height: 222px;
+			}
+			.wsnbb{
+				float: left;
+				width: 368px;
+				height: 222px;
+				margin-right: 10px;
+				margin-left: 30px;
+				position: relative;
+			}
+			.wbpm{
+				background-image: url('../image/网吧排名.png');
+				width: 189px;
+				height: 40px;
+				background-repeat: no-repeat;
+				position: absolute;
+				top: 0px;	
+			}
+			.wbpm1{
+				background-image: url('../image/网吧排名.png');
+				background-position: 0px -40px;
+				width: 189px;
+				height: 40px;
+				background-repeat: no-repeat;
+				position: absolute;
+				top: 0px;	
+			}
+			.wbpm2{
+				background-image: url('../image/网吧排名.png');
+				background-position: 0px -80px;
+				width: 189px;
+				height: 40px;
+				background-repeat: no-repeat;
+				position: absolute;
+				top: 0px;	
+			}
+			.wsnb{
+				float: left;
+				width: 270px;
+				height: 168px;
+				margin-top: 30px;
+				margin-right: 10px;
+				margin-left: 30px;
+				position: relative;
+			}
+			.clb{
+				background-color: rgba(3, 3, 3,0.8);
+				width: 270px;
+				height: 168px;
+				position: absolute;
+				top: 0px;
+				z-index: 99;
+			}
+			.h3{
+				float: left;
+				color: white;
+				line-height: 40px;
+				width: 240px;
+				margin-left: 15px;
+				border-bottom: solid 1px #999;
+			}
+			.p{
+				float: left;
+				line-height: 30px;
+				height: 30px;
+				width: 240px;
+				margin-left: 15px;
+				color: #999;
+				font-size: 10px;
+			}
+			.soood{
+					line-height: 30px;
+					height: 30px;
+					width: 240px;
+					margin: 15px;
+					color: #11aaf1;
+					font-size: 10px;
+			}
+			.sad{
+				float: left;
+				position: relative;
+				z-index: 100;
+			}
+			.sad:hover{
+				z-index: 10;
+			}
+			.clb:hover{
+				position: absolute;
+				z-index: 110;
+			}
+			.clb1{
+				background-color: rgba(3, 3, 3,0.8);
+				width: 368px;
+				height: 222px;
+				position: absolute;
+				top: 0px;
+				z-index: 99;
+			}
+			.clb1:hover{
+				position: absolute;
+				z-index: 110;
+			}
+			.p25{
+				float: left;
+				line-height: 30px;
+				height: 30px;
+				width: 368px;
+				margin-left: 15px;
+				color: #999;
+				font-size: 10px;
+			}
+			
+			.h2{
+				float: left;
+				color: white;
+				font-size: 25px;
+				line-height: 40px;
+				width: 338px;
+				margin-left: 15px;
+				border-bottom: solid 1px #999;
+			}
+			.wa{
+				margin-left: 23px;
+			}
+			.wbsq{
+				margin-top: 25px;
+				width: 1240px;
+				height: 493px;
+			}
+			.wdddf{
+				width: 1240px;
+				height: 70px;
+				border-bottom: solid 1px #999;
+			}
+			.kaoyou{
+				float: right;
+				width: 160px;
+				height: 70px;
+			}
+			.kaozuo{
+				
+					background-image: url('../image/复合图.png');
+					background-position: 9px -260px;
+					background-repeat: no-repeat;
+					float: left;
+					width: 320px;
+					height: 70px;
+					border-bottom: solid 2px #11aaf1;
+			}
+			.dtpll{
+				background-image: url('../image/网吧表.png');
+				width: 1151px;
+				height: 264px;
+				margin-top: 70px;
+			}
+			.wz80{
+				float: left;
+				color: #999;
+				text-decoration: none;
+				margin-top: 150px;
+				text-align: right;
+				width: 378px;
+			}
+			.wz82{
+				float: right;
+				color: #999;
+				text-decoration: none;
+				margin-top: 150px;
+				text-align: left;
+				width: 425px;
+			}
+			.dtpll>a:hover{
+				font-size: 17px;
+				color: #11aaf1;
+			}
+			.wdf{
+				position: relative;
+				width: 1240px;
+				height: 464px;
+			}
+			.k130{
+				background-image: url('../image/复合图.png');
+				background-position: 9px -130px;
+				background-repeat: no-repeat;
+				float: left;
+				width: 320px;
+				height: 70px;
+				border-bottom: solid 2px #11aaf1;
+			}
+			.width{
+				float: left;
+				margin-top: 30px;
+				width: 700px;
+				height: 343px;
+				position: absolute;
+				left: 0px;
+			}
+			.width>div{
+				margin-left: 20px;
+				float: left;
+			}
+			.width>div>a{
+				float: left;
+				width: 680px;
+				margin-top: 20px;
+				color: #333;
+				text-decoration: none;
+			}
+			.width>div>a:hover{
+				color: #11aaf1;
+			}
+			.width>div>img{
+				float: left;
+				margin-right: 40px;
+				margin-top: 30px;
+			}
+			.div{
+				float: right;
+				margin-left: 40px;
+				margin-right: 10px;
+				margin-top: 40px;
+				width: 200px;
+				height: 225px;
+				text-align: center;
+			}
+			.dibu{
+				width: 100%;
+				height: 143px;
+				background-color: #333;
+				margin-top: 50px;
+				font-size: 5px;
+				text-align: center;
+				color: #999;
+			}
+			.clj{
+				color: #999;
+				text-decoration: none;
+			}
+			.ziti{
+				margin-top: 10px;
+			}
+			.jdwzkaoy{
+				width: 500px;
+				height: 400px;
+				float: right;
+			}
+		</style>
+	</head>
+	<body style="overflow-x: hidden;">
+	<div class="qw">
+		<div class="dw">
+			<img src="../image/QQ二维码.jpg" width="140px" height="140px"/>
+			<p>扫码关注公众号<br />特权资讯早知道</p>
+		</div>
+			<div class="dbu">
+				<div class="dbujz">
+				<a class="sznq1" href="#"></a>
+					<a class="yxlm" href="../../../../英雄联盟.html"><img src="../../招募队友/images/英雄联盟.png" width="130px" height="48px"/></a>
+					<div class="xian"></div>
+					<div class="qqwb"></div>
+					<div class="ljie">
+						<a href="../../海克斯科技/html/海克斯科技.html">精彩活动</a>
+						<span>|</span>
+						<a href="../../招募队友/html/英雄联盟   组队招募.html">在线聚友</a>
+						<span>|</span>
+						<a href="#">道聚城</a>
+					</div>
+					<input type="text" class="sous sous2"/>
+				</div>
+			</div>
+			<div class="fm">
+				<div class="fmdibu">
+					<div class="wz"><span class="span">官网首页</span><br /><span >SOHE</span></div>
+					<div class="wz1"><span class="span">特权内容</span><br /><span >ROYALTY</span></div>
+					<div class="wz1"><span class="span">特权网吧</span><br /><span >INTERNET CAFES</span></div>
+					<div class="wz1"><span class="span">申请特权<img src="../image/pot.png" style="position: absolute;"/></span><br /><span >APPLICATION</span></div>
+					<div class="wz1"><span class="span">客服专区</span><br /><span >SERVICE</span></div>
+					<div class="wz1"><span class="span">个人中心<img src="../image/fl.png" style="position: absolute;	"/></span><br /><span >USER CENTER</span></div>
+					<div class="wz1"><span class="span">网管登录</span><br /><span >LOGIN</span></div>
+				</div>
+			</div>
+			<div class="lbo">
+					<div class="pb-carouselWarp demo1">
+						<ul class="pb-carousel">
+							<li class="pb-this"><img src="../image/图二.jpg" alt="" /></li>
+							<li><img src="../image/轮播2.webp" alt="" /></li>
+							<li><img src="../image/网吧.jpg" alt="" /></li>
+						</ul>
+					</div>
+				<div class="ww">
+					<div style="height: 35px;">
+						<div class="hk">综合</div>
+						<div class="hk">公告</div>
+						<div class="hk">活动</div>
+					</div>
+					<a class="xlb"><img src="../image/小喇叭.png"/>《英雄联盟》网吧特权采买指引</a>
+					<a class="wzbb" href="#">
+						<span class="a1">[活动]</span>
+						<span class="a2">&nbsp;&nbsp;超凡特权全面升级，100%中奖！</span>
+						<span class="a3">10/11</span>
+					</a>
+					<a class="wzbb" href="#">
+						<span class="a1">[活动]</span>
+						<span class="a2">&nbsp;&nbsp;英雄联盟超凡特权来袭，全国网吧/电竞酒店限时免费领取！！</span>
+						<span class="a3">9/11</span>
+					</a>
+					<a class="wzbb" href="#">
+						<span class="a1">[活动]</span>
+						<span class="a2">【西部赛区决赛】火龙跃巴蜀，峡谷相见！</span>
+						<span class="a3">8/11</span>
+					</a>
+					<a class="wzbb" href="#">
+						<span class="a1">[活动]</span>
+						<span class="a2">【东部赛区决赛】西递古村峡谷相逢，弈决高下！</span>
+						<span class="a3">7/11</span>
+					</a>
+					<a class="wzbb" href="#">
+						<span class="a1">[活动]</span>
+						<span class="a2">【南方赛区决赛】一次电子竞技与文旅景点的精彩碰撞</span>
+						<span class="a3">6/11</span>
+					</a>
+					<a class="wzbb" href="#">
+						<span class="a1">[活动]</span>
+						<span class="a2">【北方赛区决赛】昂首千丘远，堪寻敌手共论剑</span>
+						<span class="a3">5/11</span>
+					</a>
+					<a class="wzbb" href="#">
+						<span class="a1">[活动]</span>
+						<span class="a2">【英雄联盟网吧特权】内容限时升级公告</span>
+						<span class="a3">4/11</span>
+					</a>
+					<a class="wzbb" href="#">
+						<span class="a1">[活动]</span>
+						<span class="a2">&nbsp;&nbsp;为网吧出征，本周省赛冠军即将诞生！</span>
+						<span class="a3">3/11</span>
+					</a>
+					<a class="lj" href="#">查看更多新闻</a>
+					
+				</div>
+			</div>
+			
+			<div class="lb2">
+				<div class="lbdk">
+					<div class="xcc">
+						<div class="tub">
+							<span class="wz9">ROYALTY SKIN</span>
+							<br />
+							<span class="wz8">网吧特权皮肤</span>
+						</div>
+						<a class="tupxc" href="#">
+							<img src="../image/宣传素材.png" class="tpjz"/>
+							<img src="../image/所有特权.jpg" class="tpjz"/>
+						</a>
+					</div>
+					
+					<div>
+							<div class="pb-carouselWarp demo2">
+								<ul class="pb-carousel">
+									<li class="pb-this">
+										<div class="lbtpk">
+											<div class="dsw"><img src="../image/艾瑞莉娅.jpg"/>
+												<div>
+													<span class="wzp">冰霜之刃</span>
+													<br />
+													<span class="wzp2">艾瑞莉娅</span>
+												</div>
+											</div>
+											<div class="dsw"><img src="../image/布兰德.jpg"/>
+												<div>
+													<span class="wzp">丧尸</span>
+													<br />
+													<span class="wzp2">布兰德</span>
+												</div>
+											</div>
+											<div class="dsw"><img src="../image/内瑟斯.jpg" />
+												<div>
+													<span class="wzp">炼狱魔犬</span>
+													<br />
+													<span class="wzp2">内瑟斯</span>
+												</div>
+											</div>
+											<div class="dsw"><img src="../image/阿狸.jpg" />
+												<div>
+													<span class="wzp">偶像歌手</span>
+													<br />
+													<span class="wzp2">阿狸</span>
+												</div>
+											</div>
+											<div class="dsw" style="margin-right: 0px;"><img src="../image/费奥尔.jpg" />
+												<div>
+													<span class="wzp">女校长</span>
+													<br />
+													<span class="wzp2">菲奥娜</span>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="lbtpk">
+											<div class="dsw"><img src="../image/莎娜.jpg"/>
+												<div>
+													<span class="wzp">电玩女神</span>
+													<br />
+													<span class="wzp2">娑娜</span>
+												</div>
+											</div>
+											<div class="dsw"><img src="../image/嘉文四世.jpg"/>
+												<div>
+													<span class="wzp">暗星</span>
+													<br />
+													<span class="wzp2">嘉文四世</span>
+												</div>
+											</div>
+											<div class="dsw"><img src="../image/莫格.jpg" />
+												<div>
+													<span class="wzp">暗星</span>
+													<br />
+													<span class="wzp2">莫德凯撒</span>
+												</div>
+											</div>
+											<div class="dsw"><img src="../image/墨菲特.jpg" />
+												<div>
+													<span class="wzp">暗星</span>
+													<br />
+													<span class="wzp2">墨菲特</span>
+												</div>
+											</div>
+											<div class="dsw" style="margin-right: 0px;"><img src="../image/死兆星.jpg" />
+												<div>
+													<span class="wzp">死兆星</span>
+													<br />
+													<span class="wzp2">韦鲁斯</span>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="lbtpk">
+											<div class="dsw"><img src="../image/泽拉斯.jpg"/>
+												<div>
+													<span class="wzp">暗星</span>
+													<br />
+													<span class="wzp2">泽拉斯</span>
+												</div>
+											</div>
+											<div class="dsw"><img src="../image/拉克丝.jpg"/>
+												<div>
+													<span class="wzp">暗星</span>
+													<br />
+													<span class="wzp2">拉克丝</span>
+												</div>
+											</div>
+											<div class="dsw"><img src="../image/烬.jpg" />
+												<div>
+													<span class="wzp">暗星</span>
+													<br />
+													<span class="wzp2">烬</span>
+												</div>
+											</div>
+											<div class="dsw"><img src="../image/锤石.jpg" />
+												<div>
+													<span class="wzp">死兆星</span>
+													<br />
+													<span class="wzp2">锤石</span>
+												</div>
+											</div>
+											<div class="dsw" style="margin-right: 0px;"><img src="../image/凯尔.jpg" />
+												<div>
+													<span class="wzp">钢铁之翼</span>
+													<br />
+													<span class="wzp2">凯尔</span>
+												</div>
+											</div>
+										</div></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="wbhd">
+						<div class="hdkj">
+							<div class="kkjj">
+								<span class="wz9">CAFE EVENTS</span>
+								<br />
+								<span class="wz8">网吧活动</span>
+							</div>
+							<a class="qndmd" href="#"><img src="../image/查看更多.jpg" width="134px" height="39px" style="margin-top: 15px;float: right;"/></a>
+						</div>
+						<div class="djibk">
+							<div class="dji">本吧</div>
+							<div class="dji">同城</div>
+						</div>
+						<div>
+							<a class="wzbb" href="#">
+								<span class="a1">[活动]</span>
+								<span class="a2">【西部赛区决赛】火龙跃巴蜀，峡谷相见！</span>
+								<span class="a3">8/11</span>
+							</a>
+							<a class="wzbb" href="#">
+								<span class="a1">[活动]</span>
+								<span class="a2">【东部赛区决赛】西递古村峡谷相逢，弈决高下！</span>
+								<span class="a3">7/11</span>
+							</a>
+							<a class="wzbb" href="#">
+								<span class="a1">[活动]</span>
+								<span class="a2">【南方赛区决赛】一次电子竞技与文旅景点的精彩碰撞</span>
+								<span class="a3">6/11</span>
+							</a>
+							<a class="wzbb" href="#">
+								<span class="a1">[活动]</span>
+								<span class="a2">【北方赛区决赛】昂首千丘远，堪寻敌手共论剑</span>
+								<span class="a3">5/11</span>
+							</a>
+							<a class="wzbb" href="#">
+								<span class="a1">[活动]</span>
+								<span class="a2">【英雄联盟网吧特权】内容限时升级公告</span>
+								<span class="a3">4/11</span>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="yxwb">
+					<div class="yxdb">
+						<div class="yxtb">
+							<span class="wz9">INTERNET CAFES</span>
+							<br />
+							<span class="wz8">优秀特权网吧</span>
+						</div>
+						<div class="wzkjj">
+							<span>根据特权使用情况每周轮换</span>
+							<a><img src="../image/查看特权网吧.jpg" width="124px" height="39px"/></a>
+						</div>
+					</div>
+					<div class="wbnr">
+						<div class="yyjq">
+							<div class="wsnbb">
+								
+									<a class="clb1" href="#">
+										<h3 class="h2">新时代电子竞技俱乐部</h3>
+										<p class="p25">金城国贸大厦</p>
+										<span class="soood">查看详细地址>></span>
+									</a>
+								<img src="../image/网吧21.jpg" width="100%" height="100%" class="sad"/>
+							</div>
+							<div class="wsnbb">
+								
+									<a class="clb1" href="#">
+										<h3 class="h2">科汇星级网吧</h3>
+										<p class="p25">广东省惠州市东平桃子园25号科汇星级网吧</p>
+										<span class="soood">查看详细地址>></span>
+									</a>
+								<img src="../image/网吧三.jpg" width="100%" height="100%" class="sad"/>
+							</div>
+							<div class="wsnbb">
+								
+									<a class="clb1" href="#">
+										<h3 class="h2">冰雷破网咖</h3>
+										<p class="p25">重庆沙坪坝区大学城东路21号苏荷枫庭1号楼2层</p>
+										<span class="soood">查看详细地址>></span>
+									</a>
+								<img src="../image/冰雷破.jpg" width="100%" height="100%" class="sad"/>
+							</div>
+						</div>
+						<div>
+							<div class="wsnb wa">
+								<a class="clb" href="#">
+									<h3 class="h3">郫县时空引擎天域之城网络会所</h3>
+									<p class="p">郫县红光镇广场路北一段205号附202-201</p>
+									<span class="soood">查看详细地址>></span>
+								</a>
+								<img src="../image/时空引擎.jpg" width="100%" height="100%" class="sad"/>
+							</div>
+							<div class="wsnb wb">
+								<a class="clb" href="#">
+									<h3 class="h3">飞秒二网吧</h3>
+									<p class="p">新都区大丰街道桂蕊街45号</p>
+									<span class="soood">查看详细地址>></span>
+								</a>
+								<img src="../image/飞秒.jpg" width="100%" height="100%" class="sad"/>
+								
+							</div>
+							<div class="wsnb wc">
+								<a class="clb" href="#">
+									<h3 class="h3">摩非网咖香港路店</h3>
+									<p class="p">武汉市江岸区香港路苗栗路口紫荆花园1楼</p>
+									<span class="soood">查看详细地址>></span>
+								</a>
+								<img src="../image/香港.jpg" width="100%" height="100%" class="sad"/>
+							</div>
+							<div class="wsnb wd">
+								<a class="clb" href="#">
+									<h3 class="h3">冰雨网吧高专店</h3>
+									<p class="p">豪德广场西山路口</p>
+									<span class="soood">查看详细地址>></span>
+								</a>
+								<img src="../image/冰雨.jpg" width="100%" height="100%" class="sad"/>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="wbsq">
+					<div class="wdddf">
+						<div class="kaozuo">
+							<span class="wz9">HOW TO APPLY</span>
+							<br />
+							<span class="wz8">特权网吧申请攻略</span>
+						</div>
+						<a class="kaoyou" href="#"><img src="../image/注册.jpg" width="129px" height="40px" style="margin-top: 15px;"/></a>
+					</div>
+					<div class="dtpll">
+						<a href="#" class="wz80">申请注册</a>
+						<a href="#" class="wz82">向业务代表申请审核</a>
+					</div>
+				</div>
+				<div class="wdf">
+					<div class="wdddf">
+							<div class="k130">
+								<span class="wz9">FQA</span>
+								<br />
+								<span class="wz8">客服常见问题</span>
+							</div>
+					</div>
+						<div class="width">
+							<div>
+								<a href="#">•  什么是英雄联盟网吧特权？</a>
+							</div>
+							<div>
+								<a href="#">•  英雄联盟网吧特权提供哪些服务？</a>
+							</div>
+							<div>
+								<a href="#">•  网吧特权只能在网吧用吗？</a>
+							</div>
+							<div>
+								<a href="#">•  所有网吧都可以用网吧特权吗？</a>
+							</div>
+							<div>
+								<a href="#">•  我如何查看特权内容？</a>
+							</div>
+							<div>
+								<a href="#">•  特权内容是固定的吗？</a>
+							</div>
+							<div>
+								<img src="../image/查看更多.jpg" width="130px" height="40px"/>
+								<img src="../image/在线客服.jpg" width="130px" height="40px"/>
+							</div>
+						</div>
+					<div class="jdwzkaoy">
+						<div class="div">
+							<img src="../image/QQ二维码.jpg" width="200px" height="200px"/>
+							<p>
+								扫码使用网吧特权小助手
+								<br />
+								快速查找身边特权网吧
+							</p>
+						</div>
+						<div class="div">
+							<img src="../image/英雄联盟二维码.webp" width="200px" height="200px"/>
+							<p>
+								安装掌上英雄联盟
+								<br />
+								快速查找身边特权网吧
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="dibu">
+					<img src="../image/腾讯.png" width="260px" height="50px"/>
+					<p class="ziti">
+						<a href="#" class="clj">腾讯互动娱乐</a><span> | </span>
+						<a href="#" class="clj">服务条款</a><span> | </span>
+						<a href="#" class="clj">隐私保护指引</a><span<span> | </span>
+						<a href="#" class="clj">儿童隐私保护指引</a><span> | </span>
+						<a href="#" class="clj">腾讯游戏招聘</a><span> | </span>
+						<a href="#" class="clj">腾讯游戏客服</a><span> | </span>
+						<a href="#" class="clj">游戏列表</a><span> | </span>
+						<a href="#" class="clj">成长守护平台</a><span> | </span>
+						<a href="https://www.tencent.com/zh-cn/partnership.html" class="clj">广告服务及商务合作</a></p>
+						<a href="#" class="clj ziti">COPYRIGHT © 1998 – 2023 TENCENT. ALL RIGHTS RESERVED.
+					</p>
+					<a href="https://www.tencent.com/zh-cn/statement.html?/law/copyright.htm" class="clj ziti">腾讯公司&nbsp;版权所有</a>
+				</div>
+			
+		</div>
+			
+			<script type="text/javascript" src="../js/carousel.js"></script>
+			<script type="text/javascript" src="../js/jquery.min.js"></script>
+			<script type="text/javascript" src="../js/carousel.min.js"></script>
+			<script type="text/javascript">
+				carousel(
+					$('.demo1'),	//必选， 要轮播模块(id/class/tagname均可)，必须为jQuery元素
+					{
+						type: 'leftright',	//可选，默认左右(leftright) - 'leftright' / 'updown' / 'fade' (左右/上下/渐隐渐现)
+						arrowtype: 'move',	//可选，默认一直显示 - 'move' / 'none'	(鼠标移上显示 / 不显示 )
+						autoplay: true,	//可选，默认true - true / false (开启轮播/关闭轮播)
+						time:3000	//可选，默认3000
+					}
+				);
+				carousel(
+					$('.demo2'),	//必选， 要轮播模块(id/class/tagname均可)，必须为jQuery元素
+					{
+						type: 'leftright',	//可选，默认左右(leftright) - 'leftright' / 'updown' / 'fade' (左右/上下/渐隐渐现)
+						arrowtype: 'move',	//可选，默认一直显示 - 'move' / 'none'	(鼠标移上显示 / 不显示 )
+						autoplay: true,	//可选，默认true - true / false (开启轮播/关闭轮播)
+						time:3000	//可选，默认3000
+					}
+				);
+				
+				
+			</script>
+			
+	</body>
+</html>

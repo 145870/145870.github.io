@@ -1,0 +1,240 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+li{
+	list-style: none;
+}
+.topt{
+ background-color: #fff;
+ width: 100%;
+ height: 42px;
+ 
+}
+.topt ul{
+ list-style: none;
+ margin: 0 auto;
+ width: 900px;
+ 
+ height: 42px;
+ 
+}
+.topt ul li{
+ display: inline-block;
+ height: 94%;
+}
+
+/* 头部左边 */
+/* 头部的腾讯游戏图片 */
+.topt ul #one>a{
+ width: 205px;
+ height: 94%;
+ 
+ float: left;
+ background-image: url('../../imgs/tht/账号注销/DM_20230327094248_012.PNG');
+ background-position: -20px -43px;
+}
+/* 头部的十周年图片 */
+.topt ul #two>a{
+ width: 230px;
+ height: 100%;
+ float: left;
+ 
+ background-image: url('../../imgs/tht/账号注销/DM_20230327094248_012.PNG');
+ background-position: 0px -85px;
+}
+/* 头部右边 */
+/* 头部的内容 */
+.topt ul #three{
+ 
+ height: 100%;
+ float: right; 
+}
+.topt ul #three .topt-4ll{
+ height: 100%;
+ float: left;
+}
+.topt ul #three .topt-4ll>a{
+ text-decoration: none;
+ color: #585858;
+ border-right:1px solid #cbd1df;
+ padding: 0 10px;
+ line-height: 42px;
+ font-size: 12px;
+}
+.topt ul #three .topt-4ll>a:hover{
+ color: #0096D0;
+}
+.topt ul #three .topt-4lr{
+ height: 94%;
+ margin-left: 10px;
+ float: left;
+ width: 108px;
+ background-image: url('../../imgs/tht/账号注销/DM_20230327094248_012.PNG');
+ background-position: 0px -127px;
+}
+.topt ul #three .topt-4lr>a{
+ text-decoration: none;
+ color: #585858;
+ line-height: 42px;
+ padding-left: 23px;
+ font-size: 10px;
+}
+.topt ul #three .topt-4lr>a:hover{
+ color: #0096D0;
+}
+
+/* 头部的16+图片 */
+.topt ul #four{
+ width: 33px;
+ height: 100%;
+ float: right;
+ 
+ background-image: url('../../imgs/tht/账号注销/DM_20230327094248_013.PNG');
+ background-size: 100%;
+}
+
+
+/* 内容上部分 */
+.nr .nr-top{
+ height: 864px;
+ background-image: url('../../imgs/tht/账号注销/DM_20230327094248_001.JPEG');
+ background-repeat: no-repeat;
+ background-position: 50% 0;
+ 
+ width: 100%;
+}
+/* 背景图 */
+.bg{
+	background: url('../../imgs/tht/秩序殿堂/背景.png') no-repeat 50% 0;
+}
+.main{
+	width: 1054px;
+	margin: 0px auto;
+}
+.header{
+	height: 693px;
+	background: url('../../imgs/tht/秩序殿堂/header.png') no-repeat 0 0;
+	color: #e4e4e4;
+	font-size: 16px;
+	text-align: center;
+	line-height: 22px;
+	overflow: hidden;
+}
+.about{
+	font-size: 16px;
+	margin: 530px auto 0;
+	width: 848px;
+}
+.b1{
+	background: url('../../imgs/tht/秩序殿堂/b1.png') no-repeat 0 0;
+	height: 787px;
+	padding-top: 134px;
+}
+.b2{
+	background: url('../../imgs/tht/秩序殿堂/b2.png') no-repeat 0 0;
+	height: 1281px;
+	padding-top: 134px;
+}
+.b3{
+	background: url('../../imgs/tht/秩序殿堂/b3.png') no-repeat 0 0;
+	height: 730px;
+	font-size: 15px;
+	text-align: justify;
+	overflow: hidden;
+}
+.b1 li{
+	float: left;
+}
+.x1,.x3{
+	margin-right: 70px;
+}
+.x2,.x4{
+	margin-bottom: 96px;
+}
+a{
+	text-decoration: none;
+}
+.x-a1{
+	display: block;
+	transition: all 0.4s ease 0s;
+	transform: scale(1.0);
+}
+.b1 li:hover img{
+	transform: scale(1.1,1.1);
+	transition: all 0.4s linear;
+}
+.b1 li:not(:hover) img{
+	transition: all 0.3s linear;
+}
+.clearfix::before,.clearfix::after{
+	content: "\0020";
+	display: block;
+	height: 0;
+	visibility: hidden;
+}
+.left{
+	float: left;
+	margin-right: 62px;
+}
+.right{
+	float: right;
+}
+.t1{
+	margin-bottom:62px ;
+}
+.b2 li:hover img{
+	transform: scale(1.1,1.1);
+	transition: all 0.3s linear;
+}
+.b2 li:not(:hover) img{
+	transition: all 0.2s linear;
+}
+.t4{
+	margin-right: 71px;
+	float: left;
+	padding-top: 57px;
+}
+.t5{
+	float: right;
+	padding-top: 57px;
+}
+.kf{
+	display: block;
+	width: 240px;
+	height: 74px;
+	text-indent: -9999px;
+	overflow: hidden;
+	margin: 55px auto 0;
+	background: url('../../imgs/tht/秩序殿堂/客服.png');
+}
+.bottom{
+	height: 375.59px;
+}
+.clearfix::after{
+	clear: both;
+}
+.b3 ul{
+	margin-top: 120px;
+}
+.b3 ul li{
+	margin-bottom:54px;
+}
+.q{
+	color: #a07a33;
+}
+.a{
+	color: #d4b476;
+}
+.footer{
+	min-width: 1054px;
+	background: #02101b;
+	text-align: center;
+	color: #757575;
+	font-size: 12px;
+	line-height: 20px;
+	padding: 20px 0;
+}
+.warp a{
+	color: #757575;
+}

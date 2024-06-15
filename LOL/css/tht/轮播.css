@@ -1,0 +1,18 @@
+.carousel-indicators li{
+	width: 274px;
+	height: 38px;
+	text-indent: 0;
+	margin: 0px;
+	text-indent: 0;
+	
+}
+
+.carousel-indicators li:hover {
+	
+	border-bottom: 2px #cea861 solid !important;
+}
+.carousel-indicators li:hover a{
+	color: #ab8e66 !important;
+	background-color: #f7f6f6 !important; 
+}
+
